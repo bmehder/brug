@@ -28,10 +28,6 @@ export default [
     url: '/login/',
   },
   {
-    name: 'Register',
-    url: '/register/',
-  },
-  {
     name: 'Contact',
     url: '/contact/',
   },

@@ -1,13 +1,21 @@
+<script>
+  export let data
+</script>
+
 <section class="flow" style="padding-block-end: var(--double-size);">
   <h2 class="center" style="padding-block-end: var(--size);">Auto-grid ipsum dolor sit, amet consectetur adipisicing elit.</h2>
   <div class="auto-grid">
     <div class="bg-light block flow">
-      <h3>Subheading</h3>
+      <h3>Register</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est iure itaque
         esse? Doloribus, accusantium suscipit.
       </p>
-      <a href="/" class="animabutton">Lorem Ipsum</a>
+      {#if data.session}
+        <a href="/top-secret" class="animabutton">Admin</a>
+        {:else}
+        <a href="/register" class="animabutton">Register</a>
+      {/if}
     </div>
     <div class="bg-light block flow">
       <h3>Subheading</h3>
