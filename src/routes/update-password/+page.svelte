@@ -1,0 +1,38 @@
+<script>
+  export let data
+
+  let newPassword = null
+  let message = null
+
+  export const updatePassword = async () => {
+    message = null
+
+    const { error } = await data.supabase.auth.updateUser({ password: newPassword })
+
+    if (error) {
+      message = 'Something went wrong.'
+    } else {
+      message = 'You are logged in, and your password has been updated.'
+    }
+  }
+</script>
+
+<h1 class="title">Update Password</h1>
+
+{#if message}
+  <p>{message}</p>
+{/if}
+
+<form on:submit={updatePassword}>
+  <div class="frm-group half-flow">
+    <label for="password">Choose new password</label>
+    <input type="password" name="password" id="password" bind:value={newPassword}>
+    <button>Change Password</button>
+  </div>
+</form>
+
+<style>
+  .frm-group {
+    display: grid;
+  }
+</style>

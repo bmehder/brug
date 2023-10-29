@@ -7,6 +7,7 @@
   let email
   let password
   let err = null
+  let message = null
 
   $: console.log({ err })
 
@@ -28,12 +29,29 @@
   const handleSignOut = async () => {
     await supabase.auth.signOut()
   }
+
+  const handlePasswordReset = async () => {
+    message = null
+    const {error} = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: dev ? `http://localhost:5173/update-password` : 'https://brug-theme.vercel.app/update-password',
+    })
+
+    if (error) {
+      message = "Something went wrong."
+    } else {
+      message = 'Please check your email for a link to update your password.'
+    }
+  }
 </script>
 
 <h1 class="title">Login</h1>
 
 {#if err}
   <div class="h3">{err.message}</div>
+{/if}
+
+{#if message}
+  <p>{message}</p>
 {/if}
 
 {#if data.session}
@@ -56,6 +74,10 @@
     </div>
   </form>
   <a class="button" href="/register">Register</a>
+{/if}
+
+{#if !data.session && email}
+  <button on:click={handlePasswordReset}>Forgot Password?</button>
 {/if}
 
 <style>

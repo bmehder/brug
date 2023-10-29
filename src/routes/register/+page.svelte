@@ -1,13 +1,12 @@
 <script>
 	import { enhance } from '$app/forms'
 	export let form
-  $: console.log(form)
 </script>
 
 <h1 class="title">Register</h1>
 
 <form method="post" use:enhance>
-  <div class="flow">
+  <div class="frm-group flow">
     <div class="half-flow">
       <label for="email">Email</label>
       <input name="email" if="email" value={form?.email ?? ''} />
@@ -25,7 +24,7 @@
 {/if}
 
 <style>
-  form div {
+  .frm-group {
     display: grid;
   }
 </style>

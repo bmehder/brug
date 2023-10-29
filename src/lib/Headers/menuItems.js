@@ -28,6 +28,7 @@ export default [
     url: '/account/',
     children: [
       { name: 'Register', url: '/register' },
+      { name: 'Magic Login', url: '/magic-login' },
     ],
   },
   {
