@@ -1,4 +1,6 @@
 <script>
+  import { invalidate } from '$app/navigation'
+  import { onMount } from 'svelte'
   import { page } from '$app/stores'
   import '$lib/styles/app.css'
   import '$lib/styles/theme.css'
@@ -7,9 +9,27 @@
   import HomeHero from '$lib/HomeHero.svelte'
   import Footer from '$lib/Footers/Footer.svelte'
   import BackToTop from '$lib/BackToTop.svelte'
-  import PageTransition from '../lib/PageTransition.svelte'
+  import PageTransition from '$lib/PageTransition.svelte'
 
   const mobileThreshold = 800
+
+  export let data
+  $: console.log(data)
+
+  let { supabase, session } = data
+  $: ({ supabase, session } = data)
+
+  onMount(() => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((event, _session) => {
+      if (_session?.expires_at !== session?.expires_at) {
+        invalidate('supabase:auth')
+      }
+    })
+
+    return () => subscription.unsubscribe()
+  })
 </script>
 
 <!-- <Analytics /> -->
@@ -17,7 +37,7 @@
 <div class="wrapper">
   <Header {mobileThreshold} logo="<h1>Logo</h1>" />
 
-  <PageTransition key={$page.route.id}>
+  <!-- <PageTransition key={$page.route.id}> -->
     {#if $page.route.id === '/'}
       <HomeHero image="/abstract.jpg" />
     {/if}
@@ -25,7 +45,7 @@
     <main id="main-content" class="flow">
       <slot />
     </main>
-  </PageTransition>
+  <!-- </PageTransition> -->
 
   <Footer />
 </div>

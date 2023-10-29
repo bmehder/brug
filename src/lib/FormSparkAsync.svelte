@@ -134,7 +134,7 @@
           id="request-evaluation"
           bind:checked={requestEvaluation}
         />
-        <label for="request-evaluation"> I would like a cup of coffee. </label>
+        <label for="request-evaluation">I would like to buy you a cup of coffee.</label>
       </div>
       <div>
         <label for="message">Message <span>*</span></label>

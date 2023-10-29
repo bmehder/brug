@@ -24,6 +24,14 @@ export default [
     url: '/testimonials/',
   },
   {
+    name: 'Login',
+    url: '/login/',
+  },
+  {
+    name: 'Register',
+    url: '/register/',
+  },
+  {
     name: 'Contact',
     url: '/contact/',
   },

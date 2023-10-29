@@ -11,7 +11,7 @@
   --text-color: #646464;
   --dark: #323232;
   --light: hsl(166, 32%, 94%);
-  --accent: #BE3455;
+  --accent: #be3455;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,6 +62,53 @@ button:is(:hover, :focus),
   outline: 0.25em solid var(--accent);
 }
 
+.animabutton {
+  --border-color: var(--accent);
+  --color: white;
+  --background: var(--accent);
+  --origin-in: right;
+  --origin-out: left;
+  --speed: 400ms;
+  position: relative;
+  isolation: isolate;
+  display: block;
+  margin-inline: auto;
+  padding-block: calc(var(--size) / 1.5);
+  padding-inline: calc(var(--size));
+  background: var(--background);
+  color: var(--color, white);
+  text-align: center;
+  border: 3px solid var(--border-color, white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.animabutton:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.animabutton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  color: var(--accent);
+  scale: 0 1;
+  transform-origin: var(--origin-out, left);
+  transition: scale var(--speed, 400ms);
+  z-index: -1;
+}
+
+.animabutton:hover::after,
+.animabutton:focus-visible::after {
+  scale: 1 1;
+  transform-origin: var(--origin-in, center);
+}
+
 /* Form elements */
 label {
   font-weight: 500;
@@ -96,7 +143,7 @@ section .button {
   padding: var(--double-size);
 }
 .shadow {
-  box-shadow: var(--half-size) var(--size) var(--size) rgba(0,0,0,0.24);
+  box-shadow: var(--half-size) var(--size) var(--size) rgba(0, 0, 0, 0.24);
 }
 
 /* Skins */

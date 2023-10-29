@@ -7,7 +7,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est iure itaque
         esse? Doloribus, accusantium suscipit.
       </p>
-      <a href="/" class="button">Lorem Ipsum</a>
+      <a href="/" class="animabutton">Lorem Ipsum</a>
     </div>
     <div class="bg-light block flow">
       <h3>Subheading</h3>
@@ -15,7 +15,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="/">Quibusdam est</a> iure itaque
         esse? Doloribus, accusantium suscipit.
       </p>
-      <a href="/" class="button">Lorem Ipsum</a>
+      <a href="/" class="animabutton">Lorem Ipsum</a>
     </div>
     <div class="bg-light block flow">
       <h3>Subheading</h3>
@@ -23,7 +23,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est iure itaque
         esse? Doloribus, accusantium suscipit.
       </p>
-      <a href="/" class="button">Lorem Ipsum</a>
+      <a href="/" class="animabutton">Lorem Ipsum</a>
     </div>
   </div>
 </section>
