@@ -42,18 +42,6 @@
       message = 'Please check your email for a link to update your password.'
     }
   }
-
-  const handleSSOLogin = async () => {
-    err = null
-
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'github'
-    })
-
-    if (error) {
-      err = error
-    }
-  }
 </script>
 
 <h1 class="title">Login</h1>
@@ -90,12 +78,6 @@
 
 {#if !data.session && email}
   <button on:click={handlePasswordReset}>Forgot Password?</button>
-{/if}
-
-{#if !data.session}
-  <form>
-    <button on:click={handleSSOLogin}>GitHub</button>
-  </form>
 {/if}
 
 <style>
