@@ -16,16 +16,26 @@
   }
 
   const handleSignOut = async () => {
-    await data.supabase.auth.signOut()
+    err = null
+
+    const { error } = await data.supabase.auth.signOut()
+
+    if (error) {
+      err = error
+    }
   }
 </script>
 
 <h1 class="title">SSO</h1>
 
+{#if err}
+  <p>Something went wrong.</p>
+{/if}
+
 {#if !data.session}
-  <p>RESGISTER or SIGNIN with:</p>
+  <p>RESGISTER or SIGN IN with:</p>
   <form>
-    <button on:click={() => handleSSOLogin('gitub')}>GitHub</button>
+    <button on:click={() => handleSSOLogin('github')}>GitHub</button>
     <button on:click={() => handleSSOLogin('google')}>Google</button>
   </form>
 {:else}

@@ -35,7 +35,7 @@ export default [
   {
     name: 'Top Secret',
     url: '/top-secret/',
-    auth: true
+    auth: true,
   },
   {
     name: 'Contact',

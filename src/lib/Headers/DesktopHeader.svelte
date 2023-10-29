@@ -14,18 +14,34 @@
     <nav>
       <ul>
         {#each menuItems as { name, url, children, auth }}
-          <li>
-            <a aria-current={$page.url.pathname === url} href={url}>{name}</a>
-            {#if children}
-              <ul class="flow">
-                {#each children as { name, url }}
-                  <li>
-                    <a aria-current={$page.url.pathname === url} href={url}>{name}</a>
-                  </li>
-                {/each}
-              </ul>
-            {/if}
-          </li>
+          {#if !auth}
+            <li>
+              <a aria-current={$page.url.pathname === url} href={url}>{name}</a>
+              {#if children}
+                <ul class="flow">
+                  {#each children as { name, url }}
+                    <li>
+                      <a aria-current={$page.url.pathname === url} href={url}>{name}</a>
+                    </li>
+                  {/each}
+                </ul>
+              {/if}
+            </li>
+          {/if}
+          {#if auth === true && $page.data.session}
+            <li>
+              <a aria-current={$page.url.pathname === url} href={url}>{name}</a>
+              {#if children}
+                <ul class="flow">
+                  {#each children as { name, url }}
+                    <li>
+                      <a aria-current={$page.url.pathname === url} href={url}>{name}</a>
+                    </li>
+                  {/each}
+                </ul>
+              {/if}
+            </li>
+          {/if}
         {/each}
       </ul>
     </nav>
@@ -50,7 +66,7 @@
     text-underline-offset: calc(var(--half-size) / 2);
     transform: translateY(-120%);
   }
-  
+
   .skip-nav-link:focus {
     transition: transform 200ms ease-in;
     transform: translateY(0);
@@ -95,11 +111,11 @@
     text-underline-offset: var(--half-size);
     text-decoration-thickness: calc(var(--size) / 12);
   }
-  
+
   a:hover {
     text-decoration-color: var(--alt-one);
   }
-  
+
   a[aria-current='true'] {
     text-decoration: underline;
     text-decoration-color: var(--light);

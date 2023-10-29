@@ -5,8 +5,6 @@
     data.product
 
   const formatMoney = num => (Math.round(num * 100) / 100).toLocaleString()
-
-  console.log(data)
 </script>
 
 <div class="section flow">

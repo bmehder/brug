@@ -73,7 +73,6 @@
       <button type="submit">Sign in</button>
     </div>
   </form>
-  <a class="button" href="/register">Register</a>
 {/if}
 
 {#if !data.session && email}

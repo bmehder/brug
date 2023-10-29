@@ -9,6 +9,7 @@
 
 {#if isReady}
   <button
+    on:click
     in:fade={{ duration: 0 }}
     aria-expanded="false"
     aria-controls="nav"

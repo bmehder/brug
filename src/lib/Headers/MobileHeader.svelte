@@ -19,33 +19,57 @@
       <div class="logo">
         <a on:click={closeMenu} href="/">{@html logo}</a>
       </div>
-      <div class="trigger" on:click={toggleMenu} on:keypress>
+      <div class="trigger">
         {#if isOpen}
-          <Close />
+          <Close on:click={toggleMenu} />
         {:else}
-          <Hamburger />
+          <Hamburger on:click={toggleMenu} />
         {/if}
       </div>
     </div>
     {#if isOpen}
       <nav id="header-nav" aria-label="Main Navigation" transition:slide>
         <ul>
-          {#each menuItems as { name, url, children }}
-            <li>
-              <a aria-current={$page.url.pathname === url} on:click={closeMenu} href={url}
-                >{name}</a
-              >
-            </li>
-            {#if children}
-              {#each children as { name, url }}
-                <li class="child">
-                  <a
-                    aria-current={$page.url.pathname === url}
-                    on:click={closeMenu}
-                    href={url}>{name}</a
-                  >
-                </li>
-              {/each}
+          {#each menuItems as { name, url, children, auth }}
+            {#if !auth}
+              <li>
+                <a
+                  aria-current={$page.url.pathname === url}
+                  on:click={closeMenu}
+                  href={url}>{name}</a
+                >
+              </li>
+              {#if children}
+                {#each children as { name, url }}
+                  <li class="child">
+                    <a
+                      aria-current={$page.url.pathname === url}
+                      on:click={closeMenu}
+                      href={url}>{name}</a
+                    >
+                  </li>
+                {/each}
+              {/if}
+            {/if}
+            {#if auth === true && $page.data.session}
+              <li>
+                <a
+                  aria-current={$page.url.pathname === url}
+                  on:click={closeMenu}
+                  href={url}>{name}</a
+                >
+              </li>
+              {#if children}
+                {#each children as { name, url }}
+                  <li class="child">
+                    <a
+                      aria-current={$page.url.pathname === url}
+                      on:click={closeMenu}
+                      href={url}>{name}</a
+                    >
+                  </li>
+                {/each}
+              {/if}
             {/if}
           {/each}
         </ul>
