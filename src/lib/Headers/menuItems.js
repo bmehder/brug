@@ -24,8 +24,16 @@ export default [
     url: '/testimonials/',
   },
   {
-    name: 'Login',
-    url: '/login/',
+    name: 'Account',
+    url: '/account/',
+    children: [
+      { name: 'Register', url: '/register' },
+    ],
+  },
+  {
+    name: 'Top Secret',
+    url: '/top-secret/',
+    auth: true
   },
   {
     name: 'Contact',

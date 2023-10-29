@@ -10,7 +10,7 @@ export const actions = {
       email,
       password,
       options: {
-        emailRedirectTo: `${url.origin}/login/callback/`,
+        emailRedirectTo: `${url.origin}/account/callback/`,
       },
     })
 

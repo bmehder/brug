@@ -12,7 +12,7 @@
         esse? Doloribus, accusantium suscipit.
       </p>
       {#if data.session}
-        <a href="/top-secret" class="animabutton">Admin</a>
+        <a href="/top-secret" class="animabutton">Secret Numbers</a>
         {:else}
         <a href="/register" class="animabutton">Register</a>
       {/if}

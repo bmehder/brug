@@ -10,16 +10,6 @@
 
   $: console.log({ err })
 
-  // const handleSignUp = async () => {
-  //   await supabase.auth.signUp({
-  //     email,
-  //     password,
-  //     options: {
-  //       emailRedirectTo: `${location.origin}/login/callback`,
-  //     },
-  //   })
-  // }
-
   const handleSignIn = async () => {
     err = null
 
@@ -62,9 +52,10 @@
           <input type="password" name="password" id="password" bind:value={password} />
         </div>
       </div>
-      <button>Sign in</button>
+      <button type="submit">Sign in</button>
     </div>
   </form>
+  <a class="button" href="/register">Register</a>
 {/if}
 
 <style>

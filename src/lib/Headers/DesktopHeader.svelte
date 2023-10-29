@@ -13,7 +13,7 @@
     </div>
     <nav>
       <ul>
-        {#each menuItems as { name, url, children }}
+        {#each menuItems as { name, url, children, auth }}
           <li>
             <a aria-current={$page.url.pathname === url} href={url}>{name}</a>
             {#if children}
