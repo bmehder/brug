@@ -33,7 +33,7 @@
 {/if}
 
 {#if !data.session}
-  <p>RESGISTER or SIGN IN with:</p>
+  <p>Register or sign in with:</p>
   <form>
     <button on:click={() => handleSSOLogin('github')}>GitHub</button>
     <button on:click={() => handleSSOLogin('google')}>Google</button>

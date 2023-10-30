@@ -32,12 +32,14 @@
 
   const handlePasswordReset = async () => {
     message = null
-    const {error} = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: dev ? `http://localhost:5173/update-password` : 'https://brug-theme.vercel.app/update-password',
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: dev
+        ? `http://localhost:5173/update-password`
+        : 'https://brug-theme.vercel.app/update-password',
     })
 
     if (error) {
-      message = "Something went wrong."
+      message = 'Something went wrong.'
     } else {
       message = 'Please check your email for a link to update your password.'
     }
@@ -60,15 +62,13 @@
 {:else}
   <form on:submit={handleSignIn}>
     <div class="flow">
-      <div class="columns">
-        <div class="frm-group half-flow">
-          <label for="email">Email</label>
-          <input name="email" id="email" bind:value={email} />
-        </div>
-        <div class="frm-group half-flow">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" bind:value={password} />
-        </div>
+      <div class="frm-group half-flow">
+        <label for="email">Email</label>
+        <input name="email" id="email" bind:value={email} />
+      </div>
+      <div class="frm-group half-flow">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" bind:value={password} />
       </div>
       <button type="submit">Sign in</button>
     </div>
