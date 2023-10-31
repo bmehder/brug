@@ -20,6 +20,10 @@ export default [
     url: '/products/',
   },
   {
+    name: 'Posts',
+    url: '/posts/',
+  },
+  {
     name: 'Testimonials',
     url: '/testimonials/',
   },
