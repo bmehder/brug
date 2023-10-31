@@ -14,7 +14,6 @@
   const mobileThreshold = 800
 
   export let data
-  $: console.log(data)
 
   let { supabase, session } = data
   $: ({ supabase, session } = data)
