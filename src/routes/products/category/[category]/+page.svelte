@@ -1,10 +1,10 @@
 <script>
   import Product from '$lib/Product.svelte'
-  
+
   export let data
 </script>
 
-<h1 class="title">Products</h1>
+<h1 class="title">Category: {data.products[0].title}</h1>
 
 <section class="flow">
   <ul class="auto-grid">

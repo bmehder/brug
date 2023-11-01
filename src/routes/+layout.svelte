@@ -11,7 +11,7 @@
   import BackToTop from '$lib/BackToTop.svelte'
   import PageTransition from '$lib/PageTransition.svelte'
 
-  const mobileThreshold = 800
+  const mobileThreshold = 1120
 
   export let data
 

@@ -1,8 +1,7 @@
 export const load = async ({ fetch }) => {
-  const endpoint = 'https://dummyjson.com/quotes/'
-
-  const response = await fetch(endpoint)
-  const { quotes } = await response.json()
+  const { quotes } = await fetch('https://dummyjson.com/quotes/')
+    .then(x => x.json())
+    .catch(console.error)
 
   return { quotes }
 }

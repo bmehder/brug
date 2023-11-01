@@ -32,7 +32,7 @@ export default [
     url: '/account/',
     children: [
       { name: 'Register', url: '/register' },
-      { name: 'Magic Login', url: '/magic-login' },
+      { name: 'Magic Link', url: '/magic-link' },
       { name: 'SSO', url: '/sso' },
     ],
   },

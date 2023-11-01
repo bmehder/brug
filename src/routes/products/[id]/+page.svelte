@@ -10,7 +10,7 @@
 <div class="section flow">
   <h1 class="title">{title}</h1>
   <p>
-    <a href="/products">Products</a> &raquo; <a href={'#'}>{category}</a> &raquo; {title}
+    <a href="/products">Products</a> &raquo; <a href=/products/category/{category}>{category}</a> &raquo; {title}
   </p>
   <div class="flex">
     <img src={thumbnail} alt={title} />
@@ -27,7 +27,7 @@
       </p>
       <h3>Price: <span class="price">${formatMoney(price)}</span></h3>
       <button>Buy Now</button>
-      <p>Category: <a href={'#'}>{category}</a></p>
+      <p>Category: <a href="/products/category/{category}">{category}</a></p>
     </div>
   </div>
 </div>
@@ -38,5 +38,8 @@
   }
   .price {
     color: var(--accent);
+  }
+  img {
+    object-fit: cover;
   }
 </style>

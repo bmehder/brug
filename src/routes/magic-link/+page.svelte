@@ -26,7 +26,7 @@ const signInWithEmail = async () => {
 }
 </script>
 
-<h1 class="title">Magic Login</h1>
+<h1 class="title">Magic Link</h1>
 
 {#if message}
   <p>{message}</p>
