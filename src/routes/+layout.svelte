@@ -50,7 +50,12 @@
   <Footer />
 </div>
 
-<Popover delay={2000} cookieName="visited_within_48_hours" expirationDays={2}>
+<Popover
+  delay={2000}
+  cookieName="visited_within_48_hours"
+  cookieValue="yes"
+  expirationDays={2}
+>
   <h3>Heading</h3>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nisi dolorem

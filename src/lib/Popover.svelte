@@ -5,6 +5,7 @@
   export let delay = 0
   export let expirationDays = null
   export let cookieName = 'brug-default-cookie'
+  export let cookieValue = 'yes'
 
   const getCookie = name => {
     try {
@@ -27,7 +28,7 @@
 
   const popover = (elem, ms) => {
     const popoverButton = elem.querySelector('[data-popover-button]')
-    
+
     const closePopover = () => elem.hidePopover()
     const removeListener = () => popoverButton.removeEventListener('click', closePopover)
 
@@ -38,7 +39,7 @@
 
     setTimeout(() => {
       elem.showPopover()
-      setCookie(cookieName, 'yes', expirationDays)
+      setCookie(cookieName, cookieValue, expirationDays)
     }, ms)
 
     popoverButton.addEventListener('click', closePopover)
