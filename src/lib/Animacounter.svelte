@@ -10,14 +10,14 @@
     easing: cubicOut,
   }
 
-  const end = tweened(startingNumber, tweenOptions)
+  const end = tweened(startingNumber ?? 0, tweenOptions)
 
   const callbacks = {
     in: () => {
       end.set(endingNumber)
     },
     out: () => {
-      end.set(startingNumber ?? 0)
+      (startingNumber || placeholder) && end.set(startingNumber ?? 0)
     },
   }
 </script>

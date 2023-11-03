@@ -11,7 +11,6 @@
     duration: 1500,
     easing: cubicInOut,
   }}
-  startingNumber={32}
   >This is some content.
 </Animacounter>
 
