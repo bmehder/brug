@@ -1,11 +1,12 @@
 <script>
   import { dev } from '$app/environment'
-  // import { goto } from '$app/navigation'
+  import { goto } from '$app/navigation'
 
   export let delay = 0
   export let expirationDays = null
   export let cookieName = 'brug-default-cookie'
   export let cookieValue = 'yes'
+  export let redirect = ''
 
   const getCookie = name => {
     try {
@@ -23,13 +24,17 @@
       date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
       expires = '; expires=' + date.toUTCString()
     }
+
     document.cookie = name + '=' + value + expires + '; path=/; secure=' + !dev
   }
 
   const popover = (elem, ms) => {
     const popoverButton = elem.querySelector('[data-popover-button]')
 
-    const closePopover = () => elem.hidePopover()
+    const closePopover = () => {
+      elem.hidePopover()
+      goto(redirect)
+    }
     const removeListener = () => popoverButton.removeEventListener('click', closePopover)
 
     if (getCookie(cookieName)) {
@@ -52,7 +57,7 @@
   }
 </script>
 
-<div class="flow" use:popover={delay} popover>
+<div class="flow popover" use:popover={delay} popover>
   <slot>Fallback content</slot>
   <button data-popover-button>Close</button>
 </div>
@@ -69,6 +74,8 @@
     display: grid;
     margin: auto;
     padding: var(--double-size);
+    background-color: var(--background, black);
+    color: var(--color, white);
     line-height: 1.5;
     border-radius: calc(var(--size) / 3);
     animation-delay: 400ms;
@@ -76,9 +83,9 @@
   }
 
   div::backdrop {
-    background-color: black;
+    background-color: var(--backdrop-color, black);
     opacity: 0.8;
-    animation: fade 200ms;
+    animation: fade 200ms ease-in;
   }
 
   @keyframes fade {

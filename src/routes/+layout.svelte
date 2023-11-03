@@ -55,6 +55,9 @@
   cookieName="visited_within_48_hours"
   cookieValue="yes"
   expirationDays={2}
+  redirect={'/about'}
+  --background="#161616"
+  --color="#f1f1f1"
 >
   <h3>Heading</h3>
   <p>
