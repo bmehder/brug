@@ -3,7 +3,7 @@
   // import { goto } from '$app/navigation'
 
   export let delay = 0
-  export let expirationDays = 1
+  export let expirationDays = null
   export let cookieName = 'brug-default-cookie'
 
   const getCookie = name => {
