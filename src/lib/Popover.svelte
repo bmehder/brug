@@ -7,10 +7,8 @@
   export let cookieName = 'brug-default-cookie'
 
   const getCookie = name => {
-    const pattern = new RegExp(`(?<=${name}=)[^;]*`)
-
     try {
-      return document.cookie.match(pattern)[0] // Will raise TypeError if cookie is not found
+      return document.cookie.match(`(?<=${name}=)[^;]*`)[0] // Will throw TypeError if cookie is not found
     } catch {
       return undefined
     }
@@ -27,23 +25,35 @@
     document.cookie = name + '=' + value + expires + '; path=/; secure=' + !dev
   }
 
-  const openModal = (elem, ms) => {
-    if (!getCookie(cookieName)) {
-      setTimeout(() => {
-        elem.showPopover()
-        setCookie(cookieName, 'yes', expirationDays)
-      }, ms)
-    }
-  }
+  const popover = (elem, ms) => {
+    const popoverButton = elem.querySelector('[data-popover-button]')
+    
+    const closePopover = () => elem.hidePopover()
+    const removeListener = () => popoverButton.removeEventListener('click', closePopover)
 
-  const hideModal = evt => {
-    evt.target.parentElement.hidePopover()
+    if (getCookie(cookieName)) {
+      removeListener()
+      return
+    }
+
+    setTimeout(() => {
+      elem.showPopover()
+      setCookie(cookieName, 'yes', expirationDays)
+    }, ms)
+
+    popoverButton.addEventListener('click', closePopover)
+
+    return {
+      destroy() {
+        removeListener()
+      },
+    }
   }
 </script>
 
-<div class="flow" use:openModal={delay} popover>
+<div class="flow" use:popover={delay} popover>
   <slot>Fallback content</slot>
-  <button on:click={hideModal}>Close</button>
+  <button data-popover-button>Close</button>
 </div>
 
 <style>
