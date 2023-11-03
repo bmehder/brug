@@ -3,8 +3,10 @@ export const load = async ({ fetch, params }) => {
     `https://dummyjson.com/products/category/${params.category}`
   )
     .then(x => x.json())
-    .catch(x => console.error(x))
+    .catch(console.error)
+  
   return {
     products,
+    category: params.category
   }
 }

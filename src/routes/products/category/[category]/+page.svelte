@@ -2,9 +2,15 @@
   import Product from '$lib/Product.svelte'
 
   export let data
+
+  export const formatName = x => {
+    const splitWords = x.split('-').join(' ')
+
+    return splitWords[0].toUpperCase() + splitWords.slice(1)
+  }
 </script>
 
-<h1 class="title">Category: {data.products[0].title}</h1>
+<h1 class="title">Category: {formatName(data.category)}</h1>
 
 <section class="flow">
   <ul class="auto-grid">

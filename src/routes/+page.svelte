@@ -3,7 +3,9 @@
 </script>
 
 <section class="flow" style="padding-block-end: var(--double-size);">
-  <h2 class="center" style="padding-block-end: var(--size);">Auto-grid ipsum dolor sit, amet consectetur adipisicing elit.</h2>
+  <h2 class="center" style="padding-block-end: var(--size);">
+    Auto-grid ipsum dolor sit, amet consectetur adipisicing elit.
+  </h2>
   <div class="auto-grid">
     <div class="bg-light block flow">
       <h3>Register</h3>
@@ -13,15 +15,16 @@
       </p>
       {#if data.session}
         <a href="/top-secret" class="animabutton">Secret Numbers</a>
-        {:else}
+      {:else}
         <a href="/register" class="animabutton">Register</a>
       {/if}
     </div>
     <div class="bg-light block flow">
       <h3>Subheading</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="/">Quibusdam est</a> iure itaque
-        esse? Doloribus, accusantium suscipit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="/"
+          >Quibusdam est</a
+        > iure itaque esse? Doloribus, accusantium suscipit.
       </p>
       <a href="/" class="animabutton">Lorem Ipsum</a>
     </div>
@@ -123,24 +126,25 @@
   <h2>Columns</h2>
   <div class="columns" style="--gap: 1.5em">
     <p>
-      Quos fugiat obcaecati nobis! Provident voluptate
-      eligendi rem inventore dolorem ad alias, sit harum pariatur! Iste voluptatem
-      incidunt corrupti laboriosam necessitatibus pariatur suscipit culpa fugit atque at
-      doloremque repellat reprehenderit fugiat ratione provident perspiciatis, ea odio quasi aut quos. Voluptates, nihil ratione.
+      Quos fugiat obcaecati nobis! Provident voluptate eligendi rem inventore dolorem ad
+      alias, sit harum pariatur! Iste voluptatem incidunt corrupti laboriosam
+      necessitatibus pariatur suscipit culpa fugit atque at doloremque repellat
+      reprehenderit fugiat ratione provident perspiciatis, ea odio quasi aut quos.
+      Voluptates, nihil ratione.
     </p>
     <p>
-      Quos fugiat obcaecati nobis! Provident voluptate
-      eligendi rem inventore dolorem ad alias, sit harum pariatur! Iste voluptatem
-      incidunt corrupti laboriosam necessitatibus pariatur suscipit culpa fugit atque at
-      doloremque repellat reprehenderit fugiat ratione <a href="/">provident perspiciatis</a>, ea odio
-      quasi aut quos. Voluptates, nihil ratione.
+      Quos fugiat obcaecati nobis! Provident voluptate eligendi rem inventore dolorem ad
+      alias, sit harum pariatur! Iste voluptatem incidunt corrupti laboriosam
+      necessitatibus pariatur suscipit culpa fugit atque at doloremque repellat
+      reprehenderit fugiat ratione <a href="/">provident perspiciatis</a>, ea odio quasi
+      aut quos. Voluptates, nihil ratione.
     </p>
     <p>
-      Quos fugiat obcaecati nobis! Provident voluptate
-      eligendi rem inventore dolorem ad alias, sit harum pariatur! Iste voluptatem
-      incidunt corrupti laboriosam necessitatibus pariatur suscipit culpa fugit atque at
-      doloremque repellat reprehenderit fugiat ratione provident perspiciatis, ea odio
-      quasi aut quos. Voluptates, nihil ratione.
+      Quos fugiat obcaecati nobis! Provident voluptate eligendi rem inventore dolorem ad
+      alias, sit harum pariatur! Iste voluptatem incidunt corrupti laboriosam
+      necessitatibus pariatur suscipit culpa fugit atque at doloremque repellat
+      reprehenderit fugiat ratione provident perspiciatis, ea odio quasi aut quos.
+      Voluptates, nihil ratione.
     </p>
   </div>
   <a href="/" class="button">Lorem Ipsum</a>

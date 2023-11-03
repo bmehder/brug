@@ -9,8 +9,6 @@
   let err = null
   let message = null
 
-  $: console.log({ err })
-
   const handleSignIn = async () => {
     err = null
 
