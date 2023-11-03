@@ -37,7 +37,7 @@
 <div class="wrapper">
   <Header {mobileThreshold} logo="<h1>Logo</h1>" />
 
-  <!-- <PageTransition key={$page.route.id}> -->
+  <PageTransition key={$page.route.id}>
   {#if $page.route.id === '/'}
     <HomeHero image="/abstract.jpg" />
   {/if}
@@ -45,7 +45,7 @@
   <main id="main-content" class="flow">
     <slot />
   </main>
-  <!-- </PageTransition> -->
+  </PageTransition>
 
   <Footer />
 </div>
