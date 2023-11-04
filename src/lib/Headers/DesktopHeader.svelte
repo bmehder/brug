@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores'
+  import HomeHero from '$lib/HomeHero.svelte'
   import menuItems from '$lib/Headers/menuItems'
 
   export let logo = 'Add Logo Prop!'
@@ -46,13 +47,16 @@
       </ul>
     </nav>
   </div>
+  {#if $page.route.id === '/'}
+    <HomeHero image="/abstract.jpg" />
+  {/if}
 </header>
 
 <style>
   header {
     background-color: var(--accent);
     /* Hack to prevent seeing a flash of Desktop nav */
-    max-height: 6em;
+    /* max-height: 6em; */
     /* overflow-y: hidden; */
   }
 

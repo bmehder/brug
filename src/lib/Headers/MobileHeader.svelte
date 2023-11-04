@@ -4,6 +4,7 @@
   import menuItems from '$lib/Headers/menuItems'
   import Hamburger from '$lib/icons/Hamburger.svelte'
   import Close from '$lib/icons/Close.svelte'
+  import HomeHero from '$lib/HomeHero.svelte'
 
   export let logo = 'Add Logo Prop!'
 
@@ -76,6 +77,9 @@
       </nav>
     {/if}
   </div>
+  {#if $page.route.id === '/'}
+    <HomeHero image="/abstract.jpg" />
+  {/if}
 </header>
 
 <style>

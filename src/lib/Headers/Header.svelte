@@ -20,6 +20,6 @@
   <DesktopHeader {logo} />
 {/if}
 
-{#if $page.route.id === '/'}
+<!-- {#if $page.route.id === '/'}
   <HomeHero image="/abstract.jpg" />
-{/if}
+{/if} -->
