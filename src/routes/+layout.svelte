@@ -6,7 +6,6 @@
   import Analytics from '$lib/Analytics.svelte'
   import Header from '$lib/Headers/Header.svelte'
   import PageTransition from '$lib/PageTransition.svelte'
-  import HomeHero from '$lib/HomeHero.svelte'
   import Footer from '$lib/Footers/Footer.svelte'
   import Popover from '$lib/Popover.svelte'
   import BackToTop from '$lib/BackToTop.svelte'
@@ -37,11 +36,6 @@
   <Header {mobileThreshold} logo="<h1>Logo</h1>" />
 
   <!-- <PageTransition key={$page.route.id}> -->
-  <!-- QUESTION: Move to Header? -->
-  <!-- {#if $page.route.id === '/'}
-    <HomeHero image="/abstract.jpg" />
-  {/if} -->
-
   <main id="main-content" class="flow">
     <slot />
   </main>
