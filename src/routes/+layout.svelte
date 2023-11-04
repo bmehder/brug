@@ -1,7 +1,6 @@
 <script>
   import { invalidate } from '$app/navigation'
   import { onMount } from 'svelte'
-  import { page } from '$app/stores'
   import '$lib/styles/app.css'
   import '$lib/styles/theme.css'
   import Analytics from '$lib/Analytics.svelte'
@@ -37,15 +36,16 @@
 <div class="wrapper">
   <Header {mobileThreshold} logo="<h1>Logo</h1>" />
 
-  <PageTransition key={$page.route.id}>
-  {#if $page.route.id === '/'}
+  <!-- <PageTransition key={$page.route.id}> -->
+  <!-- QUESTION: Move to Header? -->
+  <!-- {#if $page.route.id === '/'}
     <HomeHero image="/abstract.jpg" />
-  {/if}
+  {/if} -->
 
   <main id="main-content" class="flow">
     <slot />
   </main>
-  </PageTransition>
+  <!-- </PageTransition> -->
 
   <Footer />
 </div>

@@ -2,41 +2,37 @@
   import { tweened } from 'svelte/motion'
   import { observer } from '$lib/utils.js'
 
-  export let startingNumber = null
+  export let startingNumber = 0
   export let endingNumber = 0
-  export let placeholder = ''
+  export let beforeNumber = ''
+  export let afterNumber = ''
   export let tweenOptions = {
     duration: 2000,
-    easing: cubicOut,
+    easing: null,
   }
+  export let text = ''
 
-  const end = tweened(startingNumber ?? 0, tweenOptions)
+  const end = tweened(startingNumber, tweenOptions)
 
   const callbacks = {
     in: () => {
       end.set(endingNumber)
     },
     out: () => {
-      (startingNumber || placeholder) && end.set(startingNumber ?? 0)
+      end.set(startingNumber)
     },
   }
 </script>
 
-<div use:observer={callbacks} class="animacounter">
+<div class="animacounter" use:observer={callbacks}>
   <div class="animacounter__outer">
     <div class="animacounter__inner">
-      {#if $end === 0}
-        <div class="animacounter__inner-number">{placeholder || startingNumber}</div>
-      {:else}
-        <div class="animacounter__inner-number">{parseInt($end).toLocaleString()}</div>
-      {/if}
-      <div><slot /></div>
+      <div class="animacounter__number">
+        <span>{beforeNumber}</span>
+        <span>{parseInt($end).toLocaleString()}</span>
+        <span>{afterNumber}</span>
+      </div>
+      <div class="animacounter__text">{text}</div>
     </div>
   </div>
 </div>
-
-<style>
-  /* .countup {
-    padding: var(--size);
-  } */
-</style>
