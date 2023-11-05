@@ -15,6 +15,7 @@
 <div class="flow faq">
   <button
     class="{classNames} question"
+    class:isOpen
     on:click|preventDefault={handleClick}
   >
     <span>{question}</span>
@@ -29,7 +30,7 @@
 
 <style>
   .question {
-    all: inherit;
+    all: unset;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -38,9 +39,9 @@
     cursor: pointer;
   }
 
-  .question:is(:hover, :focus) {
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  .question:is(:focus), .isOpen {
+    background-color: var(--accent);
+    color: var(--light);
   }
 
   .answer {

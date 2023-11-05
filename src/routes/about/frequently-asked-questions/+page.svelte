@@ -1,4 +1,5 @@
 <script>
+  import './faqs.css'
   import faqs from './faqs'
   import Faq from '$lib/FAQ.svelte'
   import CaretDown from '$lib/icons/CaretDown.svelte'

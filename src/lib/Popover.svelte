@@ -29,37 +29,32 @@
   }
 
   const popover = (elem, ms) => {
-    function supportsPopover() {
-      return HTMLElement.prototype.hasOwnProperty('popover')
+    if (!HTMLElement.prototype.hasOwnProperty('popover')) return
+    
+    const popoverButton = elem.querySelector('[data-popover-button]')
+
+    const closePopover = () => {
+      elem.hidePopover()
+      goto(redirect)
+    }
+    const removeListener = () => popoverButton.removeEventListener('click', closePopover)
+
+    if (getCookie(cookieName)) {
+      removeListener()
+      return
     }
 
-    if (HTMLElement.prototype.hasOwnProperty('popover')) {
-      const popoverButton = elem.querySelector('[data-popover-button]')
+    setTimeout(() => {
+      elem.showPopover()
+      setCookie(cookieName, cookieValue, expirationDays)
+    }, ms)
 
-      const closePopover = () => {
-        elem.hidePopover()
-        goto(redirect)
-      }
-      const removeListener = () =>
-        popoverButton.removeEventListener('click', closePopover)
+    popoverButton.addEventListener('click', closePopover)
 
-      if (getCookie(cookieName)) {
+    return {
+      destroy() {
         removeListener()
-        return
-      }
-
-      setTimeout(() => {
-        elem.showPopover()
-        setCookie(cookieName, cookieValue, expirationDays)
-      }, ms)
-
-      popoverButton.addEventListener('click', closePopover)
-
-      return {
-        destroy() {
-          removeListener()
-        },
-      }
+      },
     }
   }
 </script>
