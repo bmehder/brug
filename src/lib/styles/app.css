@@ -31,6 +31,10 @@ img,
 iframe {
   display: block;
   width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-style: italic;
 }
 
 input,
