@@ -44,7 +44,7 @@
   <Footer />
 </div>
 
-<Popover
+<!-- <Popover
   delay={2000}
   cookieName="visited_within_48_hours"
   cookieValue="yes"
@@ -59,7 +59,7 @@
     consequatur cum aperiam id earum aliquid non autem molestiae. Corporis non nulla natus
     vitae accusantium recusandae, tenetur repellendus commodi ducimus? Minus.
   </p>
-</Popover>
+</Popover> -->
 
 <BackToTop --bg-color="black" --color="var(--light)" threshold="500" />
 
