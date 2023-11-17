@@ -46,36 +46,38 @@
 
 <h1 class="title">Login</h1>
 
-{#if err}
-  <div class="h3">{err.message}</div>
-{/if}
-
-{#if message}
-  <p>{message}</p>
-{/if}
-
-{#if data.session}
-  <div class="h3">You are logged in as {data.session.user.email}</div>
-  <button on:click={handleSignOut}>Sign out</button>
-{:else}
-  <form on:submit={handleSignIn}>
-    <div class="flow">
-      <div class="frm-group half-flow">
-        <label for="email">Email</label>
-        <input name="email" id="email" bind:value={email} />
+<section class="flow">
+  {#if err}
+    <div class="h3">{err.message}</div>
+  {/if}
+  
+  {#if message}
+    <p>{message}</p>
+  {/if}
+  
+  {#if data.session}
+    <div class="h3">You are logged in as {data.session.user.email}</div>
+    <div><button on:click={handleSignOut}>Sign out</button></div>
+  {:else}
+    <form on:submit={handleSignIn}>
+      <div class="flow">
+        <div class="frm-group half-flow">
+          <label for="email">Email</label>
+          <input name="email" id="email" bind:value={email} />
+        </div>
+        <div class="frm-group half-flow">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" bind:value={password} />
+        </div>
+        <button type="submit">Sign in</button>
       </div>
-      <div class="frm-group half-flow">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" bind:value={password} />
-      </div>
-      <button type="submit">Sign in</button>
-    </div>
-  </form>
-{/if}
-
-{#if !data.session && email}
-  <button on:click={handlePasswordReset}>Forgot Password?</button>
-{/if}
+    </form>
+  {/if}
+  
+  {#if !data.session && email}
+    <button on:click={handlePasswordReset}>Forgot Password?</button>
+  {/if}
+</section>
 
 <style>
   .frm-group {

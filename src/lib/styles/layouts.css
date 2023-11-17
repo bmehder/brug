@@ -1,0 +1,120 @@
+/* prettier-ignore */
+.content-grid {
+  --padding: 2rem;
+  --content-max-width: 64em;
+  --breakout-max-width: 72em;
+  
+  /* Derived Values: MC Hammer - U Can't touch this! */
+  --padding-inline: var(--padding);
+  --full-width: minmax(var(--padding-inline), 1fr);
+  --breakout-size: minmax(0, calc((var(--breakout-max-width) - var(--content-max-width)) / 2));
+  --content-size: min(100% - (var(--padding-inline) * 2), var(--content-max-width));
+  
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+      var(--full-width)
+      [breakout-start]
+        var(--breakout-size)
+        [content-start]
+          var(--content-size)
+        [content-end]
+        var(--breakout-size) 
+      [breakout-end]
+      var(--full-width)
+    [full-width-end];
+  align-items: start;
+    
+  & > :not(.breakout, .full-width),
+  .full-width > :not(.breakout, .full-width){
+    grid-column: content;
+  }
+  
+  & > .breakout {
+    grid-column: breakout;
+    /* padding: var(--padding); */
+  }
+  
+  & > .full-width {
+    grid-column: full-width;
+    
+    display: grid;
+    grid-template-columns: inherit;
+    padding-block: var(--padding);
+  }
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow);
+}
+
+.half-flow > * + * {
+  margin-block-start: var(--half-size);
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min, 16em), 1fr));
+  gap: var(--gap, var(--double-size));
+}
+
+@media (min-width: 49em) {
+  .auto-grid {
+    gap: var(--double-size);
+  }
+}
+
+.columns {
+  --gap: var(--double-size);
+  display: grid;
+  gap: var(--gap);
+}
+
+@media (min-width: 49em) {
+  .columns {
+    grid-auto-flow: column;
+    gap: var(--double-size);
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: var(--double-size);
+}
+
+.flex > * {
+  flex: 1;
+}
+
+.align-center {
+  align-items: center;
+}
+
+@media (min-width: 49em) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 49em) {
+  .swap :nth-child(1) {
+    order: 2;
+  }
+  .swap :nth-child(2) {
+    order: 1;
+  }
+}
+
+@media (min-width: 49em) {
+  .float-right {
+    float: right;
+    display: inline;
+    width: auto;
+    max-width: var(--max);
+    margin-block-start: calc(var(--size) + 8px);
+    margin-block-end: var(--size);
+    margin-inline-start: var(--double-size);
+    margin-inline-end: 0;
+  }
+}

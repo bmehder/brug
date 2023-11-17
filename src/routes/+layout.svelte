@@ -1,47 +1,54 @@
 <script>
-  import { invalidate } from '$app/navigation'
-  import { onMount } from 'svelte'
-  import '$lib/styles/app.css'
-  import '$lib/styles/theme.css'
-  import Analytics from '$lib/Analytics.svelte'
-  import Header from '$lib/Headers/Header.svelte'
-  import PageTransition from '$lib/PageTransition.svelte'
-  import Footer from '$lib/Footers/Footer.svelte'
-  import Popover from '$lib/Popover.svelte'
-  import BackToTop from '$lib/BackToTop.svelte'
+	import { invalidate } from '$app/navigation'
+	import { onMount } from 'svelte'
+	import { page } from '$app/stores'
+	import '$lib/styles/app.css'
+	import '$lib/styles/skins.css'
+	import '$lib/styles/layouts.css'
+	import Analytics from '$lib/Analytics.svelte'
+	import Header from '$lib/Headers/Header.svelte'
+	import HomeHero from '$lib/HomeHero.svelte'
+	import PageTransition from '$lib/PageTransition.svelte'
+	import Footer from '$lib/Footers/Footer.svelte'
+	import Popover from '$lib/Popover.svelte'
+	import BackToTop from '$lib/BackToTop.svelte'
 
-  const mobileThreshold = 1120
+	const mobileThreshold = 1120
 
-  export let data
+	export let data
 
-  let { supabase, session } = data
-  $: ({ supabase, session } = data)
+	let { supabase, session } = data
+	$: ({ supabase, session } = data)
 
-  onMount(() => {
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, _session) => {
-      if (_session?.expires_at !== session?.expires_at) {
-        invalidate('supabase:auth')
-      }
-    })
+	onMount(() => {
+		const {
+			data: { subscription },
+		} = supabase.auth.onAuthStateChange((event, _session) => {
+			if (_session?.expires_at !== session?.expires_at) {
+				invalidate('supabase:auth')
+			}
+		})
 
-    return () => subscription.unsubscribe()
-  })
+		return () => subscription.unsubscribe()
+	})
 </script>
 
 <!-- <Analytics /> -->
 
 <div class="wrapper">
-  <Header {mobileThreshold} logo="<h1>Logo</h1>" />
+	<Header {mobileThreshold} logo="<h1>Logo</h1>" />
 
-  <!-- <PageTransition key={$page.route.id}> -->
-  <main id="main-content" class="flow">
-    <slot />
-  </main>
-  <!-- </PageTransition> -->
+	<!-- <PageTransition key={$page.route.id}> -->
+	{#if $page.route.id === '/'}
+		<HomeHero image="/abstract.jpg" />
+	{/if}
 
-  <Footer />
+	<main id="main-content" class="flow content-grid">
+		<slot />
+	</main>
+	<!-- </PageTransition> -->
+
+	<Footer />
 </div>
 
 <!-- <Popover
@@ -64,17 +71,15 @@
 <BackToTop --bg-color="black" --color="var(--light)" threshold="500" />
 
 <style>
-  .wrapper {
-    min-height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-  }
+	.wrapper {
+		min-height: 100dvh;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		align-items: start;
+	}
 
-  main {
-    width: var(--width);
-    max-width: var(--max-width);
-    padding-block: var(--double-size);
-    margin-inline: auto;
-    line-height: 1.5;
-  }
+	main {
+		margin-block: var(--double-size);
+		line-height: 1.5;
+	}
 </style>

@@ -1,14 +1,13 @@
 <script>
   import { page } from '$app/stores'
-  import HomeHero from '$lib/HomeHero.svelte'
   import menuItems from '$lib/Headers/menuItems'
 
   export let logo = 'Add Logo Prop!'
 </script>
 
-<header>
+<header class="content-grid">
   <a class="skip-nav-link" href="#main-content">skip navigation</a>
-  <div class="inner">
+  <div class="flex align-center">
     <div class="logo">
       <a href="/">{@html logo}</a>
     </div>
@@ -47,17 +46,12 @@
       </ul>
     </nav>
   </div>
-  {#if $page.route.id === '/'}
-    <HomeHero image="/abstract.jpg" />
-  {/if}
 </header>
 
 <style>
   header {
+    padding-block: var(--size);
     background-color: var(--accent);
-    /* Hack to prevent seeing a flash of Desktop nav */
-    /* max-height: 6em; */
-    /* overflow-y: hidden; */
   }
 
   .skip-nav-link {
@@ -68,20 +62,12 @@
     padding-inline: var(--size);
     text-decoration: underline;
     text-underline-offset: calc(var(--half-size) / 2);
-    transform: translateY(-120%);
+    transform: translateY(-180%);
   }
 
   .skip-nav-link:focus {
     transition: transform 200ms ease-in;
     transform: translateY(0);
-  }
-
-  .inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--size);
   }
 
   .logo {
@@ -90,6 +76,7 @@
 
   ul {
     display: flex;
+    justify-content: end;
     gap: var(--size);
   }
 
