@@ -10,7 +10,7 @@
 		},
 		out: x => {
 			x.target.style.opacity = 0
-			x.target.style.translate = '0 0'
+			x.target.style.translate = '0 calc(var(--double-size) * -0.5)'
 		},
 	}
 
@@ -85,16 +85,18 @@
 		display: flex;
 		justify-content: flex-end;
 		position: relative;
-		margin: 5rem 0;
 		margin: clamp(2rem, 2vh, 5rem) 0;
 		margin: 5rem 0;
 		width: 100%;
 		align-items: center;
 		position: relative;
 		opacity: 0;
-    /* translate: 0 calc(var(--size) * -1); */
-    translate: 0 0;
+    translate: 0 calc(var(--size) * -1);
 		transition: opacity 400ms ease-out, translate 400ms ease-out;
+	}
+	
+  .timeline__item:nth-of-type(1) {
+		margin-block-start: 8rem;
 	}
 
 	.timeline__text,
