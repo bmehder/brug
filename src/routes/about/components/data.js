@@ -38,51 +38,50 @@ export const stats = [
 
 export const timeline = [
 	{
-		title: 'Occasion 1',
-		date: '12 Dec. 2023',
+		title: 'French Grand Prix',
+		date: '1901',
 		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+			'The first use of the words grand prix to describe a race, the French Grand Prix at Le Mans.',
 	},
 	{
-		title: 'Occasion 2',
-		date: '13 Dec. 2023',
+		title: 'Formation of FIA',
+		date: '1904',
 		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+			"The formation of the Fédération Internationale de l'Automobile (FIA), a non-profit association established to represent the interests of motoring organisations and motor car users.",
 	},
 	{
-		title: 'Occasion 3',
-		date: '14 Dec. 2023',
+		title: 'Qualifying',
+		date: '1933',
 		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+			'Starting positions on the grid were decided by qualifying times for the first time at the Monaco Grand Prix.',
 	},
 	{
-		title: 'Occasion 4',
-		date: '15 Dec. 2023',
+		title: "World Drivers' Championship Established",
+		date: '1935-39',
 		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+			"A number of meetings were held with a view to establishing a world drivers' championship; these were shelved at the outbreak of World War Two.",
 	},
 	{
-		title: 'Occasion 5',
-		date: '16 Dec. 2023',
+		title: "World Drivers' Championship Formalised",
+		date: '1946',
 		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+			"World drivers' championship formalised. It was to take three more years before the first championship race, although there were races under F1 regulations from this year.",
 	},
 	{
-		title: 'Occasion 6',
-		date: '17 Dec. 2023',
+		title: 'British Grand Prix',
+		date: '1950',
 		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+			"The launch of the drivers' world championship with the first race at the British Grand Prix at Silverstone on May 13. Although there were 22 non-championship races that year, only six counted towards the title. The first official F1 race, a non-championship event at Pau, was held the previous month.",
 	},
 	{
-		title: 'Occasion 7',
-		date: '18 Dec. 2023',
+		title: 'Formula Two Regulations',
+		date: '1952',
 		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+			"The drivers' championship was run to Formula Two regulations because of concerns about the number of F1 cars available. This continued through the 1953 season as well.",
 	},
 	{
-		title: 'Occasion 8',
-		date: '19 Dec. 2023',
-		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, explicabo.',
+		title: 'Argentina Grand Prix',
+		date: '1953',
+		content: 'Argentina hosted the first championship grand prix outside Europe.',
 	},
 ]
