@@ -84,4 +84,9 @@ export const timeline = [
 		date: '1953',
 		content: 'Argentina hosted the first championship grand prix outside Europe.',
 	},
+	{
+		title: 'Las Vegas Grand Prix',
+		date: '2023',
+		content: "A welded-closed drain cover is sucked out of the cement by a Ferrari due to the suction caused by ground-effect. This delayed FP1 until 1:51 AM. At 2 AM, organisers told the fans they had to leave, and FP1 continued with empty stands until 4 AM.",
+	},
 ]
