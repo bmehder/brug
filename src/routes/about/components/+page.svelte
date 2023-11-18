@@ -1,17 +1,18 @@
 <script>
 	import '$lib/styles/animacounter.css'
-	import data from './data'
+	import { stats, timeline } from './data'
 
 	import Animacounter from '$lib/Animacounter.svelte'
 	import Share from '$lib/Share.svelte'
 	import Switch from '$lib/Switch.svelte'
+	import Timeline from '$lib/Timeline.svelte'
 </script>
 
 <h1 class="title">UI Components</h1>
 
 <section>
 	<div class="auto-grid">
-		{#each data as item}
+		{#each stats as item}
 			<Animacounter {...item} />
 		{/each}
 	</div>
@@ -22,7 +23,7 @@
 		<Switch />
 	</div>
 
-	<Share
+	<!-- <Share
 		icons={[
 			{
 				color: '#ff0000',
@@ -46,5 +47,9 @@
 			},
 		]}
 		--size="200px"
-	/>
+	/> -->
+</section>
+
+<section>
+	<Timeline {timeline} />
 </section>

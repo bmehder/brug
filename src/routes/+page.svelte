@@ -1,13 +1,17 @@
 <script>
+	import HomeHero from '$lib/HomeHero.svelte'
+
 	export let data
 </script>
+
+<HomeHero image="/abstract.jpg" />
 
 <section class="flow" style="padding-block-end: var(--double-size);">
 	<h2 class="center" style="padding-block-end: var(--size);">
 		Auto-grid ipsum dolor sit, amet consectetur adipisicing elit.
 	</h2>
-	<div class="auto-grid cards">
-		<div class="bg-light flow">
+	<div class="auto-grid">
+		<div class="light flow padding">
 			<h3>Register</h3>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est iure itaque
@@ -19,7 +23,7 @@
 				<a href="/register" class="animabutton">Register</a>
 			{/if}
 		</div>
-		<div class="bg-light flow">
+		<div class="light flow padding">
 			<h3>Subheading</h3>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="/"
@@ -28,7 +32,7 @@
 			</p>
 			<a href="/" class="animabutton">Lorem Ipsum</a>
 		</div>
-		<div class="bg-light flow">
+		<div class="light flow padding">
 			<h3>Subheading</h3>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam est iure itaque
@@ -38,7 +42,7 @@
 		</div>
 	</div>
 </section>
-<section class="full-width bg-accent">
+<section class="full-width accent">
 	<div class="content flow">
 		<h2>Heading</h2>
 		<p>
@@ -81,7 +85,10 @@
 		<p><a href="/" class="button">Lorem Ipsum</a></p>
 	</div>
 </section>
-<section class="breakout flow bg-light" style="padding: var(--double-size);">
+<section
+	class="breakout flow light"
+	style="padding: var(--double-size);"
+>
 	<h2>Breakout</h2>
 	<p>
 		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id illo saepe ratione autem,
@@ -96,7 +103,7 @@
 		Voluptates, nihil ratione.
 	</p>
 </section>
-<section class="flow full-width bg-light">
+<section class="flow full-width light">
 	<h2>Columns</h2>
 	<div class="columns" style="--gap: 1.5em">
 		<p>
@@ -162,9 +169,3 @@
 	</p>
 	<a href="/" class="button">Lorem Ipsum</a>
 </section>
-
-<style>
-	.cards > div {
-		padding: var(--size);
-	}
-</style>

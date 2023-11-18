@@ -39,11 +39,11 @@
 	<Header {mobileThreshold} logo="<h1>Logo</h1>" />
 
 	<!-- <PageTransition key={$page.route.id}> -->
-	{#if $page.route.id === '/'}
-		<HomeHero image="/abstract.jpg" />
-	{/if}
-
 	<main id="main-content" class="flow content-grid">
+		<!-- {#if $page.route.id === '/'}
+			<HomeHero image="/abstract.jpg" />
+		{/if} -->
+
 		<slot />
 	</main>
 	<!-- </PageTransition> -->
@@ -68,7 +68,7 @@
   </p>
 </Popover> -->
 
-<BackToTop --bg-color="black" --color="var(--light)" threshold="500" />
+<BackToTop --color="black" --bg-color="var(--light)" threshold="500" />
 
 <style>
 	.wrapper {

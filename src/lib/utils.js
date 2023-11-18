@@ -1,9 +1,10 @@
-export const observer = (node, callbacks) => {
+export const observer = (node, params) => {
   const options = { threshold: 0.9 }
 
-  const callback = x => (x.isIntersecting ? callbacks.in() : callbacks.out())
+  const callback = x =>
+		x.isIntersecting ? params.callbacks.in(x) : params.callbacks.out(x)
 
-  const observer = new IntersectionObserver(xs => xs.forEach(callback), options)
+  const observer = new IntersectionObserver(xs => xs.forEach(callback), params.options)
 
   observer.observe(node)
 

@@ -5,7 +5,7 @@
 	const currentYear = new Date().getFullYear()
 </script>
 
-<footer class="content-grid bg-light">
+<footer class="content-grid light">
 	<div class="full-width flow">
 		<p>
 			Copyright © 2021-{currentYear} Tom Foolery. All shenanigans reserved.

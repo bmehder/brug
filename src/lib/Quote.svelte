@@ -2,7 +2,7 @@
   export let quote
 </script>
 
-<figure class="bg-light block flow shadow">
+<figure class="light padding flow shadow">
   <blockquote>
     <q>
       {quote.quote}

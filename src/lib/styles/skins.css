@@ -128,39 +128,39 @@ textarea {
   box-shadow: var(--half-size) var(--size) var(--size) rgba(0, 0, 0, 0.24);
 }
 
-.bg-light {
+.light {
   background-color: var(--light);
   color: var(--dark);
 }
 
-.bg-accent {
+.accent {
   background-color: var(--accent);
   color: var(--light);
 }
 
-.bg-accent a {
+.accent a {
   color: var(--light);
   text-decoration: underline;
   text-underline-offset: 6px;
 }
 
-.bg-accent a:hover {
+.accent a:hover {
   text-decoration: none;
 }
 
-.bg-accent :is(button, .button) {
+.accent :is(button, .button) {
   background-color: var(--light);
   color: var(--accent);
   text-decoration: none;
 }
 
-.bg-accent :is(button:hover, button:focus, .button:hover, .button:focus) {
+.accent :is(button:hover, button:focus, .button:hover, .button:focus) {
   background-color: transparent;
   color: var(--light);
   outline: 0.25em solid var(--light);
 }
 
-.bg-accent :is(h1, h2, h3, .h1, .h2, .h3) {
+.accent :is(h1, h2, h3, .h1, .h2, .h3) {
   color: var(--light);
 }
 

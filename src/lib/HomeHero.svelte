@@ -11,8 +11,9 @@
 </div>
 
 <style>
-	.hero {
-		padding-block: calc(var(--size) * 5);
+	.hero.hero {
+		margin-block-start: calc(var(--double-size) * -1);
+		padding-block: calc(var(--double-size) * 3);
 		background-position: center;
 		background-size: cover;
 		color: var(--light);

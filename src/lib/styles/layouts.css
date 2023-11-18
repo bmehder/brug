@@ -32,7 +32,7 @@
   
   & > .breakout {
     grid-column: breakout;
-    /* padding: var(--padding); */
+    padding: var(--padding);
   }
   
   & > .full-width {

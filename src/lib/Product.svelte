@@ -4,7 +4,7 @@
   const { id, title, description, thumbnail } = product
 </script>
 
-<li class="flow bg-light shadow">
+<li class="flow light shadow">
   <a href="/products/{id}"><img class="square" src="{thumbnail}" alt="{title}"></a>
   <div class="half-flow">
     <h2 class="balance"><a href="/products/{id}">{title}</a></h2>
