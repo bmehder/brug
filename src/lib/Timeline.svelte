@@ -10,7 +10,7 @@
 		},
 		out: x => {
 			x.target.style.opacity = 0
-			x.target.style.translate = '0 calc(var(--double-size) * -1)'
+			x.target.style.translate = '0 0'
 		},
 	}
 
@@ -92,7 +92,8 @@
 		align-items: center;
 		position: relative;
 		opacity: 0;
-    translate: 0 calc(var(--size) * -1);
+    /* translate: 0 calc(var(--size) * -1); */
+    translate: 0 0;
 		transition: opacity 400ms ease-out, translate 400ms ease-out;
 	}
 

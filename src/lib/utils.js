@@ -1,5 +1,4 @@
 export const observer = (node, params) => {
-  const options = { threshold: 0.9 }
 
   const callback = x =>
 		x.isIntersecting ? params.callbacks.in(x) : params.callbacks.out(x)
