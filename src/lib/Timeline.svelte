@@ -8,10 +8,7 @@
 			x.target.style.opacity = 1
 			x.target.style.translate = '0 calc(var(--double-size) * -1.5)'
 		},
-		out: x => {
-			x.target.style.opacity = 0
-			x.target.style.translate = '0 calc(var(--double-size) * -0.5)'
-		},
+		out: _ => {},
 	}
 
 	const options = {
