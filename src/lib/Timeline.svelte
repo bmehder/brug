@@ -111,9 +111,19 @@
 			flex-direction: row-reverse;
 		}
 		
+		.item:nth-child(odd) .text {
+			padding-inline-start: calc(var(--double-size) * 2);
+			padding-inline-end: calc(var(--double-size) * 3);
+		}
+		
+		.item:nth-child(even) .text {
+			padding-inline-start: calc(var(--double-size) * 3);
+			padding-inline-end: calc(var(--double-size) * 2);
+			text-align: right;
+		}
+		
 		.text {
 			width: 50%;
-			padding-inline: calc(var(--double-size) * 2);
 		}
 		
 		.circle {
