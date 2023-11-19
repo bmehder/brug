@@ -56,12 +56,12 @@
 
   .skip-nav-link {
     position: absolute;
-    left: var(--half-size);
+    left: var(--size-0-5);
     background-color: black;
-    padding-block: var(--half-size);
+    padding-block: var(--size-0-5);
     padding-inline: var(--size);
     text-decoration: underline;
-    text-underline-offset: calc(var(--half-size) / 2);
+    text-underline-offset: calc(var(--size-0-5) / 2);
     transform: translateY(-180%);
   }
 
@@ -99,7 +99,7 @@
 
   a {
     color: var(--light);
-    text-underline-offset: var(--half-size);
+    text-underline-offset: var(--size-0-5);
     text-decoration-thickness: calc(var(--size) / 12);
   }
 

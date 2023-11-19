@@ -75,11 +75,11 @@
     width: min(32em, 80%);
     display: grid;
     margin: auto;
-    padding: var(--double-size);
+    padding: var(--size-2);
     background-color: var(--background, black);
     color: var(--color, white);
     line-height: 1.5;
-    border-radius: calc(var(--size) / 3);
+    border-radius: var(--size-3);
     animation-delay: 400ms;
     animation: slideDown 400ms;
   }

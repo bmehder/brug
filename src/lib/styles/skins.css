@@ -2,7 +2,7 @@
 :root {
   color-scheme: dark light;
   --font-size: 18px;
-  --h1-font-size: calc(var(--double-size) - 0.5rem);
+  --h1-font-size: calc(var(--size-2) - 0.5rem);
   --h2-font-size: calc(var(--size) + 0.25rem);
   --h3-font-size: calc(var(--size) - 0.25rem);
   --heading-line-height: 1.25;
@@ -25,6 +25,22 @@ body {
   font-size: var(--font-size);
 }
 
+h1, .h1, h2, .h2, h3, .h3 {
+  line-height: 1.25;
+}
+
+h1, .h1 {
+  font-size: var(--size-2);
+}
+
+h2, .h2 {
+  font-size: calc(var(--size) * 1.5);
+}
+
+h3, .h3 {
+  font-size: var(--size);
+}
+
 /* Links and Buttons */
 a {
   color: var(--accent);
@@ -39,11 +55,11 @@ a:hover {
 button,
 .button {
   display: inline-flex;
-  gap: var(--half-size);
+  gap: var(--size-0-5);
   justify-content: center;
   align-items: center;
   padding-block: calc(var(--size) / 1.5);
-  padding-inline: calc(var(--double-size));
+  padding-inline: calc(var(--size-2));
   background-color: var(--accent);
   color: var(--light);
   text-transform: uppercase;
@@ -115,7 +131,7 @@ label {
 
 input,
 textarea {
-  padding: var(--half-size);
+  padding: var(--size-0-5);
 }
 
 /* Utilities */
@@ -125,7 +141,7 @@ textarea {
 }
 
 .shadow {
-  box-shadow: var(--half-size) var(--size) var(--size) rgba(0, 0, 0, 0.24);
+  box-shadow: var(--size-0-5) var(--size) var(--size) rgba(0, 0, 0, 0.24);
 }
 
 .light {

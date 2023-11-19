@@ -46,7 +46,7 @@
 
 <h1 class="title">Login</h1>
 
-<section class="flow">
+<section>
   {#if err}
     <div class="h3">{err.message}</div>
   {/if}
@@ -61,13 +61,13 @@
   {:else}
     <form on:submit={handleSignIn}>
       <div class="flow">
-        <div class="frm-group half-flow">
+        <div class="grid half-flow">
           <label for="email">Email</label>
-          <input name="email" id="email" bind:value={email} />
+          <input name="email" id="email" bind:value={email} autocomplete="username" />
         </div>
-        <div class="frm-group half-flow">
+        <div class="grid half-flow">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" bind:value={password} />
+          <input type="password" name="password" id="password" bind:value={password} autocomplete="current-password" />
         </div>
         <button type="submit">Sign in</button>
       </div>
@@ -78,9 +78,3 @@
     <button on:click={handlePasswordReset}>Forgot Password?</button>
   {/if}
 </section>
-
-<style>
-  .frm-group {
-    display: grid;
-  }
-</style>

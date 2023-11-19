@@ -23,6 +23,6 @@
 
 <style>
 	div {
-		padding-block-start: var(--double-size);
+		padding-block-start: var(--size-2);
 	}
 </style>

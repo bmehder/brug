@@ -2,7 +2,7 @@
 
 <style>
   svg {
-    width: var(--double-size);
-    height: var(--double-size);
+    width: var(--size-2);
+    height: var(--size-2);
   }
 </style>

@@ -178,7 +178,7 @@
 
   div {
     display: grid;
-    gap: calc(var(--size) / 4);
+    gap: calc(var(--size-0-5) / 2);
   }
 
   span {
@@ -187,7 +187,7 @@
 
   .request-evaluation {
     display: flex;
-    gap: var(--half-size);
+    gap: var(--size-0-5);
   }
 
   .request-evaluation input {

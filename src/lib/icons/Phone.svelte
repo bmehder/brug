@@ -2,8 +2,8 @@
 
 <style>
   svg {
-    width: calc(var(--half-size) * 1.5);
-    height: calc(var(--half-size) * 1.5);
+    width: calc(var(--size-0-5) * 1.5);
+    height: calc(var(--size-0-5) * 1.5);
     order: unset !important;
   }
 </style>

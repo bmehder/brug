@@ -24,15 +24,9 @@
 {/if}
 
 <form on:submit={updatePassword}>
-  <div class="frm-group half-flow">
+  <div class="grid half-flow">
     <label for="password">Choose new password</label>
     <input type="password" name="password" id="password" bind:value={newPassword}>
     <button>Change Password</button>
   </div>
 </form>
-
-<style>
-  .frm-group {
-    display: grid;
-  }
-</style>

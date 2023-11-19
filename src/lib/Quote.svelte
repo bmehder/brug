@@ -16,6 +16,6 @@
 
 <style>
   figure {
-    border-radius: var(--half-size);
+    border-radius: var(--size-0-5);
   }
 </style>

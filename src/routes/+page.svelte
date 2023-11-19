@@ -6,7 +6,7 @@
 
 <HomeHero image="/abstract.jpg" />
 
-<section class="flow" style="padding-block-end: var(--double-size);">
+<section class="flow" style="padding-block-end: var(--size-2);">
 	<h2 class="center" style="padding-block-end: var(--size);">
 		Auto-grid ipsum dolor sit, amet consectetur adipisicing elit.
 	</h2>
@@ -85,22 +85,40 @@
 		<p><a href="/" class="button">Lorem Ipsum</a></p>
 	</div>
 </section>
-<section
-	class="breakout flow light"
-	style="padding: var(--double-size);"
->
-	<h2>Breakout</h2>
+<section>
+	<p>
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, labore distinctio.
+		Ipsum earum, rerum dignissimos laudantium, eaque consequuntur impedit quia officiis
+		atque facilis similique praesentium perspiciatis eum dolorem ex culpa tempore,
+		voluptatem repellendus beatae. Id, nisi omnis dolores deleniti reprehenderit
+		exercitationem esse sunt repudiandae ipsum, aliquam minus fugit accusamus ab modi
+		harum in sit, rerum necessitatibus dolor sequi suscipit nostrum. Unde nihil corporis
+		laudantium quod aliquid dolore eum quas, obcaecati quibusdam maxime magnam voluptatem
+		quaerat fugiat, autem eveniet. Quidem, aperiam iure accusantium expedita tempora
+		perspiciatis. Sunt earum consectetur autem, deserunt molestiae illo facilis, similique
+		iusto nam, nisi suscipit ex commodi?
+	</p>
+</section>
+<section class="breakout flow italic light">
 	<p>
 		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id illo saepe ratione autem,
 		eos laboriosam quis maxime fugiat tenetur nemo quidem veniam veritatis, explicabo
 		facere vero dolores harum atque officiis a suscipit facilis consequatur, amet quia!
-		Accusamus possimus illum assumenda iste esse autem sit. Fugit est, aliquam, possimus
-		error iste exercitationem tempora omnis similique provident reprehenderit incidunt
-		corrupti. Quos fugiat obcaecati nobis! Provident voluptate eligendi rem inventore
-		dolorem ad alias, sit harum pariatur! Iste voluptatem incidunt corrupti laboriosam
-		necessitatibus pariatur suscipit culpa fugit atque at doloremque repellat
-		reprehenderit fugiat ratione provident perspiciatis, ea odio quasi aut quos.
-		Voluptates, nihil ratione.
+		Accusamus possimus illum assumenda iste esse autem sit.
+	</p>
+</section>
+<section>
+	<p>
+		Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, labore distinctio.
+		Ipsum earum, rerum dignissimos laudantium, eaque consequuntur impedit quia officiis
+		atque facilis similique praesentium perspiciatis eum dolorem ex culpa tempore,
+		voluptatem repellendus beatae. Id, nisi omnis dolores deleniti reprehenderit
+		exercitationem esse sunt repudiandae ipsum, aliquam minus fugit accusamus ab modi
+		harum in sit, rerum necessitatibus dolor sequi suscipit nostrum. Unde nihil corporis
+		laudantium quod aliquid dolore eum quas, obcaecati quibusdam maxime magnam voluptatem
+		quaerat fugiat, autem eveniet. Quidem, aperiam iure accusantium expedita tempora
+		perspiciatis. Sunt earum consectetur autem, deserunt molestiae illo facilis, similique
+		iusto nam, nisi suscipit ex commodi?
 	</p>
 </section>
 <section class="flow full-width light">

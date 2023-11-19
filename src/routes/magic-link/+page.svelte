@@ -34,16 +34,10 @@ const signInWithEmail = async () => {
 
 <form on:submit={signInWithEmail}>
   <div class="flow">
-    <div class="frm-group half-flow">
+    <div class="grid half-flow">
       <label for="email">Enter email</label>
       <input type="text" name="email" id="email" bind:value={email} />
     </div>
     <button>Submit</button>
   </div>
 </form>
-
-<style>
-  .frm-group {
-    display: grid;
-  }
-</style>

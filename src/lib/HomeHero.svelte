@@ -12,8 +12,8 @@
 
 <style>
 	.hero.hero {
-		margin-block-start: calc(var(--double-size) * -1);
-		padding-block: calc(var(--double-size) * 3);
+		margin-block-start: calc(var(--size-2) * -1);
+		padding-block: var(--size-6);
 		background-position: center;
 		background-size: cover;
 		color: var(--light);
@@ -25,16 +25,16 @@
 	}
 	.h2 {
 		color: var(--light);
-		font-size: var(--triple-size);
+		font-size: var(--size-3);
 	}
 	.h3 {
 		color: var(--light);
-		font-size: var(--double-size);
+		font-size: var(--size-2);
     line-height: 1.6;
 	}
 	.button {
 		display: inline-block;
-		margin-block-start: var(--half-size);
+		margin-block-start: var(--size-0-5);
 		font-size: calc(var(--size) - 0.25rem);
 		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.24);
 	}

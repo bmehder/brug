@@ -6,7 +6,7 @@
 	const callbacks = {
 		in: x => {
 			x.target.style.opacity = 1
-			x.target.style.translate = '0 calc(var(--double-size) * -1.5)'
+			x.target.style.translate = '0 calc(var(--size-2) * -1.5)'
 		},
 		out: x => x,
 	}
@@ -18,7 +18,7 @@
 
 <section class="timeline">
 	<div class="center half-flow">
-		<h2>Timeline</h2>
+		<h2 class="h1">Timeline</h2>
 		<p class="balance">
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, reiciendis.
 			Eligendi cum sit numquam?
@@ -26,12 +26,12 @@
 	</div>
 
 	<div class="content">
-		{#each timeline as item}
+		{#each timeline as { title, content, date }}
 			<div class="item" use:observer={{ callbacks, options }}>
-				<div class="text">
-					<h3 class="balance">{item.title}</h3>
-					<p>{item.content}</p>
-					<span class="circle">{item.date}</span>
+				<div class="text half-flow">
+					<h3 class="balance">{title}</h3>
+					<p>{content}</p>
+					<span class="circle">{date}</span>
 				</div>
 			</div>
 		{/each}
@@ -39,15 +39,6 @@
 </section>
 
 <style>
-	h2 {
-		font-size: var(--double-size);
-	}
-
-	h3 {
-		padding: 1.25rem 0;
-		font-size: var(--size);
-	}
-
 	.timeline {
 		position: relative;
 		padding-block: var(--size);
@@ -57,7 +48,7 @@
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		margin-block-start: var(--double-size);
+		margin-block-start: var(--size-2);
 	}
 
 	.content::after {
@@ -73,22 +64,22 @@
 	.item {
 		display: flex;
 		position: relative;
-		margin-block: var(--double-size);
+		margin-block: var(--size-2);
 		opacity: 0;
 		transition: opacity 400ms ease-out, translate 400ms ease-out;
 	}
 
 	.item:nth-of-type(1) {
-		margin-block-start: calc(var(--double-size) * 2);
+		margin-block-start: var(--size-5);
 	}
 
 	.text {
-		padding-inline-start: calc(var(--double-size) * 2);
+		padding-inline-start: var(--size-4);
 	}
 
 	.circle {
 		width: 100%;
-		max-width: calc(var(--size) * 3);
+		max-width: var(--size-3);
 		position: absolute;
 		top: 50%;
 		left: var(--size);
@@ -110,24 +101,24 @@
 		.item:nth-child(even) {
 			flex-direction: row-reverse;
 		}
-		
+
 		.item:nth-child(odd) .text {
-			padding-inline-start: calc(var(--double-size) * 2);
-			padding-inline-end: calc(var(--double-size) * 3);
+			padding-inline-start: var(--size-2);
+			padding-inline-end: var(--size-6);
 		}
-		
+
 		.item:nth-child(even) .text {
-			padding-inline-start: calc(var(--double-size) * 3);
-			padding-inline-end: calc(var(--double-size) * 2);
+			padding-inline-start: var(--size-6);
+			padding-inline-end: var(--size-2);
 			text-align: right;
 		}
-		
+
 		.text {
 			width: 50%;
 		}
-		
+
 		.circle {
-			max-width: calc(var(--double-size) * 2);
+			max-width: var(--size-4);
 			left: 50%;
 		}
 	}

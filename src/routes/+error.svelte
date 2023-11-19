@@ -10,6 +10,6 @@
   div {
     display: grid;
     place-items: center;
-    margin-block-start: var(--double-size);
+    margin-block-start: var(--size-2);
   }
 </style>

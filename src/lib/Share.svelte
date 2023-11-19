@@ -43,7 +43,7 @@
   button {
     all: unset;
     position: relative;
-    width: calc(var(--size) / 2 - 1rem);
+    width: calc(var(--size-0-5) - 1rem);
     aspect-ratio: 1;
     display: flex;
     justify-content: center;
