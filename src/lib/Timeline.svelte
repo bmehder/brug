@@ -8,7 +8,7 @@
 			x.target.style.opacity = 1
 			x.target.style.translate = '0 calc(var(--double-size) * -1.5)'
 		},
-		out: _ => {},
+		out: x => x,
 	}
 
 	const options = {
@@ -16,147 +16,109 @@
 	}
 </script>
 
-<section class="timeline-section">
-	<div class="container">
-		<div class="timeline__header">
-			<h2>Timeline</h2>
+<section class="timeline">
+	<div class="center half-flow">
+		<h2>Timeline</h2>
+		<p class="balance">
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, reiciendis.
+			Eligendi cum sit numquam?
+		</p>
+	</div>
 
-			<p class="heading--title balance">
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, reiciendis.
-				Eligendi cum sit numquam?
-			</p>
-		</div>
-
-		<div class="timeline__content">
-			{#each timeline as item, idx}
-				<div class="timeline__item" use:observer={{callbacks, options}}>
-					<div class="timeline__text">
-						<h3>{item.title}</h3>
-						<p>{item.content}</p>
-						<span class="circle">{idx + 1}</span>
-					</div>
-					<h3 class="timeline__date">{item.date}</h3>
+	<div class="content">
+		{#each timeline as item}
+			<div class="item" use:observer={{ callbacks, options }}>
+				<div class="text">
+					<h3 class="balance">{item.title}</h3>
+					<p>{item.content}</p>
+					<span class="circle">{item.date}</span>
 				</div>
-			{/each}
-		</div>
+			</div>
+		{/each}
 	</div>
 </section>
 
 <style>
 	h2 {
-		font-size: 4rem;
+		font-size: var(--double-size);
 	}
 
 	h3 {
-		font-size: 1.6rem;
-		padding: 1.2rem 0;
+		padding: 1.25rem 0;
+		font-size: var(--size);
 	}
 
-	.timeline-section {
-		padding-block: var(--size);
+	.timeline {
 		position: relative;
+		padding-block: var(--size);
 	}
 
-	.timeline__header {
-		text-align: center;
-		margin-bottom: var(--size);
-	}
-
-	.timeline__content {
+	.content {
 		display: flex;
 		flex-direction: column;
 		position: relative;
+		margin-block-start: var(--double-size);
 	}
 
-	.timeline__content::after {
-		background-color: var(--accent);
-		content: '';
-		position: absolute;
-		left: calc(50% - 2px);
+	.content::after {
 		width: 0.4rem;
-		height: 97%;
+		height: 100%;
+		position: absolute;
+		content: '';
+		left: var(--size);
+		background-color: var(--accent);
 		z-index: -5;
 	}
 
-	.timeline__item {
+	.item {
 		display: flex;
-		justify-content: flex-end;
 		position: relative;
-		margin: clamp(2rem, 2vh, 5rem) 0;
-		margin: 5rem 0;
-		width: 100%;
-		align-items: center;
-		position: relative;
+		margin-block: var(--double-size);
 		opacity: 0;
-    translate: 0 calc(var(--size) * -1);
 		transition: opacity 400ms ease-out, translate 400ms ease-out;
 	}
-	
-  .timeline__item:nth-of-type(1) {
-		margin-block-start: 8rem;
+
+	.item:nth-of-type(1) {
+		margin-block-start: calc(var(--double-size) * 2);
 	}
 
-	.timeline__text,
-	.timeline__date {
-		width: 50%;
-	}
-
-	.timeline__item .timeline__date {
-		padding-right: 4rem;
-	}
-
-	.timeline__item .timeline__text {
-		padding-left: 4rem;
-	}
-	.timeline__item .timeline__text {
-		padding-right: 4rem;
-	}
-	.timeline__item .timeline__date {
-		padding-left: 4rem;
-	}
-
-	@media (min-width: 49em) {
-		.timeline__item:nth-child(even) {
-			flex-direction: row-reverse;
-		}
-		.timeline__item:nth-child(even) .timeline__date {
-			text-align: right;
-			padding-right: 8.3rem;
-		}
-
-		.timeline__item:nth-child(even) .timeline__text {
-			padding-left: 8.3rem;
-		}
-		.timeline__item:nth-child(odd) .timeline__text {
-			text-align: right;
-			align-items: flex-end;
-			padding-right: 8.3rem;
-		}
-		.timeline__item:nth-child(odd) .timeline__date {
-			padding-left: 8.3rem;
-		}
+	.text {
+		padding-inline-start: calc(var(--double-size) * 2);
 	}
 
 	.circle {
-		position: absolute;
-		background: var(--accent);
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		max-width: 3.4rem;
 		width: 100%;
-		aspect-ratio: 1/ 1;
+		max-width: calc(var(--size) * 3);
+		position: absolute;
+		top: 50%;
+		left: var(--size);
+		translate: -50% -50%;
+		aspect-ratio: 1;
+		background-color: var(--accent);
+		font-size: var(--size);
 		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		display: grid;
+		place-items: center;
 		z-index: 3;
-		font-size: 1.6rem;
 	}
 
-	@media (min-width: 49em) {
+	@media (min-width: 60em) {
+		.content::after {
+			left: calc(50% - 2px);
+		}
+
+		.item:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+		
+		.text {
+			width: 50%;
+			padding-inline: calc(var(--double-size) * 2);
+		}
+		
 		.circle {
-			max-width: 6.8rem;
+			max-width: calc(var(--double-size) * 2);
+			left: 50%;
 		}
 	}
 </style>

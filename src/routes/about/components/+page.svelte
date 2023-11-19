@@ -50,6 +50,4 @@
 	/> -->
 </section>
 
-<section>
-	<Timeline {timeline} />
-</section>
+<Timeline {timeline} />
