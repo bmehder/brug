@@ -59,6 +59,23 @@ section {
 	padding-block: var(--size);
 }
 
+summary {
+	cursor: pointer;
+}
+
+summary > * {
+	display: inline;
+}
+
+summary::marker {
+	content: '\002B';
+	font-size: var(--size);
+}
+
+details[open] summary::marker {
+	content: '\2212';
+}
+
 /* Utilities */
 .square {
 	aspect-ratio: 1;

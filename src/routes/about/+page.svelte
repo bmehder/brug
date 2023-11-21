@@ -1,12 +1,20 @@
 <script>
 	import Carousel from '$lib/Carousel.svelte'
+	import FAQ2 from '$lib/FAQ2.svelte'
+	import faqs2 from "./faqs2";
+
+	let container
 </script>
 
-<div class="full-width" style="margin-block-start: calc(var(--size-4) * -1);">
+<div class="full-width carousel" style="margin-block-start: calc(var(--size-2) * -1.75);">
 	<Carousel />
 </div>
 
 <h1 class="title">About</h1>
+
+<section class="flow">
+	<FAQ2 items={faqs2}/>
+</section>
 
 <section class="flow">
 	<h2>Lorem Ipsum Dolor</h2>
@@ -34,29 +42,25 @@
 	</p>
 </section>
 
-<section class="full-bleed flow">
-	<h2>Lorem Ipsum</h2>
-	<div class="auto-grid cards">
-		<div class="light flow padding">
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas mollitia aperiam
-				nesciunt ipsam expedita? Officiis, provident?
-			</p>
-			<button>Lorem Ipsum</button>
+<!-- TODO: Move to component -->
+<section class="full-width accent content-grid">
+	<h2>Slider</h2>
+	<div class="cards-container breakout">
+		<button class="prev" on:click={container.scrollBy({ left: -300, behavior: 'smooth' })}>
+			<iconify-icon width="1.5rem" icon="fluent:chevron-left-24-filled" />
+		</button>
+		<div class="cards" bind:this={container}>
+			<img src="https://source.unsplash.com/ndN00KmbJ1c" alt="" />
+			<img src="https://source.unsplash.com/eOpewngf68w" alt="" />
+			<img src="https://source.unsplash.com/78A265wPiO4" alt="" />
+			<img src="https://source.unsplash.com/ndN00KmbJ1c" alt="" />
+			<img src="https://source.unsplash.com/eOpewngf68w" alt="" />
+			<img src="https://source.unsplash.com/78A265wPiO4" alt="" />
 		</div>
-		<div class="light flow padding">
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas mollitia aperiam
-				nesciunt ipsam expedita? Officiis, provident?
-			</p>
-			<button>Lorem Ipsum</button>
-		</div>
-		<div class="light flow padding">
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas mollitia aperiam
-				nesciunt ipsam expedita? Officiis, provident?
-			</p>
-			<button>Lorem Ipsum</button>
+		<div>
+			<button class="next" on:click={container.scrollBy({ left: 300, behavior: 'smooth' })}>
+				<iconify-icon width="1.5rem" icon="fluent:chevron-right-24-filled" />
+			</button>
 		</div>
 	</div>
 </section>
@@ -88,7 +92,25 @@
 </section>
 
 <style>
-	.cards button {
-		width: 100%;
+	.cards-container {
+		display: flex;
+		align-items: center;
+		gap: var(--size-0-5);
+	}
+
+	.cards {
+		display: flex;
+		gap: var(--size);
+		overflow: scroll;
+		scroll-snap-type: x mandatory;
+	}
+
+	.cards > * {
+		max-width: 23rem;
+		scroll-snap-align: center;
+	}
+
+	.prev, .next {		
+		padding: var(--size-0-5);
 	}
 </style>

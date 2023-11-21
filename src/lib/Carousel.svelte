@@ -83,7 +83,7 @@
 				<li class:active={index === idx}>
 					<img src={item.src} alt={item.alt} />
 					{#if item.text}
-						<div class="h1" x-text="">{item.text}</div>
+						<div class="h1">{item.text}</div>
 					{/if}
 				</li>
 			{/each}

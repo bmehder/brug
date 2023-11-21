@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <div class="container">
   <div class="slide">
     <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Hiker looking standing on mountain peak overlooking mountain range">
