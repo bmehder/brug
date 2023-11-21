@@ -1,10 +1,13 @@
 <script>
 	import HomeHero from '$lib/HomeHero.svelte'
+	import Carousel from '$lib/Carousel.svelte'
 
 	export let data
 </script>
 
-<HomeHero image="/abstract.jpg" />
+<Carousel />
+
+<!-- <HomeHero image="/abstract.jpg" /> -->
 
 <section class="flow" style="padding-block-end: var(--size-2);">
 	<h2 class="center" style="padding-block-end: var(--size);">

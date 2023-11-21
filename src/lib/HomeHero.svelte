@@ -2,12 +2,15 @@
 	export let image = ''
 </script>
 
-<div class="inner balance full-width hero half-flow" style="background-image: url({image})">
-		<div class="h2">The Brug Theme</div>
-		<div class="h3">A minimal, but useful, SvelteKit theme.</div>
-		<div>
-			<a class="button" href="/">Lorem Ipsum Dolor</a>
-		</div>
+<div
+	class="inner balance full-width hero half-flow"
+	style="background-image: url({image})"
+>
+	<div class="h2">The Brug Theme</div>
+	<div class="h3">A minimal, but useful, SvelteKit theme.</div>
+	<div>
+		<a class="button" href="/">Lorem Ipsum Dolor</a>
+	</div>
 </div>
 
 <style>
@@ -30,7 +33,7 @@
 	.h3 {
 		color: var(--light);
 		font-size: var(--size-2);
-    line-height: 1.6;
+		line-height: 1.6;
 	}
 	.button {
 		display: inline-block;
