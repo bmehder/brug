@@ -79,7 +79,7 @@
 	}
 
 	main {
-		/* margin-block: var(--size-2); */
+		margin-block: var(--size-2);
 		line-height: 1.5;
 	}
 </style>

@@ -1,3 +1,11 @@
+<script>
+	import Carousel from '$lib/Carousel.svelte'
+</script>
+
+<div class="full-width" style="margin-block-start: calc(var(--size-4) * -1);">
+	<Carousel />
+</div>
+
 <h1 class="title">About</h1>
 
 <section class="flow">

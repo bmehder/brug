@@ -55,14 +55,20 @@
 			autoplay()
 		}
 	}
+
+	const handleClick = direction => {
+		isPlaying = false
+		clearInterval(intervalId)
+		direction === 'prev' ? setIndex(index - 1) : setIndex(index + 1)
+	}
 </script>
 
 <div class="carousel full-width" use:autoplay>
 	<div>
-		<button class="prev" on:click={() => setIndex(index - 1)}>
+		<button class="prev" on:click={() => handleClick('prev')}>
 			<iconify-icon width="1.5rem" icon="fluent:chevron-left-24-filled" />
 		</button>
-		<button class="next" on:click={() => setIndex(index - 1)}>
+		<button class="next" on:click={() => handleClick('next')}>
 			<iconify-icon width="1.5rem" icon="fluent:chevron-right-24-filled" />
 		</button>
 		<button class="pause" on:click={togglePlay}>
