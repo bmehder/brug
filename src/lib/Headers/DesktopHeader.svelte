@@ -82,6 +82,7 @@
 
   ul li ul {
     display: none;
+    z-index: 2;
   }
 
   ul li {

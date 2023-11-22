@@ -142,9 +142,15 @@
 		& .pause {
 			position: absolute;
 			padding-inline: 1rem;
-			top: 0;
-			right: 0;
+			top: var(--size-0-5);
+			right: var(--size-0-5);
 			z-index: 2;
+			border-radius: 50%;
+
+			&:focus {
+				background-color: var(--accent);
+				color: white;
+			}
 		}
 
 		& .h1 {
