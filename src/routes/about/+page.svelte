@@ -1,9 +1,12 @@
 <script>
+	import faqs2 from './faqs2'
 	import Carousel from '$lib/Carousel.svelte'
 	import Slider from '$lib/Slider.svelte'
-	import FAQ2 from '$lib/FAQ2.svelte'
-	import faqs2 from "./faqs2";
+	import Details from '$lib/Details.svelte'
 
+	let isOpen = false
+
+	const toggleIsOpen = () => (isOpen = !isOpen)
 </script>
 
 <div class="full-width carousel" style="margin-block-start: calc(var(--size-2) * -1.75);">
@@ -13,7 +16,19 @@
 <h1 class="title">About</h1>
 
 <section class="flow">
-	<FAQ2 items={faqs2}/>
+	<div class="flex">
+		<h2>Details Accordion</h2>
+		<button style="flex: initial" on:click={toggleIsOpen}>
+			{#if isOpen}
+				Close All
+			{:else}
+				Open All
+			{/if}
+		</button>
+	</div>
+	{#each faqs2 as item}
+		<Details {item} {isOpen} />
+	{/each}
 </section>
 
 <section class="flow">

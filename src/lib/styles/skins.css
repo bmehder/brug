@@ -114,16 +114,6 @@ button:is(:hover, :focus),
   transform-origin: var(--origin-in, center);
 }
 
-/* Form elements */
-label {
-  font-weight: 500;
-}
-
-input,
-textarea {
-  padding: var(--size-0-5);
-}
-
 /* Utilities */
 .title {
   padding-bottom: var(--size);
