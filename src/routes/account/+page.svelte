@@ -56,8 +56,10 @@
   {/if}
   
   {#if data.session}
-    <div class="h3">You are logged in as {data.session.user.email}</div>
-    <div><button on:click={handleSignOut}>Sign out</button></div>
+    <div class="flow">
+      <div class="h3">You are logged in as {data.session.user.email}</div>
+      <button on:click={handleSignOut}>Sign out</button>
+    </div>
   {:else}
     <form on:submit={handleSignIn}>
       <div class="flow">

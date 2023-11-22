@@ -1,11 +1,7 @@
 /* Magic Numbers */
 :root {
   color-scheme: dark light;
-  --font-size: 18px;
-  --h1-font-size: calc(var(--size-2) - 0.5rem);
-  --h2-font-size: calc(var(--size) + 0.25rem);
-  --h3-font-size: calc(var(--size) - 0.25rem);
-  --heading-line-height: 1.25;
+  --font-size: 1.125rem;
   --flow: 1.5rem;
   --max-width: 60em;
   --text-color: #646464;
