@@ -42,7 +42,7 @@
 		return {
 			destroy() {
 				clearInterval(intervalId)
-			}
+			},
 		}
 	}
 
@@ -146,11 +146,11 @@
 			right: var(--size-0-5);
 			z-index: 2;
 			border-radius: 50%;
+		}
 
-			&:focus {
-				background-color: var(--accent);
-				color: white;
-			}
+		& button:is(:hover, :focus) {
+			background-color: var(--accent);
+			color: white;
 		}
 
 		& .h1 {
