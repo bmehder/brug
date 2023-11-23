@@ -4,8 +4,8 @@
 </script>
 
 <details class="flow" open={isOpen}>
-	<summary>{item.question}</summary>
-	<div class="flow">{@html item.answer}</div>
+	<summary>{@html item.summary}</summary>
+	<div class="flow">{@html item.detail}</div>
 </details>
 
 <style>

@@ -1,21 +1,19 @@
 <script>
-	import Facebook from '$lib/icons/Facebook.svelte'
-	import LinkedIn from '$lib/icons/LinkedIn.svelte'
-
-	const currentYear = new Date().getFullYear()
+	import {getCurrentYear} from '$lib/utils';
 </script>
 
 <footer class="content-grid light">
 	<div class="full-width flow">
 		<p>
-			Copyright © 2021-{currentYear} Tom Foolery. All shenanigans reserved.
+			Copyright © 2021-{getCurrentYear} Tom Foolery. All shenanigans reserved.
 		</p>
 		<p>
-			<a href="/" target="_blank" aria-label="Facebook">
-				<Facebook />
+			<a class="social" href="/" target="_blank" aria-label="Facebook">
+				<iconify-icon icon="bi:facebook" width="3rem"></iconify-icon>
+
 			</a>
-			<a href="/" target="_blank" aria-label="LinkedIn">
-				<LinkedIn />
+			<a class="social" href="/" target="_blank" aria-label="LinkedIn">
+				<iconify-icon icon="bi:linkedin" width="3rem"></iconify-icon>
 			</a>
 		</p>
 	</div>
@@ -24,5 +22,9 @@
 <style>
 	div {
 		padding-block-start: var(--size-2);
+	}
+
+	.social {
+		color: inherit;
 	}
 </style>

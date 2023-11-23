@@ -1,14 +1,10 @@
 <script>
 	import { invalidate } from '$app/navigation'
 	import { onMount } from 'svelte'
-	import { page } from '$app/stores'
 	import '$lib/styles/app.css'
 	import '$lib/styles/skins.css'
 	import '$lib/styles/layouts.css'
-	import Analytics from '$lib/Analytics.svelte'
 	import Header from '$lib/Headers/Header.svelte'
-	import HomeHero from '$lib/HomeHero.svelte'
-	import PageTransition from '$lib/PageTransition.svelte'
 	import Footer from '$lib/Footers/Footer.svelte'
 	import Popover from '$lib/Popover.svelte'
 	import BackToTop from '$lib/BackToTop.svelte'
@@ -33,17 +29,11 @@
 	})
 </script>
 
-<!-- <Analytics /> -->
-
 <div class="wrapper">
-	<Header {mobileThreshold} logo="<h1>Logo</h1>" />
+	<Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} />
 
 	<!-- <PageTransition key={$page.route.id}> -->
 	<main id="main-content" class="flow content-grid">
-		<!-- {#if $page.route.id === '/'}
-			<HomeHero image="/abstract.jpg" />
-		{/if} -->
-
 		<slot />
 	</main>
 	<!-- </PageTransition> -->

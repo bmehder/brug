@@ -1,7 +1,7 @@
 <script>
   import { page } from '$app/stores'
-  import menuItems from '$lib/Headers/menuItems'
-
+  
+  export let menuItems = []
   export let logo = 'Add Logo Prop!'
 </script>
 

@@ -1,8 +1,9 @@
 <script>
-	import faqs2 from './faqs2'
 	import Carousel from '$lib/Carousel.svelte'
 	import Slider from '$lib/Slider.svelte'
 	import Details from '$lib/Details.svelte'
+
+	export let data 
 
 	let isOpen = false
 
@@ -17,7 +18,7 @@
 
 <section class="flow">
 	<div class="flex">
-		<h2>Details Accordion</h2>
+		<h2>Details</h2>
 		<button style="flex: initial" on:click={toggleIsOpen}>
 			{#if isOpen}
 				Close All
@@ -26,9 +27,13 @@
 			{/if}
 		</button>
 	</div>
-	{#each faqs2 as item}
-		<Details {item} {isOpen} />
-	{/each}
+	<ul class="flow">
+		{#each data.details as item}
+			<li>
+				<Details {item} {isOpen} />
+			</li>
+		{/each}
+	</ul>
 </section>
 
 <section class="flow">
@@ -57,10 +62,9 @@
 	</p>
 </section>
 
-<!-- TODO: Move to component -->
-<section class="full-width accent content-grid">
+<section class="full-width content-grid accent">
 	<h2>Slider</h2>
-	<Slider />
+	<Slider items={data.sliderImages} />
 </section>
 
 <section class="flow">

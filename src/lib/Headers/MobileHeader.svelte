@@ -1,11 +1,9 @@
 <script>
 	import { page } from '$app/stores'
 	import { slide } from 'svelte/transition'
-	import menuItems from '$lib/Headers/menuItems'
-	import Hamburger from '$lib/icons/Hamburger.svelte'
-	import Close from '$lib/icons/Close.svelte'
-
+	
 	export let logo = 'Add Logo Prop!'
+	export let menuItems = []
 
 	let isOpen = false
 
@@ -19,11 +17,13 @@
 			<a on:click={closeMenu} href="/">{@html logo}</a>
 		</div>
 		<div class="trigger">
-			{#if isOpen}
-				<Close on:click={toggleMenu} />
-			{:else}
-				<Hamburger on:click={toggleMenu} />
-			{/if}
+			<button on:click={toggleMenu}>
+				{#if isOpen}
+					<iconify-icon icon="octicon:x-12" width="2.5rem"></iconify-icon>
+				{:else}
+					<iconify-icon icon="mdi:hamburger-menu" width="2.5rem"></iconify-icon>
+				{/if}
+			</button>
 		</div>
 	</div>
 	{#if isOpen}
@@ -74,7 +74,7 @@
 
 <style>
 	header {
-    padding-block: var(--size);
+		padding-block: var(--size);
 		background-color: var(--accent);
 		color: var(--light);
 	}
@@ -116,6 +116,15 @@
 
 	a[aria-current='true'] {
 		color: var(--alt-one);
+	}
+
+	button {
+		all: unset;
+		color: white;
+
+		&:focus-visible {
+			outline: 1px solid;
+		}
 	}
 
 	/* :global(body:has(.isOpen)) {

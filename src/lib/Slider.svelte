@@ -1,46 +1,59 @@
 <script>
-  export let container
+	export let items
+
+	let container
+
+	const rightArrow = 'fluent:chevron-right-24-filled'
+	const leftArrow = 'fluent:chevron-left-24-filled'
+
+	const handleClick = x => {
+		container.scrollBy({ left: x === 'prev' ? -300 : 300, behavior: 'smooth' })
+	}
 </script>
 
-<div class="cards-container breakout">
-	<button class="prev" on:click={container.scrollBy({ left: -300, behavior: 'smooth' })}>
-		<iconify-icon width="1.5rem" icon="fluent:chevron-left-24-filled" />
+<div class="breakout container">
+	<button class="prev" on:click={() => handleClick('prev')}>
+		<iconify-icon width="3rem" icon={leftArrow} />
 	</button>
-	<div class="cards" bind:this={container}>
-		<img src="https://source.unsplash.com/ndN00KmbJ1c" alt="" />
-		<img src="https://source.unsplash.com/eOpewngf68w" alt="" />
-		<img src="https://source.unsplash.com/78A265wPiO4" alt="" />
-		<img src="https://source.unsplash.com/ndN00KmbJ1c" alt="" />
-		<img src="https://source.unsplash.com/eOpewngf68w" alt="" />
-		<img src="https://source.unsplash.com/78A265wPiO4" alt="" />
+	<div class="items" bind:this={container}>
+		{#each items as { src, alt }}
+			<img {src} {alt} />
+		{/each}
 	</div>
-	<div>
-		<button class="next" on:click={container.scrollBy({ left: 300, behavior: 'smooth' })}>
-			<iconify-icon width="1.5rem" icon="fluent:chevron-right-24-filled" />
-		</button>
-	</div>
+	<button class="next" on:click={() => handleClick('next')}>
+		<iconify-icon width="3rem" icon={rightArrow} />
+	</button>
 </div>
 
 <style>
-	.cards-container {
+	.container {
 		display: flex;
 		align-items: center;
 		gap: var(--size-0-5);
 	}
-
-	.cards {
+	
+	.items {
 		display: flex;
 		gap: var(--size);
 		overflow: scroll;
 		scroll-snap-type: x mandatory;
 	}
-
-	.cards > * {
-		max-width: 23rem;
+	
+	.items > * {
+		--max: 20rem;
+		max-width: var(--max);
 		scroll-snap-align: center;
 	}
 
-	.prev, .next {		
-		padding: var(--size-0-5);
+	button {
+		all: unset;
+
+		&:is(:hover, :focus) {
+			outline: none;
+		}
+
+		&:focus-visible {
+			outline: 4px solid;
+		}
 	}
 </style>

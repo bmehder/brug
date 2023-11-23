@@ -13,3 +13,5 @@ export const observer = (node, params) => {
     },
   }
 }
+
+export const getCurrentYear = new Date().getFullYear()
