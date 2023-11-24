@@ -1,18 +1,27 @@
 <script>
-  import './faqs.css'
-  import Faq from '$lib/FAQ.svelte'
+	import './faqs.css'
+	import Faq from '$lib/FAQ.svelte'
+	import RadioDisclosure from '$lib/RadioDisclosure.svelte'
 
-  export let data
+	export let data
 </script>
 
 <h1 class="title">Frequently Asked Questions</h1>
 
 <section class="flow">
-  <ul>
+  <h2>Many Open at Once</h2>
+	<ul>
     {#each data.faqs as { question, answer }}
-      <li>
-        <Faq {question} {answer} />
-      </li>
-    {/each}
-  </ul>
+    <li>
+      <Faq {question} {answer} />
+    </li>
+		{/each}
+	</ul>
+</section>
+
+<section class="flow">
+  <h2>One Open at a Time</h2>
+	<ul>
+		<RadioDisclosure items={data.faqs} />
+	</ul>
 </section>
