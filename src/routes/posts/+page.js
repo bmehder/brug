@@ -5,7 +5,7 @@ export async function load({ fetch }) {
 
   const postsByCategories = Promise.all(
     categories.map(({ id }) =>
-      fetch(`https://rfh-api.com/wp-json/wp/v2/posts?per_page=100&categories=${id}`)
+      fetch(`https://rfh-api.com/wp-json/wp/v2/posts?_embed&per_page=100&categories=${id}`)
         .then(x => x.json())
         .catch(console.error)
     )

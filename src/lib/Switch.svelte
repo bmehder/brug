@@ -1,5 +1,9 @@
+<script>
+  export let isChecked = false
+</script>
+
 <label class="switch">
-  <input type="checkbox" on:click />
+  <input type="checkbox" on:click bind:checked={isChecked} />
   <span class="slider round"></span>
 </label>
 

@@ -46,14 +46,13 @@ ul {
 }
 
 section {
-	padding-block: var(--size);
+	padding-block: var(--size-2);
 }
 
 summary {
 	margin-inline-start: var(--size-0-5);
 	padding-left: var(--size-0-5);
 	list-style-position: outside;
-	font-size: 1.25rem;
 	cursor: pointer;
 }
 
@@ -64,7 +63,6 @@ summary > * {
 summary::marker {
 	content: var(--plus);
 	color: var(--accent);
-	font-size: var(--size);
 	font-weight: bold;
 }
 

@@ -28,7 +28,7 @@
 	}
 </script>
 
-<div class="animacounter" use:observer={{ callbacks, options }}>
+<div class="animacounter shadow" use:observer={{ callbacks, options }}>
 	<div class="animacounter__outer">
 		<div class="animacounter__inner">
 			<div class="animacounter__number">

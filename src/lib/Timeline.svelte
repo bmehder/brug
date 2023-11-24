@@ -120,6 +120,7 @@
 		.circle {
 			max-width: var(--size-4);
 			left: 50%;
+			color: white;
 		}
 	}
 </style>
