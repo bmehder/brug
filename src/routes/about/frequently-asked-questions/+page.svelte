@@ -1,5 +1,4 @@
 <script>
-	import './faqs.css'
 	import Faq from '$lib/FAQ.svelte'
 	import RadioDisclosure from '$lib/RadioDisclosure.svelte'
 
