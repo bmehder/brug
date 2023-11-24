@@ -7,7 +7,7 @@
 		isChecked = document.documentElement.dataset.theme === 'dark-mode'
 	}
 
-	const toggle = () => {
+	const toggleDarkMode = () => {
 		isChecked = !isChecked
 		document.documentElement.dataset.theme = isChecked ? 'dark-mode' : 'light-mode'
 
@@ -16,5 +16,5 @@
 </script>
 
 <div use:init>
-	<Switch on:click={toggle} {isChecked} />
+	<Switch on:click={toggleDarkMode} {isChecked} />
 </div>

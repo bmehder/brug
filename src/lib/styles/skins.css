@@ -9,7 +9,7 @@
   --accent: #be3455;
 }
 
-@media (max-width: 32em) {
+@media (max-width: 70em) {
   :root {
     color-scheme: dark light;
   }
