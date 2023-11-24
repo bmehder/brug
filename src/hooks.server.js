@@ -19,10 +19,13 @@ export const handle = async ({ event, resolve }) => {
 		} = await event.locals.supabase.auth.getSession()
 		return session
 	}
+
+	const theme = event.cookies.get('siteTheme')
   
 	return resolve(event, {
-    filterSerializedResponseHeaders(name) {
-      return name === 'content-range'
+		transformPageChunk: ({ html }) => html.replace('data-theme=""', `data-theme="${theme}"`),
+		filterSerializedResponseHeaders(name) {
+			return name === 'content-range'
 		},
 	})
 }

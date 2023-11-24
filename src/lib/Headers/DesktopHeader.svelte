@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores'
-	import DarkMode from '$lib/DarkMode.svelte'
+	// import DarkMode from '$lib/DarkMode.svelte'
+	import DarkModeCookie from '$lib/DarkModeCookie.svelte'
 
 	export let menuItems = []
 	export let logo = 'Add Logo Prop!'
@@ -45,7 +46,8 @@
 					{/if}
 				{/each}
 				<li class="dark-mode-toggle">
-          <DarkMode />
+          <!-- <DarkMode /> -->
+          <DarkModeCookie />
 				</li>
 			</ul>
 		</nav>
