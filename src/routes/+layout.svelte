@@ -33,7 +33,7 @@
 	<Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} />
 
 	<!-- <PageTransition key={$page.route.id}> -->
-	<main id="main-content" class="flow content-grid">
+	<main id="main-content" class="content-grid">
 		<slot />
 	</main>
 	<!-- </PageTransition> -->

@@ -5,7 +5,8 @@
 	--max-width: 60em;
 	--text-color: #646464;
 	--dark: #161616;
-	--light: hsl(166, 32%, 94%);
+	/* --light: hsl(166, 32%, 94%); */
+	--light: #f1f3f6;
 	--accent: #be3455;
 }
 
@@ -62,7 +63,7 @@ button,
 	justify-content: center;
 	align-items: center;
 	padding-block: var(--size-0-5);
-	padding-inline: calc(var(--size-2));
+	padding-inline: calc(var(--size) * 1.5);
 	background-color: var(--accent);
 	color: var(--light);
 	text-transform: uppercase;
@@ -87,7 +88,9 @@ button:is(:hover, :focus),
 }
 
 .shadow {
-	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+	/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15); */
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+
 }
 
 .light {

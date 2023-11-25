@@ -40,7 +40,7 @@
     
     display: grid;
     grid-template-columns: inherit;
-    padding-block: var(--padding);
+    padding-block: var(--size-3);
   }
 }
 

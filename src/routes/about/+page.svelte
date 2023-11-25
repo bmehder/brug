@@ -10,13 +10,13 @@
 	const toggleIsOpen = () => (isOpen = !isOpen)
 </script>
 
-<div class="full-width carousel" style="margin-block-start: calc(var(--size-2) * -1.75);">
+<div class="full-width carousel" style="margin-block-start: calc(var(--size-5) * -1);">
 	<Carousel />
 </div>
 
 <h1 class="title">About</h1>
 
-<section class="flow">
+<section class="full-width flow">
 	<div class="flex">
 		<h2>Details</h2>
 		<button style="flex: initial" on:click={toggleIsOpen}>
@@ -36,7 +36,12 @@
 	</ul>
 </section>
 
-<section class="full-width accent">
+<section class="content-grid full-width accent">
+	<h2>Slider</h2>
+	<Slider items={data.sliderImages} />
+</section>
+
+<section class="full-width light">
 	<div class="flow">
 		<h2>Lorem Ipsum Dolor</h2>
 		<img class="float-right" src="https://picsum.photos/500/380" alt="placeholder" />
@@ -64,12 +69,7 @@
 	</div>
 </section>
 
-<section class="content-grid">
-	<h2>Slider</h2>
-	<Slider items={data.sliderImages} />
-</section>
-
-<section class="full-width accent">
+<section class="full-width">
 	<div class="flow">
 		<h2>Lorem Ipsum Consectetur</h2>
 		<img class="float-right" src="https://picsum.photos/500/381" alt="placeholder" />

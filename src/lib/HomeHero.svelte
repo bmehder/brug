@@ -2,48 +2,43 @@
 	export let image = ''
 </script>
 
-<div
-	class="inner balance full-width hero half-flow"
-	style="background-image: url({image})"
->
-	<div class="h2">The Brug Theme</div>
-	<div class="h3">A minimal, but useful, SvelteKit theme.</div>
-	<div>
-		<a class="button" href="/">Lorem Ipsum Dolor</a>
+<div class="full-width hero" style="margin-block-start: calc(var(--size-2) * -1);">
+	<div class="flex align-center swap">
+		<div>
+			<img class="shadow" src="{image}" alt="hero">
+		</div>
+		<div class="flow">
+			<div class="h2 balance">Lorem <span class="highlight">ipsum</span> dolor sit amet consectetur.</div>
+			<p class="balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, placeat perspiciatis impedit in magnam sed.</p>
+			<a href="/" class="button">Learn more</a>
+		</div>
 	</div>
 </div>
 
 <style>
 	.hero.hero {
-		margin-block-start: calc(var(--size-2) * -1);
-		padding-block: var(--size-6);
-		background-position: center;
-		background-size: cover;
-		color: var(--light);
-		font-weight: bold;
-		line-height: 1.25;
-		text-align: center;
-		text-shadow: 6px 6px 30px rgba(0, 0, 0, 1);
-		letter-spacing: 1px;
-	}
-	.h2 {
-		color: var(--light);
-		font-size: var(--size-3);
-	}
-	.h3 {
-		color: var(--light);
-		font-size: var(--size-2);
-		line-height: 1.6;
-	}
-	.button {
-		display: inline-block;
-		margin-block-start: var(--size-0-5);
-		font-size: calc(var(--size) - 0.25rem);
-		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.24);
-	}
-	.button:hover,
-	.button:focus {
-		color: var(--light);
-		outline-color: var(--light);
+		padding-block: var(--size-4);
+
+		& .h2 {
+			font-size: var(--size-2);
+			line-height: 1.2;
+			font-weight: 700;
+		}
+		
+		& .highlight {
+			color: var(--accent);
+		}
+		
+		& img {
+			border-radius: 4px;
+		}
+
+		@media (max-width: 48em) {
+			padding-block: var(--size-2);
+
+			& .balance {
+				text-wrap: unset
+			}
+		}
 	}
 </style>

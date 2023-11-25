@@ -28,18 +28,20 @@
 
 <h1 class="title">Single Sign-On (SSO)</h1>
 
-{#if err}
-  <p>Something went wrong.</p>
-{/if}
-
-{#if !data.session}
-  <p>Register or sign in with:</p>
-  <form>
-    <button on:click={() => handleSSOLogin('github')}>GitHub</button>
-    <button on:click={() => handleSSOLogin('google')}>Google</button>
-  </form>
-{:else}
-  <form>
-    <button on:click={handleSignOut}>Signout</button>
-  </form>
-{/if}
+<section class="flow">
+  {#if err}
+    <p>Something went wrong.</p>
+  {/if}
+  
+  {#if !data.session}
+    <p>Register or sign in with:</p>
+    <form>
+      <button on:click={() => handleSSOLogin('github')}>GitHub</button>
+      <button on:click={() => handleSSOLogin('google')}>Google</button>
+    </form>
+  {:else}
+    <form>
+      <button on:click={handleSignOut}>Signout</button>
+    </form>
+  {/if}
+</section>

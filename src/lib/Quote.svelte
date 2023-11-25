@@ -2,7 +2,7 @@
   export let quote
 </script>
 
-<figure class="light padding flow shadow">
+<figure class="padding flow shadow">
   <blockquote>
     <q>
       {quote.quote}
@@ -16,6 +16,7 @@
 
 <style>
   figure {
+    border: 1px solid var(--light);
     border-radius: var(--size-0-5);
   }
 </style>

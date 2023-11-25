@@ -28,16 +28,18 @@ const signInWithEmail = async () => {
 
 <h1 class="title">Magic Link</h1>
 
-{#if message}
-  <p>{message}</p>
-{/if}
-
-<form on:submit={signInWithEmail}>
-  <div class="flow">
-    <div class="grid half-flow">
-      <label for="email">Enter email</label>
-      <input type="text" name="email" id="email" bind:value={email} />
+<section>
+  {#if message}
+    <p>{message}</p>
+  {/if}
+  
+  <form on:submit={signInWithEmail}>
+    <div class="flow">
+      <div class="grid half-flow">
+        <label for="email">Enter email</label>
+        <input type="text" name="email" id="email" bind:value={email} />
+      </div>
+      <button>Submit</button>
     </div>
-    <button>Submit</button>
-  </div>
-</form>
+  </form>
+</section>
