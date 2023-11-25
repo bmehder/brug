@@ -1,6 +1,5 @@
 <script>
 	export let item
-	console.log(item)
 </script>
 
 <div class="card" style="background-color: white;">

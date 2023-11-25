@@ -16,7 +16,7 @@
 </div>
 
 <style>
-	.hero.hero {
+	.hero {
 		padding-block: var(--size-4);
 
 		& .h2 {

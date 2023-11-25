@@ -87,5 +87,22 @@ export async function load() {
 				content: 'Argentina hosted the first championship grand prix outside Europe.',
 			},
 		],
+		tabItems: [
+			{
+				heading: 'Juan',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, error. Cumque optio ex molestias, sit vel quis aliquam quaerat vero saepe doloribus ipsa laboriosam quos voluptatum. Molestias architecto aut odit quos amet. Quaerat, error. Cumque optio ex molestias. Quaerat, error.',
+			},
+			{
+				heading: 'Won',
+				content:
+					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit excepturi voluptatem quisquam distinctio, vel facilis perspiciatis dolor libero aliquid sequi quos earum ab pariatur, minus eius rem delectus aspernatur voluptates odio inventore. Excepturi labore vel eaque pariatur quos in voluptatum reprehenderit facere?',
+			},
+			{
+				heading: 'One',
+				content:
+					'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia odio accusamus ut, esse architecto nemo laboriosam tempore accusantium magnam aut adipisci quis? Culpa, vero animi officia sunt eius, saepe commodi voluptas nobis, eum dolore cum in numquam repellat aliquid. Velit amet laudantium sequi corporis similique aspernatur culpa eaque ipsa fugit ea. Minus.',
+			},
+		],
 	}
 }

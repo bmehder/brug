@@ -37,6 +37,10 @@
 		gap: var(--size);
 		overflow: scroll;
 		scroll-snap-type: x mandatory;
+
+		& img {
+			width: unset;
+		}
 	}
 	
 	.items > * {

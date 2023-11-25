@@ -2,6 +2,7 @@
 	import Animacounter from '$lib/Animacounter.svelte'
 	import Switch from '$lib/Switch.svelte'
 	import Timeline from '$lib/Timeline.svelte'
+	import Tabs from '$lib/Tabs.svelte'
 
 	export let data
 </script>
@@ -17,3 +18,5 @@
 <Switch on:click={() => console.log('Switched')} />
 
 <Timeline timeline={data.timeline} />
+
+<Tabs items={data.tabItems} />
