@@ -3,14 +3,17 @@
 	import Slider from '$lib/Slider.svelte'
 	import Details from '$lib/Details.svelte'
 
-	export let data 
+	export let data
 
 	let isOpen = false
 
 	const toggleIsOpen = () => (isOpen = !isOpen)
 </script>
 
-<div class="full-width carousel" style="margin-block-start: calc(var(--size-5) * -1);">
+<div
+	class="full-width carousel"
+	style="margin-block-start: calc(var(--size-2) * -1); padding-block-start: calc(var(--size-3) * -1)"
+>
 	<Carousel />
 </div>
 
@@ -53,10 +56,10 @@
 		<p>
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium fugiat natus
 			nihil aperiam expedita eos qui odio totam autem! Animi, eligendi id perspiciatis
-			ducimus adipisci quas dolores dicta ea, incidunt velit inventore, expedita illo odit?
-			Nobis, ratione! Ex blanditiis at iure, et adipisci odio suscipit eveniet, atque
-			consectetur, dolore dolorem ipsum sequi dolorum. Tempora aliquid, natus praesentium
-			harum aut laborum eaque eveniet sequi distinctio?
+			ducimus adipisci quas dolores dicta ea, incidunt velit inventore, expedita illo
+			odit? Nobis, ratione! Ex blanditiis at iure, et adipisci odio suscipit eveniet,
+			atque consectetur, dolore dolorem ipsum sequi dolorum. Tempora aliquid, natus
+			praesentium harum aut laborum eaque eveniet sequi distinctio?
 		</p>
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit exercitationem, in
@@ -81,10 +84,10 @@
 		<p>
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium fugiat natus
 			nihil aperiam expedita eos qui odio totam autem! Animi, eligendi id perspiciatis
-			ducimus adipisci quas dolores dicta ea, incidunt velit inventore, expedita illo odit?
-			Nobis, ratione! Ex blanditiis at iure, et adipisci odio suscipit eveniet, atque
-			consectetur, dolore dolorem ipsum sequi dolorum. Tempora aliquid, natus praesentium
-			harum aut laborum eaque eveniet sequi distinctio?
+			ducimus adipisci quas dolores dicta ea, incidunt velit inventore, expedita illo
+			odit? Nobis, ratione! Ex blanditiis at iure, et adipisci odio suscipit eveniet,
+			atque consectetur, dolore dolorem ipsum sequi dolorum. Tempora aliquid, natus
+			praesentium harum aut laborum eaque eveniet sequi distinctio?
 		</p>
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit exercitationem, in
