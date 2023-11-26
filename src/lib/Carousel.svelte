@@ -162,7 +162,7 @@
 			display: grid;
 			place-content: center;
 			text-align: center;
-			font-size: calc(6vw + 1rem);
+			font-size: calc(4vw + 1rem);
 			font-weight: 700;
 		}
 	}

@@ -78,6 +78,10 @@
 
 	.logo {
 		max-width: 12em;
+
+		& h1 {
+			color: var(--light);
+		}
 	}
 
 	ul {
