@@ -9,11 +9,11 @@
 	--accent: #be3455;
 }
 
-@media (max-width: 70em) {
+/* @media (max-width: 70em) {
 	:root {
 		color-scheme: dark light;
 	}
-}
+} */
 
 /* Typography */
 body {
@@ -28,6 +28,18 @@ body {
 [data-theme='light-mode'] body {
 	color: var(--text-color);
 }
+
+/* @media (prefers-color-scheme: light) {
+  .wrapper :is(h1, .h1, h2, .h2, h3, .h3) {
+    color: var(--text-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .wrapper :is(h1, .h1, h2, .h2, h3, .h3) {
+    color: var(--light);
+  }
+} */
 
 h1,
 .h1,
@@ -147,7 +159,7 @@ button:is(:hover, :focus),
 	color: var(--text-color);
 
 	& :is(h1, .h1, h2, .h2, h3, .h3) {
-		color: var(--dark);
+		color: var(--dark) !important;
 	}
 }
 
