@@ -20,8 +20,6 @@
 
 <style>
 	footer {
-		/* border-top: 1px solid; */
-		
 		& .social {
 			padding-inline: calc(var(--size-0-5) / 2);
 		}

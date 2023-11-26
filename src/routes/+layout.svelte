@@ -4,6 +4,11 @@
 	import '$lib/styles/app.css'
 	import '$lib/styles/skins.css'
 	import '$lib/styles/layouts.css'
+	import '@fontsource/poppins/600.css'
+	import '@fontsource/poppins/700.css'
+	import "@fontsource/open-sans";
+	import "@fontsource/open-sans/600.css";
+	import "@fontsource/open-sans/700.css";
 	import Header from '$lib/Headers/Header.svelte'
 	import Footer from '$lib/Footers/Footer.svelte'
 	import Popover from '$lib/Popover.svelte'
@@ -70,6 +75,6 @@
 
 	main {
 		margin-block: var(--size-2);
-		line-height: 1.5;
+		line-height: 1.6;
 	}
 </style>

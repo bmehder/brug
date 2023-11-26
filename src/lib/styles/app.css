@@ -129,6 +129,10 @@ textarea {
 	text-wrap: balance;
 }
 
+.bold {
+	font-weight: 600;
+}
+
 .italic {
 	font-style: italic;
 }

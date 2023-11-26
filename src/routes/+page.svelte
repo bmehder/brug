@@ -70,8 +70,7 @@
 			<h3>Clinic Principles</h3>
 			<p>
 				We are committed to principles to aligning operations and strategies with
-				universally accepted principles in the areas of human rights, environment and
-				anti-corruption.
+				universally accepted principles in the areas of human rights, and environment.
 			</p>
 		</div>
 	</div>
@@ -154,6 +153,50 @@
 	</p>
 </section>
 
+<section
+	class="flow full-width balance"
+	style="
+					padding-block: var(--size-6);
+					background-image: url('https://picsum.photos/id/17/2000');
+					background-size: cover;
+					background-position: center;
+				"
+>
+	<div class="glass center flow" style="font-size: var(--size);">
+		<div class="h1" style="font-size: var(--size-3); font-weight: 700">
+			Lorem ipsum dolor
+		</div>
+		<p class="balance" style="max-width: 48rem">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sint voluptatem enim velit dolores? Modi, quam?
+		</p>
+		<button class="shadow" style="margin-inline: auto; font-size: 1.5rem;">
+			Let's Go!
+		</button>
+	</div>
+</section>
+
+<section class="flow">
+	<h2>Lorem, ipsum.</h2>
+	<div class="columns">
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga nesciunt ab
+			sapiente rem harum hic expedita aspernatur? Error veniam laudantium alias nesciunt
+			mollitia tenetur, vero quod recusandae. Sint nobis sunt accusamus voluptate
+			cupiditate ducimus repellat atque, aut quam rerum ipsa maiores, mollitia
+			repellendus. Dolore dolorum non ut, possimus praesentium suscipit quia nobis eos,
+			amet facilis corporis ipsa ad reiciendis.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga nesciunt ab
+			sapiente rem harum hic expedita aspernatur? Error veniam laudantium alias nesciunt
+			mollitia tenetur, vero quod recusandae. Sint nobis sunt accusamus voluptate
+			cupiditate ducimus repellat atque, aut quam rerum ipsa maiores, mollitia
+			repellendus. Dolore dolorum non ut, possimus praesentium suscipit quia nobis eos,
+			amet facilis corporis ipsa ad reiciendis.
+		</p>
+	</div>
+</section>
+
 <section class="breakout italic accent shadow">
 	<div class="half-flow">
 		<p class="h2 center">Lorem ipsum, dolor sit amet consectetur adipisicing elit!</p>
@@ -164,23 +207,22 @@
 	</div>
 </section>
 
-<section class="flow">
+<section class="columns">
 	<p>
-		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id illo saepe ratione autem,
-		eos laboriosam quis maxime fugiat tenetur nemo quidem veniam veritatis, explicabo
-		facere vero dolores harum atque officiis a suscipit facilis consequatur, amet quia!
-		Accusamus possimus illum assumenda iste esse autem sit. Fugit est, aliquam, possimus
-		error iste exercitationem tempora omnis similique provident reprehenderit incidunt
-		corrupti. Quos fugiat obcaecati nobis!
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga nesciunt ab
+		sapiente rem harum hic expedita aspernatur? Error veniam laudantium alias nesciunt
+		mollitia tenetur, vero quod recusandae. Sint nobis sunt accusamus voluptate cupiditate
+		ducimus repellat atque, aut quam rerum ipsa maiores, mollitia repellendus. Dolore
+		dolorum non ut, possimus praesentium suscipit quia nobis eos, amet facilis corporis
+		ipsa ad reiciendis.
 	</p>
 	<p>
-		Accusamus possimus illum assumenda iste esse autem sit. Fugit est, aliquam, possimus
-		error iste exercitationem tempora omnis similique provident reprehenderit incidunt
-		corrupti. Quos fugiat obcaecati nobis! Provident voluptate eligendi rem inventore
-		dolorem ad alias, sit harum pariatur! Iste voluptatem incidunt corrupti laboriosam
-		necessitatibus pariatur suscipit culpa fugit atque at doloremque repellat
-		reprehenderit fugiat ratione provident perspiciatis, ea odio quasi aut quos.
-		Voluptates, nihil ratione.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga nesciunt ab
+		sapiente rem harum hic expedita aspernatur? Error veniam laudantium alias nesciunt
+		mollitia tenetur, vero quod recusandae. Sint nobis sunt accusamus voluptate cupiditate
+		ducimus repellat atque, aut quam rerum ipsa maiores, mollitia repellendus. Dolore
+		dolorum non ut, possimus praesentium suscipit quia nobis eos, amet facilis corporis
+		ipsa ad reiciendis.
 	</p>
 </section>
 
