@@ -26,20 +26,12 @@ body {
 }
 
 [data-theme='light-mode'] body {
-	color: var(--text-color);
+	color: var(--text-color) !important;
 }
 
-/* @media (prefers-color-scheme: light) {
-  .wrapper :is(h1, .h1, h2, .h2, h3, .h3) {
-    color: var(--text-color);
-  }
+[data-theme='light-mode'] .logo h1 {
+	color: var(--light) !important;
 }
-
-@media (prefers-color-scheme: dark) {
-  .wrapper :is(h1, .h1, h2, .h2, h3, .h3) {
-    color: var(--light);
-  }
-} */
 
 h1,
 .h1,

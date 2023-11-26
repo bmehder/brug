@@ -80,7 +80,7 @@
 		max-width: 12em;
 
 		& h1 {
-			color: var(--light);
+			color: var(--light) !important;
 		}
 	}
 
