@@ -1,16 +1,20 @@
 <script>
+	import carousel1 from '$lib/assets/1.jpg?enhanced'
+	import carousel2 from '$lib/assets/2.jpg?enhanced'
+	import carousel3 from '$lib/assets/3.jpg?enhanced'
+
 	export const carouselItems = [
 		{
-			src: 'https://source.unsplash.com/ndN00KmbJ1c',
-			alt: 'Hiker looking standing on mountain peak overlooking mountain range',
+			src: carousel1,
+			alt: 'Hiker standing on mountain peak overlooking mountain range',
 		},
 		{
-			src: 'https://source.unsplash.com/eOpewngf68w',
+			src: carousel2,
 			alt: 'Looking across bridge in a forest',
 			text: 'Here is some text!',
 		},
 		{
-			src: 'https://source.unsplash.com/78A265wPiO4',
+			src: carousel3,
 			alt: 'Trees and side of a mountain',
 			text: 'Here is some more text that is longer!',
 		},
@@ -81,7 +85,7 @@
 		<ul>
 			{#each items as item, idx}
 				<li class:active={index === idx}>
-					<img src={item.src} alt={item.alt} />
+					<enhanced:img src="{item.src}" alt={item.alt} />
 					{#if item.text}
 						<div class="h1">{item.text}</div>
 					{/if}

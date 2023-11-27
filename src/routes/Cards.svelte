@@ -1,4 +1,7 @@
 <script>
+	import carousel1 from '$lib/assets/1.jpg?enhanced'
+	import carousel2 from '$lib/assets/2.jpg?enhanced'
+	import carousel3 from '$lib/assets/3.jpg?enhanced'
 	import Card from '$lib/Card.svelte'
 </script>
 
@@ -8,8 +11,8 @@
 		<Card
 			item={{
 				url: '/',
-				src: 'https://source.unsplash.com/ndN00KmbJ1c',
-				alt: 'Hiker looking standing on mountain peak overlooking mountain range',
+				src: carousel1,
+				alt: 'Hiker standing on mountain peak overlooking mountain range',
 				title: 'One Thing',
 				content:
 					'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, sit.',
@@ -18,7 +21,7 @@
 		<Card
 			item={{
 				url: '/',
-				src: 'https://source.unsplash.com/eOpewngf68w',
+				src: carousel2,
 				alt: 'Looking across bridge in a forest',
 				title: 'Another Thing',
 				content:
@@ -28,7 +31,7 @@
 		<Card
 			item={{
 				url: '/',
-				src: 'https://source.unsplash.com/78A265wPiO4',
+				src: carousel3,
 				alt: 'Trees and side of a mountain',
 				title: 'More Things, Still',
 				content:

@@ -1,4 +1,6 @@
 <script>
+	import abstract from '$lib/assets/abstract.jpg?enhanced';
+	import placeholder from '$lib/assets/5.jpg?enhanced';
 	import Hero from './Hero.svelte'
 	import Columns from './Columns.svelte'
 	import Banana from './Banana.svelte'
@@ -8,7 +10,7 @@
 	import TextBreakout from './TextBreakout.svelte'
 </script>
 
-<Hero image="/abstract.jpg" />
+<Hero image={abstract} />
 
 <Columns />
 
@@ -16,7 +18,7 @@
 
 <Cards />
 
-<TextImage />
+<TextImage image={placeholder} />
 
 <FullWidthGlass />
 
