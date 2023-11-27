@@ -1,11 +1,11 @@
 <script>
-	import Hero from './_parts/Hero.svelte'
-	import Columns from './_parts/Columns.svelte'
-	import Banana from './_parts/Banana.svelte'
-	import Cards from './_parts/Cards.svelte'
-	import TextImage from './_parts/TextImage.svelte'
-	import FullWidthGlass from './_parts/FullWidthGlass.svelte'
-	import TextBreakout from './_parts/TextBreakout.svelte'
+	import Hero from './Hero.svelte'
+	import Columns from './Columns.svelte'
+	import Banana from './Banana.svelte'
+	import Cards from './Cards.svelte'
+	import TextImage from './TextImage.svelte'
+	import FullWidthGlass from './FullWidthGlass.svelte'
+	import TextBreakout from './TextBreakout.svelte'
 </script>
 
 <Hero image="/abstract.jpg" />

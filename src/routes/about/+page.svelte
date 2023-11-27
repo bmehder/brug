@@ -1,9 +1,9 @@
 <script>
-	import Carousel from './_parts/Carousel.svelte'
-	import Details from './_parts/Details.svelte'
-	import Slider from './_parts/Slider.svelte'
-	import TextImage1 from './_parts/TextImage1.svelte'
-	import TextImage2 from './_parts/TextImage2.svelte'
+	import Carousel from './Carousel.svelte'
+	import Details from './Details.svelte'
+	import Slider from './Slider.svelte'
+	import TextImage1 from './TextImage1.svelte'
+	import TextImage2 from './TextImage2.svelte'
 
 	export let data
 </script>

@@ -27,6 +27,12 @@ body {
 	color: var(--light) !important;
 }
 
+.dark-mode,
+[data-theme='dark-mode'] {
+	background-color: var(--dark);
+	color: var(--light);
+}
+
 @media (prefers-color-scheme: dark) {
 	[data-theme="dark-mode"] form {
 		color-scheme: dark;
@@ -103,7 +109,6 @@ button:is(:hover, :focus),
 }
 
 .shadow {
-	/* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15); */
 	box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -156,12 +161,6 @@ button:is(:hover, :focus),
 	.h3 {
 		color: var(--accent);
 	}
-}
-
-.dark-mode,
-[data-theme='dark-mode'] {
-	background-color: var(--dark);
-	color: var(--light);
 }
 
 .accent {

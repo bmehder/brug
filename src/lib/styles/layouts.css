@@ -44,16 +44,16 @@
   }
 }
 
-.grid {
-  display: grid;
-}
-
 .flow > * + * {
   margin-block-start: var(--flow);
 }
 
 .half-flow > * + * {
   margin-block-start: var(--size-0-5);
+}
+
+.grid {
+  display: grid;
 }
 
 .auto-grid {
