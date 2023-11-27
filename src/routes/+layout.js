@@ -69,5 +69,8 @@ export const load = async ({ fetch, data, depends }) => {
 				url: '/contact/',
 			},
 		],
+		threePosts: fetch('https://rfh-api.com/wp-json/wp/v2/posts?_embed&per_page=3')
+			.then(x => x.json())
+			.catch(console.error),
 	}
 }

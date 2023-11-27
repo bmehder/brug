@@ -1,6 +1,6 @@
 <script>
 	import HomeHero from '$lib/HomeHero.svelte'
-	import Card from '../lib/Card.svelte'
+	import Card from '$lib/Card.svelte'
 </script>
 
 <HomeHero image="/abstract.jpg" />
