@@ -8,12 +8,18 @@
 
 <h1 class="title">UI Components</h1>
 
-<section class="auto-grid">
-	{#each data.stats as item}
-		<Animacounter {...item} />
-	{/each}
+<section class="auto-grid accent">
+	<div class="flex">
+		{#each data.stats as item}
+			<Animacounter {...item} />
+		{/each}
+	</div>
 </section>
 
-<Timeline timeline={data.timeline} />
+<section>
+	<Timeline timeline={data.timeline} />
+</section>
 
-<Tabs items={data.tabItems} />
+<section>
+	<Tabs items={data.tabItems} />
+</section>

@@ -28,15 +28,26 @@
 	}
 </script>
 
-<div class="animacounter shadow" use:observer={{ callbacks, options }}>
-	<div class="animacounter__outer">
-		<div class="animacounter__inner">
-			<div class="animacounter__number">
-				<span>{beforeNumber}</span>
-				<span>{parseInt($end).toLocaleString()}</span>
-				<span>{afterNumber}</span>
-			</div>
-			<div class="animacounter__text">{text}</div>
-		</div>
+<div class="animacounter" use:observer={{ callbacks, options }}>
+	<div class="number">
+		<span>{beforeNumber}</span>
+		<span>{parseInt($end).toLocaleString()}</span>
+		<span>{afterNumber}</span>
 	</div>
+	<div class="text">{text}</div>
 </div>
+
+<style>
+	.animacounter {
+		padding-inline: var(--size);
+		text-align: center;
+
+		& .number {
+			font-size: var(--size-2);
+		}
+
+		& .text {
+			font-size: var(--size);
+		}
+	}
+</style>

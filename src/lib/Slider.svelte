@@ -31,7 +31,7 @@
 		align-items: center;
 		gap: var(--size-0-5);
 	}
-	
+
 	.items {
 		display: flex;
 		gap: var(--size);
@@ -39,10 +39,14 @@
 		scroll-snap-type: x mandatory;
 
 		& img {
-			width: unset;
+			border: none;
+			
+			@media (min-width: 32em) {
+				width: unset;
+			}
 		}
 	}
-	
+
 	.items > * {
 		--max: 20rem;
 		max-width: var(--max);

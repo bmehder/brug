@@ -26,7 +26,7 @@
   align-items: start;
     
   & > :not(.breakout, .full-width),
-  .full-width > :not(.breakout, .full-width){
+  .full-width > :not(.breakout, .full-width) {
     grid-column: content;
   }
   

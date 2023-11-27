@@ -29,6 +29,10 @@
 			padding: var(--size);
 			background-color: white;
 			color: var(--text-color);
+			font-family: var(--fonts);
+			font-size: 1rem;
+			font-weight: normal;
+			text-transform: none;
 			border: none;
 			outline: none;
 
@@ -37,7 +41,7 @@
 			}
 		}
 		& div {
-			padding: var(--padding);
+			padding: var(--size);
 			background-color: white;
 			color: var(--text-color);
 		}
