@@ -78,7 +78,7 @@
 		<button class="next" on:click={() => handleClick('next')}>
 			<iconify-icon width="1.5rem" icon="fluent:chevron-right-24-filled" />
 		</button>
-		<button class="pause" on:click={togglePlay}>
+		<button class="pause square" on:click={togglePlay}>
 			{#if isPlaying}
 				<iconify-icon icon="solar:pause-bold" />
 			{:else}

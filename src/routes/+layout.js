@@ -1,5 +1,5 @@
 export const trailingSlash = 'always'
-// export const prerender = true
+export const prerender = true
 
 import { PUBLIC_SUPABASE_ANON_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public'
 import { createSupabaseLoadClient } from '@supabase/auth-helpers-sveltekit'

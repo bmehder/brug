@@ -27,7 +27,7 @@
 		line-height: 2.5;
 	}
 
-	div :global(:is(img, iframe)) {
+	div :global(iframe) {
 		display: block;
 		width: 100%;
 		height: 100%;

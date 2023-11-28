@@ -30,6 +30,7 @@
 		display: flex;
 		align-items: center;
 		gap: var(--size-0-5);
+		padding: var(--size) 0;
 	}
 
 	.items {
