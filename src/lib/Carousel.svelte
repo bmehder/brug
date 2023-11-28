@@ -1,7 +1,10 @@
 <script>
-	import carousel1 from '$lib/assets/1.jpg?enhanced'
-	import carousel2 from '$lib/assets/2.jpg?enhanced'
-	import carousel3 from '$lib/assets/3.jpg?enhanced'
+	// import carousel1 from '$lib/assets/1.jpg?enhanced'
+	// import carousel2 from '$lib/assets/2.jpg?enhanced'
+	// import carousel3 from '$lib/assets/3.jpg?enhanced'
+	import carousel1 from '$lib/assets/1.jpg'
+	import carousel2 from '$lib/assets/2.jpg'
+	import carousel3 from '$lib/assets/3.jpg'
 
 	export const carouselItems = [
 		{
@@ -85,7 +88,8 @@
 		<ul>
 			{#each items as item, idx}
 				<li class:active={index === idx}>
-					<enhanced:img src="{item.src}" alt={item.alt} />
+					<!-- <enhanced:img src="{item.src}" alt={item.alt} /> -->
+					<img src="{item.src}" alt={item.alt} />
 					{#if item.text}
 						<div class="h1">{item.text}</div>
 					{/if}
