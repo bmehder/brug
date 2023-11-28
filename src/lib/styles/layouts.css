@@ -116,7 +116,7 @@
 		display: inline;
 		width: auto;
 		max-width: var(--max);
-		margin-block-start: calc(var(--size) + 8px);
+		/* margin-block-start: calc(var(--size) + 8px); */
 		margin-block-end: var(--size);
 		margin-inline-start: var(--size-2);
 		margin-inline-end: 0;
