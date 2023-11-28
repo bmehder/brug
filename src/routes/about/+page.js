@@ -3,39 +3,39 @@ export async function load() {
 	return {
 		sliderImages: [
 			{
-				src: 'https://source.unsplash.com/eOpewngf68w',
+				src: 'https://source.unsplash.com/eOpewngf68w?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/78A265wPiO4',
+				src: 'https://source.unsplash.com/78A265wPiO4?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/ndN00KmbJ1c',
+				src: 'https://source.unsplash.com/ndN00KmbJ1c?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/eOpewngf68w',
+				src: 'https://source.unsplash.com/eOpewngf68w?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/78A265wPiO4',
+				src: 'https://source.unsplash.com/78A265wPiO4?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/ndN00KmbJ1c',
+				src: 'https://source.unsplash.com/ndN00KmbJ1c?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/eOpewngf68w',
+				src: 'https://source.unsplash.com/eOpewngf68w?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/78A265wPiO4',
+				src: 'https://source.unsplash.com/78A265wPiO4?enhanced',
 				alt: 'placeholder',
 			},
 			{
-				src: 'https://source.unsplash.com/ndN00KmbJ1c',
+				src: 'https://source.unsplash.com/ndN00KmbJ1c?enhanced',
 				alt: 'placeholder',
 			},
 		],

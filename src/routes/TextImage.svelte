@@ -1,9 +1,13 @@
+<script>
+	export let image
+</script>
+
 <section class="flow">
 	<h2>Heading</h2>
-	<img
+	<enhanced:img
 		class="float-right shadow"
-		style="border-radius: 4px;"
-		src="https://picsum.photos/500/380"
+		style="border-radius: 4px; width: 500px"
+		src="{image}"
 		alt="placeholder"
 	/>
 

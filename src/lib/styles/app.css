@@ -32,7 +32,8 @@ body {
 }
 
 img,
-iframe {
+iframe,
+picture {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -67,7 +68,7 @@ summary::marker {
 }
 
 details[open] summary::marker {
-	content: var(--minus)
+	content: var(--minus);
 }
 
 /* Form elements */
