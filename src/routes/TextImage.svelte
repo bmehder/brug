@@ -12,7 +12,7 @@
 	/>
 
 	<p>
-		Fugit est, aliquam, possimus error exercitationem tempora omnis similique
+		Fugit est, aliquam, possimus error exercitationem tempor omnis similique
 		provident reprehenderit incidunt corrupti. Quos fugiat obcaecati nobis! Provident
 		voluptate eligendi rem inventore dolorem ad alias, sit harum pariatur!
 	</p>
