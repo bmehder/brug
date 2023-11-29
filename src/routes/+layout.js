@@ -32,6 +32,7 @@ export const load = async ({ fetch, data, depends }) => {
 				children: [
 					{ name: 'FAQs', url: '/about/frequently-asked-questions' },
 					{ name: 'Components', url: '/about/components' },
+					{ name: 'Screen Recorder', url: '/about/recorder' },
 				],
 			},
 			{
