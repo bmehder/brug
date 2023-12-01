@@ -19,7 +19,7 @@
 				--timer
         if (timer === 0) {
           clearInterval(timerInterval)
-          resolve(timer)
+          resolve(null)
         }
 			}, 1000)
 		})
@@ -68,7 +68,6 @@
 			})
 
       stream.addEventListener('inactive', stopRecording)
-
 			await startTimer()
       startRecording()
 		} catch (err) {
@@ -120,32 +119,30 @@
 </div>
 
 <style>
-	button:hover {
-		outline: none;
-	}
-
 	.recorder {
-		--txt-clr: hsl(0 0% 98%);
-		--circle-bg-clr: hsl(0 100% 60%);
-		--circle-border-clr: hsl(0 0% 98%);
-
-		color: var(--txt-clr);
+		--txt-clr: var(--light);
+		--circle-bg-clr: var(--accent);
+		--circle-border-clr: var(--light);
+		
 		text-align: center;
 	}
-
+	
 	[data-state='countdown'] {
 		& .circle {
 			--txt-clr: hsl(0 0% 10%);
-			--circle-bg-clr: hsl(0 100% 98%);
 		}
 	}
-
+	
 	.record {
 		width: 80px;
 		height: 80px;
 		padding: 4px;
 		border: 4px solid var(--circle-border-clr);
 		border-radius: 50%;
+		
+		&:hover {
+			outline: none;
+		}
 	}
 
 	.circle {
@@ -159,11 +156,7 @@
 		color: var(--txt-clr);
 		background-color: var(--circle-bg-clr);
 		border-radius: 50%;
-		transition: background-color 0.6s;
-
-		&:hover {
-			--circle-bg-clr: hsl(0 100% 64%);
-		}
+		transition: background-color 0.3s;
 	}
 
 	.info {
