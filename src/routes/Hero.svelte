@@ -5,7 +5,7 @@
 <div class="full-width hero" style="margin-block-start: calc(var(--size-2) * -1);">
 	<div class="flex align-center swap">
 		<div>
-			<enhanced:img class="shadow" src="{image}" alt="hero">
+			<enhanced:img src="{image}" alt="hero">
 		</div>
 		<div class="flow">
 			<div class="h2 balance">Lorem <span class="highlight">ipsum</span> dolor sit amet consectetur.</div>
