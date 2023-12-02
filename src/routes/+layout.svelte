@@ -13,6 +13,7 @@
 	import Footer from '$lib/Footers/Footer.svelte'
 	import Popover from '$lib/Popover.svelte'
 	import BackToTop from '$lib/BackToTop.svelte'
+	import ViewTransition from '../lib/ViewTransition.svelte'
 
 	const mobileThreshold = 1120
 
@@ -36,6 +37,7 @@
 
 <div class="wrapper">
 	<Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} />
+	<ViewTransition />
 
 	<!-- <PageTransition key={$page.route.id}> -->
 	<main id="main-content" class="content-grid">
