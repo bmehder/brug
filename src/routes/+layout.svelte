@@ -36,8 +36,8 @@
 </script>
 
 <div class="wrapper">
-	<Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} />
 	<ViewTransition />
+	<Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} />
 
 	<!-- <PageTransition key={$page.route.id}> -->
 	<main id="main-content" class="content-grid">

@@ -75,7 +75,7 @@
 <style>
 	header {
 		padding-block: var(--size);
-		background-color: var(--accent);
+		background-color: var(--dark);
 		color: var(--light);
 	}
 

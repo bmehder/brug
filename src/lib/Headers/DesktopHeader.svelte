@@ -57,7 +57,10 @@
 <style>
 	header {
 		padding-block: var(--size);
-		background-color: var(--accent);
+		/* background-color: var(--accent); */
+		background-color: var(--dark);
+		border-bottom: 1px solid var(--text-color);
+		box-shadow: 0 1px 2px rgba(255, 255, 255, .1);
 	}
 
 	.skip-nav-link {
@@ -105,7 +108,7 @@
 		left: calc(var(--size) * -1);
 		display: block;
 		padding: var(--size);
-		background-color: var(--accent);
+		background-color: var(--dark);
 	}
 
 	a {

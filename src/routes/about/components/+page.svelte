@@ -11,7 +11,12 @@
 <section class="auto-grid accent">
 	<div class="flex">
 		{#each data.stats as item}
-			<Animacounter {...item} />
+			<Animacounter
+				{...item}
+				tweenOptions={{
+					duration: 1200,
+				}}
+			/>
 		{/each}
 	</div>
 </section>
