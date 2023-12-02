@@ -115,16 +115,22 @@
 		color: var(--light);
 		text-underline-offset: var(--size-0-5);
 		text-decoration-thickness: calc(var(--size) / 12);
+		position: relative;
 	}
-
+	
 	a:hover {
-		text-decoration-color: var(--alt-one);
+		text-decoration: none;
 	}
-
-	a[aria-current='true'] {
-		text-decoration: underline;
-		text-decoration-color: var(--light);
-		text-decoration-thickness: calc(var(--size) / 8);
+	
+	a[aria-current='true']::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: calc(var(--size-0-5) * -1);
+		width: 100%;
+		height: 2px;
+		background-color: white;
+		view-transition-name: active-page;
 	}
 
 	.dark-mode-toggle {
