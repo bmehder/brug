@@ -1,7 +1,7 @@
 <script>
   export let data
 
-  const { title, thumbnail, description, price, brand, rating, stock, category } =
+  const { id, title, thumbnail, description, price, brand, rating, stock, category } =
     data.product
 
   const formatMoney = num => (Math.round(num * 100) / 100).toLocaleString()

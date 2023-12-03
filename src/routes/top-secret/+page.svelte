@@ -6,7 +6,7 @@
 
 <section>
   {#if data.session}
-    <p>The secret is 42</p>
+    <p>The secret is {data.secret}</p>
   {:else}
     <p>You can't handle the truth!</p>
   {/if}
