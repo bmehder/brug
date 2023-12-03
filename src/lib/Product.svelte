@@ -6,7 +6,7 @@
 
 <li class="flow light shadow">
 	<a href="/products/{id}"
-		><img class="square" src={thumbnail} alt={title} style:--product={id} /></a
+		><img class="square" src={thumbnail} alt={title} /></a
 	>
 	<div class="half-flow">
 		<h2 class="balance"><a href="/products/{id}">{title}</a></h2>
@@ -20,7 +20,6 @@
 	}
 	img {
 		border: none;
-		view-transition-name: var(--product);
 	}
 	.half-flow {
 		margin-inline: calc(var(--size) * 1.5);

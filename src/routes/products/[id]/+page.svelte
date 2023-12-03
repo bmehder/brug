@@ -13,7 +13,7 @@
     <a href="/products">Products</a> &raquo; <a href=/products/category/{category}>{category}</a> &raquo; {title}
   </p>
   <div class="flex">
-    <img src={thumbnail} alt={title} style:--product={id} />
+    <img src={thumbnail} alt={title} />
     <div class="flow">
       <h3>Description:</h3>
       <p>{description}</p>
@@ -41,6 +41,5 @@
   }
   img {
     object-fit: cover;
-		view-transition-name: var(--product);
   }
 </style>

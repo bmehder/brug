@@ -1,7 +1,12 @@
+<script>
+	import Image from '$lib/assets/1.jpg?enhanced';
+</script>
+
 <section class="full-width light">
 	<div class="flow">
 		<h2>Lorem Ipsum Dolor</h2>
-		<img class="float-right" src="https://picsum.photos/500/380" alt="placeholder" />
+		<!-- <img class="float-right" src="https://picsum.photos/500/380" alt="placeholder" /> -->
+		<enhanced:img class="float-right" src="{Image}" alt="placeholder" />
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo impedit esse nobis,
 			odio incidunt reprehenderit at? Suscipit, sit ducimus quidem quisquam tenetur libero
