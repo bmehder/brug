@@ -10,6 +10,7 @@
 		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--plus: '\002B';
 	--minus: '\2212';
+	/* view-transition-name: none; */
 }
 
 /* Resets */
@@ -65,6 +66,7 @@ summary::marker {
 	content: var(--plus);
 	color: var(--accent);
 	font-weight: bold;
+	font-size: var(--size);
 }
 
 details[open] summary::marker {

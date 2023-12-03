@@ -113,8 +113,6 @@
 
 	a {
 		color: var(--light);
-		text-underline-offset: var(--size-0-5);
-		text-decoration-thickness: calc(var(--size) / 12);
 		position: relative;
 	}
 	
@@ -126,7 +124,7 @@
 		content: '';
 		position: absolute;
 		left: 0;
-		bottom: calc(var(--size-0-5) * -1);
+		bottom: calc(var(--size-0-5) * -0.025);
 		width: 100%;
 		height: 2px;
 		background-color: white;
