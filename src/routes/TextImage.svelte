@@ -6,7 +6,6 @@
 	<h2>Heading</h2>
 	<enhanced:img
 		class="float-right shadow"
-		style="border-radius: 4px; width: 500px"
 		src="{image}"
 		alt="placeholder"
 	/>
@@ -42,3 +41,11 @@
 		odio quasi aut quos. Voluptates, nihil ratione.
 	</p>
 </section>
+
+<style>
+	.float-right {
+		@media (min-width: 48em) {
+			min-width: 500px;
+		}
+	}
+</style>

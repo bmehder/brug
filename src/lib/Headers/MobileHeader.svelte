@@ -88,6 +88,7 @@
 
 	.logo {
 		max-width: 12em;
+		color: white;
 	}
 
 	ul {
