@@ -86,7 +86,7 @@
 		gap: var(--size);
 	}
 
-	.logo {
+	.logo.logo .logo a {
 		max-width: 12em;
 		color: white;
 	}
