@@ -4,14 +4,17 @@
 	import DarkModeCookie from '$lib/DarkModeCookie.svelte'
 
 	export let menuItems = []
-	export let logo = 'Add Logo Prop!'
+	// export let logo = 'Add Logo Prop!'
 </script>
 
 <header class="content-grid">
 	<a class="skip-nav-link" href="#main-content">skip navigation</a>
 	<div class="flex align-center">
 		<div class="logo">
-			<a href="/">{@html logo}</a>
+			<a href="/">
+				<!-- {@html logo} -->
+				<slot />
+			</a>
 		</div>
 		<nav>
 			<ul class="align-center">
@@ -57,10 +60,9 @@
 <style>
 	header {
 		padding-block: var(--size);
-		/* background-color: var(--accent); */
 		background-color: var(--dark);
 		border-bottom: 1px solid var(--text-color);
-		box-shadow: 0 1px 2px rgba(255, 255, 255, .1);
+		box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
 	}
 
 	.skip-nav-link {

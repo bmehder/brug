@@ -2,7 +2,7 @@
 	import { page } from '$app/stores'
 	import { slide } from 'svelte/transition'
 	
-	export let logo = 'Add Logo Prop!'
+	// export let logo = 'Add Logo Prop!'
 	export let menuItems = []
 
 	let isOpen = false
@@ -14,7 +14,10 @@
 <header class:isOpen class="content-grid">
 	<div class="top">
 		<div class="logo">
-			<a on:click={closeMenu} href="/">{@html logo}</a>
+			<a on:click={closeMenu} href="/">
+				<!-- {@html logo} -->
+				<slot />
+			</a>
 		</div>
 		<div class="trigger">
 			<button on:click={toggleMenu}>
@@ -77,6 +80,7 @@
 		padding-block: var(--size);
 		background-color: var(--dark);
 		color: var(--light);
+		box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
 	}
 
 	.top {

@@ -9,6 +9,7 @@
 	import "@fontsource/open-sans";
 	import "@fontsource/open-sans/600.css";
 	import "@fontsource/open-sans/700.css";
+	import Logo from '$lib/assets/logo.svelte'
 	import Header from '$lib/Headers/Header.svelte'
 	import Footer from '$lib/Footers/Footer.svelte'
 	import Popover from '$lib/Popover.svelte'
@@ -37,7 +38,10 @@
 
 <div class="wrapper">
 	<ViewTransition />
-	<Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} />
+	<!-- <Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} /> -->
+	<Header {mobileThreshold} menuItems={data.menuItems}>
+		<Logo />
+	</Header>
 
 	<!-- <PageTransition key={$page.route.id}> -->
 	<main id="main-content" class="content-grid">

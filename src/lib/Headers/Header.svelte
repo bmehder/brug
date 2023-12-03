@@ -2,7 +2,7 @@
   import DesktopHeader from '$lib/Headers/DesktopHeader.svelte'
   import MobileHeader from '$lib/Headers/MobileHeader.svelte'
 
-  export let logo = '<img src="/logo.png" alt="Restore Wound Care Logo" />'
+  // export let logo = '<img src="/logo.png" alt="Restore Wound Care Logo" />'
   export let mobileThreshold = 768
   export let menuItems = []
 
@@ -12,7 +12,11 @@
 <svelte:window bind:innerWidth />
 
 {#if innerWidth < mobileThreshold}
-  <MobileHeader {logo} {menuItems} />
+  <MobileHeader {menuItems}>
+    <slot />
+  </MobileHeader>
 {:else}
-  <DesktopHeader {logo} {menuItems} />
+  <DesktopHeader {menuItems}>
+    <slot />
+  </DesktopHeader>
 {/if}
