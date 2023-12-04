@@ -1,6 +1,7 @@
 <script>
 	import { invalidate } from '$app/navigation'
 	import { onMount } from 'svelte'
+	import 'iconify-icon'
 	import '$lib/styles/app.css'
 	import '$lib/styles/skins.css'
 	import '$lib/styles/layouts.css'

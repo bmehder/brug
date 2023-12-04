@@ -19,6 +19,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/open-sans": "^5.0.17",
-		"@fontsource/poppins": "^5.0.8"
+		"@fontsource/poppins": "^5.0.8",
+		"iconify-icon": "^1.0.8"
 	}
 }
