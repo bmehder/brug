@@ -18,6 +18,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@botpoison/browser": "^0.1.30",
 		"@fontsource/open-sans": "^5.0.17",
 		"@fontsource/poppins": "^5.0.8",
 		"iconify-icon": "^1.0.8"

@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte'
+  import Botpoison from "@botpoison/browser"
   import Spinner from '$lib/Spinner.svelte'
 
   export let id = ''
