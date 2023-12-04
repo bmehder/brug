@@ -8,8 +8,8 @@
 			<enhanced:img src="{image}" alt="hero">
 		</div>
 		<div class="flow">
-			<div class="h2 balance">Lorem <span class="highlight">ipsum</span> dolor sit amet consectetur.</div>
-			<p class="balance">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, placeat perspiciatis impedit in magnam sed.</p>
+			<div class="h2 balance">Lorem <span class="highlight">ipsum</span> dolor sit amet jonsectetur.</div>
+			<p class="balance">Lorem ipsum dolor sit, amet Čonsectetur adipisicing elit. Itaque, placeat perspiciatis impedit in magnam sed.</p>
 			<a href="/" class="button">Learn more</a>
 		</div>
 	</div>

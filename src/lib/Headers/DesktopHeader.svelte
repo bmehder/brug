@@ -26,7 +26,7 @@
 								<ul class="flow">
 									{#each children as { name, url }}
 										<li>
-											<a aria-current={$page.url.pathname === url} href={url}>{name}</a>
+											<a aria-current={$page.url.pathname.includes(url)} href={url}>{name}</a>
 										</li>
 									{/each}
 								</ul>
@@ -40,7 +40,7 @@
 								<ul class="flow">
 									{#each children as { name, url }}
 										<li>
-											<a aria-current={$page.url.pathname === url} href={url}>{name}</a>
+											<a aria-current={$page.url.pathname.includes(url)} href={url}>{name}</a>
 										</li>
 									{/each}
 								</ul>
