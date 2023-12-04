@@ -116,9 +116,6 @@
 	a {
 		color: var(--light);
 		position: relative;
-	}
-	
-	a:hover {
 		text-decoration: none;
 	}
 	

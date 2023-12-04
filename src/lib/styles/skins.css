@@ -7,6 +7,7 @@
 	--dark: #161616;
 	--light: #f1f3f6;
 	--accent: #be3455;
+	/* --accent: hsl(346, 57%, 47%); */
 }
 
 /* Typography */
@@ -68,13 +69,15 @@ h3,
 
 /* Links and Buttons */
 a {
-	color: var(--accent);
-	text-decoration: none;
+	/* color: var(--accent); */
+	color: inherit;
+	/* text-decoration: none; */
+	text-underline-offset: 4px;
+	text-decoration-thickness: 2px;
 }
 
 a:hover {
-	text-decoration: underline;
-	text-underline-offset: 4px;
+	text-decoration: none;
 }
 
 button,
@@ -88,6 +91,7 @@ button,
 	background-color: var(--accent);
 	color: var(--light);
 	text-transform: uppercase;
+	text-decoration: none;
 	font-weight: bold;
 	letter-spacing: 1px;
 	border: none;

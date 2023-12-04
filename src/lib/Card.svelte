@@ -12,3 +12,14 @@
     <a href="/" class="button block center">Go Here</a>
 	</div>
 </div>
+
+<style>
+	a:not(.button) {
+		color: var(--accent);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+</style>

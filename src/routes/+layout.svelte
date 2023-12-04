@@ -37,18 +37,16 @@
 	})
 </script>
 
+<ViewTransition />
+
 <div class="wrapper">
-	<ViewTransition />
-	<!-- <Header {mobileThreshold} logo="<h1>Logo</h1>" menuItems={data.menuItems} /> -->
 	<Header {mobileThreshold} menuItems={data.menuItems}>
 		<Logo />
 	</Header>
 
-	<!-- <PageTransition key={$page.route.id}> -->
 	<main id="main-content" class="content-grid">
 		<slot />
 	</main>
-	<!-- </PageTransition> -->
 
 	<Footer />
 </div>

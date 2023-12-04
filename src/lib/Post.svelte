@@ -9,3 +9,14 @@
   <h3><a href="/posts/{item.slug}">{@html item.title.rendered}</a></h3>
   <div class="flow">{@html item.excerpt.rendered}</div>
 </div>
+
+<style>
+  a {
+		text-decoration: none;
+		color: var(--accent);
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+</style>

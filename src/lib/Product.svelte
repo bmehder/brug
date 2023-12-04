@@ -18,6 +18,14 @@
 	li {
 		padding-block-end: calc(var(--size) + 0.5rem);
 	}
+	a {
+		text-decoration: none;
+		color: var(--accent);
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 	img {
 		border: none;
 	}

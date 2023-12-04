@@ -43,7 +43,7 @@
 							{#each children as { name, url }}
 								<li class="child">
 									<a
-										aria-current={$page.url.pathname === url}
+										aria-current={$page.url.pathname.includes(url)}
 										on:click={closeMenu}
 										href={url}>{name}</a
 									>
@@ -61,7 +61,7 @@
 							{#each children as { name, url }}
 								<li class="child">
 									<a
-										aria-current={$page.url.pathname === url}
+										aria-current={$page.url.pathname.includes(url)}
 										on:click={closeMenu}
 										href={url}>{name}</a
 									>
@@ -117,10 +117,13 @@
 	a {
 		display: block;
 		color: inherit;
+		text-decoration: none;
 	}
 
 	a[aria-current='true'] {
-		color: var(--alt-one);
+		/* color: var(--alt-one); */
+		text-decoration: underline;
+		text-underline-offset: 4px;
 	}
 
 	button {

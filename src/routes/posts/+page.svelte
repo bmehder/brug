@@ -8,7 +8,7 @@
 
 <section class="flow">
 	{#each data.postsByCategories as posts, idx}
-		<h2 class="title">
+		<h2>
 			<a href="/posts/category/{data.categories[idx].slug}"
 				>{data.categories[idx].name} Category</a
 			>
