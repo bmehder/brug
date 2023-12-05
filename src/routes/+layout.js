@@ -54,11 +54,11 @@ export const load = async ({ fetch, data, depends }) => {
 			{
 				name: 'Account',
 				url: '/account/',
-				children: [
-					{ name: 'Register', url: '/register' },
-					{ name: 'Magic Link', url: '/magic-link' },
-					{ name: 'SSO', url: '/sso' },
-				],
+				// children: [
+				// 	{ name: 'Register', url: '/register' },
+				// 	{ name: 'Magic Link', url: '/magic-link' },
+				// 	{ name: 'SSO', url: '/sso' },
+				// ],
 			},
 			{
 				name: 'Top Secret',

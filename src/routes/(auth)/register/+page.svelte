@@ -3,9 +3,9 @@
 	export let form
 </script>
 
-<h1 class="title">Register</h1>
 
-<section>
+<div class="flow">
+	<!-- <h1 class="title">Register</h1> -->
 	<form method="post" use:enhance>
 		<div class="flow">
 			<div class="grid half-flow">
@@ -23,4 +23,4 @@
 	{#if form?.success}
 		<div class="h3">{form.message}</div>
 	{/if}
-</section>
+</div>

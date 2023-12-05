@@ -27,9 +27,10 @@
 	}
 </script>
 
-<h1 class="title">Magic Link</h1>
 
-<section>
+<div class="flow">
+	<!-- <h1 class="title">Magic Link</h1> -->
+
 	{#if message}
 		<p>{message}</p>
 	{/if}
@@ -43,4 +44,4 @@
 			<button>Submit</button>
 		</div>
 	</form>
-</section>
+</div>

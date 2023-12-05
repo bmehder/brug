@@ -69,15 +69,27 @@
 	}
 
 	/* Links and Buttons */
-	a {
+	a, .a {
 		/* color: var(--accent); */
 		color: inherit;
 		/* text-decoration: none; */
 		text-underline-offset: 4px;
 		text-decoration-thickness: 2px;
 	}
+	
+	.a {
+		all: unset;
+		text-decoration: underline;
+		text-underline-offset: 4px;
+		text-decoration-thickness: 2px;
+		cursor: pointer;
+		
+		&:is(:hover, :focus) {
+			all: unset;
+		}
+	}
 
-	a:hover {
+	a:hover, .a:hover {
 		text-decoration: none;
 	}
 

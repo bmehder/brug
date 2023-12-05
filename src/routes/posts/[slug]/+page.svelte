@@ -18,6 +18,12 @@
 		margin-block-start: var(--size);
 	}
 
+	div :global(img:first-child) {
+		aspect-ratio: 16 / 9;
+		object-fit: cover;
+		object-position: center;
+	}
+
 	div :global(ul) {
 		list-style: initial;
 		padding-inline-start: var(--size);
