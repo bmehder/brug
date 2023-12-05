@@ -1,5 +1,6 @@
-/* prettier-ignore */
-.content-grid {
+@layer layouts {
+	/* prettier-ignore */
+	.content-grid {
   --padding: 2rem;
   --content-max-width: 64em;
   --breakout-max-width: 72em;
@@ -44,81 +45,81 @@
   }
 }
 
-.flow > * + * {
-	margin-block-start: var(--flow);
-}
+	.flow > * + * {
+		margin-block-start: var(--flow);
+	}
 
-.half-flow > * + * {
-	margin-block-start: var(--size-0-5);
-}
+	.half-flow > * + * {
+		margin-block-start: var(--size-0-5);
+	}
 
-.grid {
-	display: grid;
-}
+	.grid {
+		display: grid;
+	}
 
-.auto-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(var(--min, 16em), 1fr));
-	gap: var(--gap, var(--size-2));
-}
-
-@media (min-width: 49em) {
 	.auto-grid {
-		gap: var(--size-2);
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(var(--min, 16em), 1fr));
+		gap: var(--gap, var(--size-2));
 	}
-}
 
-.columns {
-	--gap: var(--size-2);
-	display: grid;
-	gap: var(--gap);
-}
+	@media (min-width: 49em) {
+		.auto-grid {
+			gap: var(--size-2);
+		}
+	}
 
-@media (min-width: 49em) {
 	.columns {
-		grid-auto-flow: column;
-		gap: var(--size-2);
+		--gap: var(--size-2);
+		display: grid;
+		gap: var(--gap);
 	}
-}
 
-.flex {
-	display: flex;
-	flex-direction: column;
-	gap: var(--gap, var(--size-2));
-}
+	@media (min-width: 49em) {
+		.columns {
+			grid-auto-flow: column;
+			gap: var(--size-2);
+		}
+	}
 
-.flex > * {
-	flex: 1;
-}
-
-.align-center {
-	align-items: center;
-}
-
-@media (min-width: 49em) {
 	.flex {
-		flex-direction: row;
+		display: flex;
+		flex-direction: column;
+		gap: var(--gap, var(--size-2));
+		
+		@media (min-width: 49em) {
+			flex-direction: row;
+		}
 	}
-}
 
-@media (min-width: 49em) {
-	.swap :nth-child(1) {
-		order: 2;
+	.flex > * {
+		flex: 1;
 	}
-	.swap :nth-child(2) {
-		order: 1;
-	}
-}
+	
 
-@media (min-width: 49em) {
-	.float-right {
-		float: right;
-		display: inline;
-		width: auto;
-		max-width: var(--max);
-		/* margin-block-start: calc(var(--size) + 8px); */
-		margin-block-end: var(--size);
-		margin-inline-start: var(--size-2);
-		margin-inline-end: 0;
+	.align-center {
+		align-items: center;
+	}
+
+
+	@media (min-width: 49em) {
+		.swap :nth-child(1) {
+			order: 2;
+		}
+		.swap :nth-child(2) {
+			order: 1;
+		}
+	}
+
+	@media (min-width: 49em) {
+		.float-right {
+			float: right;
+			display: inline;
+			width: auto;
+			max-width: var(--max);
+			margin-block-end: var(--size);
+			margin-inline-start: var(--size-2);
+			margin-inline-end: 0;
+		}
 	}
 }

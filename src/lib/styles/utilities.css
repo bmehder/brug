@@ -1,0 +1,64 @@
+@layer utilities {
+	.block {
+		display: block;
+	}
+
+	.square {
+		aspect-ratio: 1;
+		object-fit: cover;
+	}
+
+	.auto-hyphen {
+		hyphens: auto;
+	}
+
+	.center {
+		margin-inline: auto;
+		text-align: center;
+	}
+
+	.balance {
+		text-wrap: balance;
+	}
+
+	.bold {
+		font-weight: 600;
+	}
+
+	.italic {
+		font-style: italic;
+	}
+
+	.list {
+		list-style: initial;
+		padding-inline-start: calc(var(--size) * 1.5);
+	}
+
+	@media (min-width: 49em) {
+		.list {
+			padding-inline-start: var(--size-2);
+		}
+	}
+
+	.list > * + * {
+		margin-block-start: calc(var(--size) / 6);
+	}
+
+	.padding {
+		padding: var(--padding, --size);
+	}
+
+	.video {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		overflow: hidden;
+	}
+
+	.video iframe {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		inset: 0;
+		border: 0;
+	}
+}

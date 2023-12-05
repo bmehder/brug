@@ -5,6 +5,8 @@
 	import '$lib/styles/app.css'
 	import '$lib/styles/skins.css'
 	import '$lib/styles/layouts.css'
+	import '$lib/styles/utilities.css'
+	import '$lib/styles/misc.css'
 	import '@fontsource/poppins/600.css'
 	import '@fontsource/poppins/700.css'
 	import "@fontsource/open-sans";
@@ -15,7 +17,7 @@
 	import Footer from '$lib/Footers/Footer.svelte'
 	import Popover from '$lib/Popover.svelte'
 	import BackToTop from '$lib/BackToTop.svelte'
-	import ViewTransition from '../lib/ViewTransition.svelte'
+	import ViewTransition from '$lib/ViewTransition.svelte'
 
 	const mobileThreshold = 1120
 
@@ -68,7 +70,7 @@
   </p>
 </Popover> -->
 
-<BackToTop --color="black" --bg-color="var(--light)" threshold="500" />
+<BackToTop --color="var(--accent)" --bg-color="var(--light)" threshold="500" />
 
 <style>
 	.wrapper {
