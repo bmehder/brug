@@ -35,10 +35,9 @@
 					</li>
 					{#if !data.session}
 						<li><a href="/register">Register</a></li>
-					{/if}
-					<li><a href="/magic-link">Magic Link</a></li>
-					<li><a href="/sso">Single Sign-on</a></li>
-					{#if data.session}
+						<li><a href="/magic-link">Magic Link</a></li>
+						<li><a href="/sso">Single Sign-on</a></li>
+					{:else}
 						<li><a href="/update-password">Update Password</a></li>
 						<li><button class="a" on:click={handleSignOut}>Sign out</button></li>
 					{/if}
