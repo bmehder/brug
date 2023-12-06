@@ -7,7 +7,7 @@
 
 <h1 class="title">Frequently Asked Questions</h1>
 
-<section class="flow">
+<section class="section flow">
   <h2>Many Open at Once</h2>
 	<ul>
     {#each data.faqs as { question, answer }}
@@ -18,7 +18,7 @@
 	</ul>
 </section>
 
-<section class="flow">
+<section class="section flow">
   <h2>One Open at a Time</h2>
 	<ul>
 		<RadioDisclosure items={data.faqs} />

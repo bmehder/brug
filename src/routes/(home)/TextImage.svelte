@@ -2,7 +2,7 @@
 	export let image
 </script>
 
-<section class="flow">
+<section class="section flow">
 	<h2>Heading</h2>
 	<enhanced:img
 		class="float-right shadow"

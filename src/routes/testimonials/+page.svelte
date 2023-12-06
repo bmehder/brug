@@ -5,7 +5,7 @@
 
 <h1 class="title">Testimonials</h1>
 
-<section class="auto-grid">
+<section class="section auto-grid">
   {#each data.quotes as quote}
     <Quote {quote} />
   {/each}

@@ -1,4 +1,4 @@
-<section class="breakout center banana" style="--gap: 4rem; padding-block: var(--size-4)">
+<section class="section breakout center banana" style="--gap: 4rem; padding-block: var(--size-4)">
 	<div class="flow">
 		<h2>Mission & Vision Statement</h2>
 		<div class="sep"></div>

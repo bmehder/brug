@@ -4,7 +4,7 @@
   export let sliderImages
 </script>
 
-<section class="content-grid full-width accent">
+<section class="section content-grid full-width accent">
 	<h2>Slider</h2>
 	<Slider items={sliderImages} />
 </section>

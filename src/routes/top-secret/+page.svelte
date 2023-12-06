@@ -4,7 +4,7 @@
 
 <h1 class="title">Top Secret 🕵️</h1>
 
-<section>
+<section class="section">
   {#if data.session}
     <p>The secret is {data.secret}</p>
   {:else}

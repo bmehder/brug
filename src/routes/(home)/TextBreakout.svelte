@@ -1,4 +1,4 @@
-<section class="flow">
+<section class="section flow">
 	<h2>Lorem, ipsum.</h2>
 	<div class="columns">
 		<p>
@@ -20,7 +20,7 @@
 	</div>
 </section>
 
-<section class="breakout italic accent shadow">
+<section class="section breakout italic accent shadow">
 	<div class="half-flow">
 		<p class="h2 center">Lorem ipsum, dolor sit amet consectetur adipisicing elit!</p>
 		<p class="center">
@@ -30,7 +30,7 @@
 	</div>
 </section>
 
-<section class="columns">
+<section class="section columns">
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fuga nesciunt ab
 		sapiente rem harum hic expedita aspernatur? Error veniam laudantium alias nesciunt

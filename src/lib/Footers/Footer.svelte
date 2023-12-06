@@ -13,6 +13,9 @@
 				<a class="social" href="/" target="_blank" aria-label="LinkedIn">
 					<iconify-icon icon="bi:linkedin" width="3rem"></iconify-icon>
 				</a>
+				<a class="social" href="https://github.com/bmehder/brug" target="_blank" aria-label="GitHub">
+					<iconify-icon icon="bi:github" width="3rem"></iconify-icon>
+				</a>
 			</p>
 		</div>
 	</div>

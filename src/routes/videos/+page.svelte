@@ -5,7 +5,7 @@ import Vimeo from '$lib/Vimeo.svelte';
 
 <h1 class="title">Videos</h1>
 
-<section class="flow">
+<section class="section flow">
   <div class="auto-grid">
     <div class="flow">
       <h2>YouTube</h2>

@@ -1,5 +1,5 @@
 <section
-	class="flow full-width balance"
+	class="section flow full-width balance"
 	style="
 					padding-block: var(--size-6);
 					background-image: url('https://picsum.photos/id/127/2000');

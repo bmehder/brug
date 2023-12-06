@@ -5,7 +5,7 @@
 	import Card from '$lib/Card.svelte'
 </script>
 
-<section class="full-width flow light">
+<section class="section full-width flow light">
 	<h2>Cards</h2>
 	<div class="auto-grid">
 		<Card

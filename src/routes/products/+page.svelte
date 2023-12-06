@@ -6,7 +6,7 @@
 
 <h1 class="title">Products</h1>
 
-<section class="flow">
+<section class="section flow">
   <ul class="auto-grid">
     {#each data.products as product}
       <Product {product} />

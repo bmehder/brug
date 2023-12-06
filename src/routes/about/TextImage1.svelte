@@ -2,7 +2,7 @@
 	import Image from '$lib/assets/1.jpg?enhanced';
 </script>
 
-<section class="full-width light">
+<section class="section full-width light">
 	<div class="flow">
 		<h2>Lorem Ipsum Dolor</h2>
 		<!-- <img class="float-right" src="https://picsum.photos/500/380" alt="placeholder" /> -->

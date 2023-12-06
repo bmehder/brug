@@ -8,7 +8,7 @@
 	const toggleIsOpen = () => (isOpen = !isOpen)
 </script>
 
-<section class="full-width flow">
+<section class="section full-width flow">
 	<div class="flex">
 		<h2>Details</h2>
 		<button style="flex: initial" on:click={toggleIsOpen}>

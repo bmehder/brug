@@ -33,9 +33,6 @@
 </div>
 
 <style>
-  .section {
-    padding-block-end: var(--size);
-  }
   .price {
     color: var(--accent);
   }

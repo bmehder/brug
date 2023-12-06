@@ -1,4 +1,4 @@
-<section class="flow full-width light">
+<section class="section flow full-width light">
 	<h2>Columns</h2>
 	<div class="columns" style="--gap: 1.5em">
 		<p>

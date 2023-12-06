@@ -52,6 +52,11 @@ export const load = async ({ fetch, data, depends }) => {
 				url: '/testimonials/',
 			},
 			{
+				name: 'Top Secret',
+				url: '/top-secret/',
+				auth: true,
+			},
+			{
 				name: 'Account',
 				url: '/account/',
 				// children: [
@@ -59,11 +64,6 @@ export const load = async ({ fetch, data, depends }) => {
 				// 	{ name: 'Magic Link', url: '/magic-link' },
 				// 	{ name: 'SSO', url: '/sso' },
 				// ],
-			},
-			{
-				name: 'Top Secret',
-				url: '/top-secret/',
-				auth: true,
 			},
 			{
 				name: 'Contact',

@@ -7,6 +7,6 @@
 
 <h1 class="title">Contact</h1>
 
-<section>
+<section class="section">
   <FormSparkAsync id={FORMSPARK_ID} botpoisonKey={BOTPOISON_KEY} />
 </section>

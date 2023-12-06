@@ -57,11 +57,6 @@
 		list-style: none;
 	}
 
-	/* TODO - replace w/ section class? */
-	section {
-		padding-block: var(--size-2);
-	}
-
 	summary {
 		margin-inline-start: var(--size-0-5);
 		padding-left: var(--size-0-5);

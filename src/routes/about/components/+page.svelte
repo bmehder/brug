@@ -8,7 +8,7 @@
 
 <h1 class="title">UI Components</h1>
 
-<section class="auto-grid accent">
+<section class="section auto-grid accent animacounter">
 	<div class="flex">
 		{#each data.stats as item}
 			<Animacounter
@@ -21,10 +21,16 @@
 	</div>
 </section>
 
-<section>
+<section class="section">
 	<Timeline timeline={data.timeline} />
 </section>
 
-<section>
+<section class="section">
 	<Tabs items={data.tabItems} />
 </section>
+
+<style>
+	.animacounter {
+		margin-block-start: var(--size-2);
+	}
+</style>
