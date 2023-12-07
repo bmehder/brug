@@ -3,9 +3,7 @@
 	export let form
 </script>
 
-
 <div class="flow">
-	<!-- <h1 class="title">Register</h1> -->
 	<form method="post" use:enhance>
 		<div class="flow">
 			<div class="grid half-flow">
@@ -14,12 +12,17 @@
 			</div>
 			<div class="grid half-flow">
 				<label for="password">Password</label>
-				<input type="password" name="password" id="password" autocomplete="current-password" />
+				<input
+					type="password"
+					name="password"
+					id="password"
+					autocomplete="current-password"
+				/>
 			</div>
 			<button>Sign up</button>
 		</div>
 	</form>
-	
+
 	{#if form?.success}
 		<div class="h3">{form.message}</div>
 	{/if}

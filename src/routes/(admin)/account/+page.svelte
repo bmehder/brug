@@ -1,6 +1,6 @@
 <script>
-	import { dev} from '$app/environment'
-	
+	import { dev } from '$app/environment'
+
 	export let data
 
 	let { supabase } = data
@@ -46,10 +46,7 @@
 	}
 </script>
 
-
 <div class="flow">
-	<!-- <h1 class="title">Login</h1> -->
-
 	{#if err}
 		<div class="h3">{err.message}</div>
 	{/if}
@@ -60,7 +57,7 @@
 
 	{#if data.session}
 		<div class="flow">
-      <div class="h3">Hello, {data.session.user.user_metadata.full_name}</div>
+			<div class="h3">Hello, {data.session.user.user_metadata.full_name}</div>
 			<img
 				class="avatar"
 				src={data.session.user.user_metadata.avatar_url}
@@ -97,7 +94,7 @@
 </div>
 
 <style>
-  .avatar {
-    max-width: 8rem;
-  }
+	.avatar {
+		max-width: 8rem;
+	}
 </style>

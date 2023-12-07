@@ -59,8 +59,12 @@
 
 <style>
 	header {
-		padding-block: var(--size);
-		background-color: var(--dark);
+		--background-color: #242424;
+		position: fixed;
+		width: 100%;
+		z-index: 2;
+		padding-block: var(--size-0-5);
+		background-color: var(--background-color);
 		border-bottom: 1px solid var(--text-color);
 		box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
 	}
@@ -110,7 +114,7 @@
 		left: calc(var(--size) * -1);
 		display: block;
 		padding: var(--size);
-		background-color: var(--dark);
+		background-color: var(--background-color);
 	}
 
 	a {

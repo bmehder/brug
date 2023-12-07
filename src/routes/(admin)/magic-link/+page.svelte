@@ -14,8 +14,8 @@
 			options: {
 				shouldCreateUser: true,
 				emailRedirectTo: dev
-					? 'http://localhost:5173/'
-					: 'https://brug-theme.vercel.app/',
+					? 'http://localhost:5173/account/'
+					: 'https://brug-theme.vercel.app/account/',
 			},
 		})
 
@@ -24,13 +24,12 @@
 		} else {
 			message = 'Check your email for a link to login.'
 		}
+
+		email = null
 	}
 </script>
 
-
 <div class="flow">
-	<!-- <h1 class="title">Magic Link</h1> -->
-
 	{#if message}
 		<p>{message}</p>
 	{/if}

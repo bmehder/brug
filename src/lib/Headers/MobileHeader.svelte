@@ -129,6 +129,7 @@
 	button {
 		all: unset;
 		color: white;
+		cursor: pointer;
 
 		&:focus-visible {
 			outline: 1px solid;

@@ -81,7 +81,8 @@
 	}
 
 	main {
-		margin-block: var(--size-2);
+		margin-block-start: calc(var(--size-2) * 3.25);
+		margin-block-end: var(--size-2);
 		line-height: 1.6;
 	}
 </style>

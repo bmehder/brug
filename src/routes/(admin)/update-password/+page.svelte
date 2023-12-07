@@ -17,8 +17,6 @@
 	}
 </script>
 
-<!-- <h1 class="title">Update Password</h1> -->
-
 {#if data.session}
 	<div class="flow">
 		{#if message}

@@ -34,8 +34,6 @@
 </script>
 
 <div class="flow">
-	<!-- <h1 class="title">Single Sign-On (SSO)</h1> -->
-
 	{#if err}
 		<p>Something went wrong.</p>
 	{/if}
