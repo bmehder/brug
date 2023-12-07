@@ -5,7 +5,7 @@
 
 	let err = null
 
-	const handleSSOLogin = async provider => {
+	const handleSSOLogin = async (provider) => {
 		err = null
 
 		const { error } = await data.supabase.auth.signInWithOAuth({
@@ -45,8 +45,8 @@
 			<button on:click={() => handleSSOLogin('google')}>Google</button>
 		</form>
 	{:else}
-		<form>
-			<button on:click={handleSignOut}>Sign out</button>
+		<form on:submit|preventDefault={handleSignOut}>
+			<button>Sign out</button>
 		</form>
 	{/if}
 </div>

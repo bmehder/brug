@@ -90,6 +90,10 @@
 		gap: var(--size);
 	}
 
+	.logo a {
+		line-height: 0;
+	}
+
 	.logo.logo, .logo a :global(h1) {
 		max-width: 12em;
 		color: white !important;
@@ -124,6 +128,10 @@
 		/* color: var(--alt-one); */
 		text-decoration: underline;
 		text-underline-offset: 4px;
+	}
+
+	.trigger {
+		line-height: 0;
 	}
 
 	button {
