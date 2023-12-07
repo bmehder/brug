@@ -59,7 +59,6 @@
 
 <style>
 	header {
-		--background-color: #242424;
 		position: fixed;
 		width: 100%;
 		z-index: 2;

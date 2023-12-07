@@ -77,8 +77,8 @@
 
 <style>
 	header {
-		padding-block: var(--size);
-		background-color: var(--dark);
+		padding-block: var(--size-0-5);
+		background-color: var(--background-color);
 		color: var(--light);
 		box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
 	}

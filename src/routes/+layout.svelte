@@ -81,8 +81,11 @@
 	}
 
 	main {
-		margin-block-start: calc(var(--size-2) * 3.25);
-		margin-block-end: var(--size-2);
+		margin-block: var(--size-2);
 		line-height: 1.6;
+		
+		@media (min-width: 1120px) {
+			margin-block-start: calc(var(--size-6) * 1);
+		}
 	}
 </style>
