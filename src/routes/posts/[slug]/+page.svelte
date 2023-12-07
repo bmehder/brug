@@ -4,14 +4,14 @@
 	const post = data.post[0]
 </script>
 
-<section class="section flow">
+<section class="flow">
 	<h1>{@html post.title.rendered}</h1>
 
 	<div>{@html post.content.rendered}</div>
 </section>
 
 <style>
-	.section {
+	section {
 		max-width: 48em;
 	}
 	div :global(> * + *) {

@@ -76,7 +76,7 @@
 	.wrapper {
 		min-height: 100dvh;
 		display: grid;
-		grid-template-rows: auto 1fr auto;
+		grid-template-rows: 1fr auto;
 		align-items: start;
 	}
 
@@ -85,7 +85,7 @@
 		line-height: 1.6;
 		
 		@media (min-width: 1120px) {
-			margin-block-start: calc(var(--size-6) * 1);
+			margin-block-start: var(--size-6);
 		}
 	}
 </style>

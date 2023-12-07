@@ -7,7 +7,7 @@
   const formatMoney = num => (Math.round(num * 100) / 100).toLocaleString()
 </script>
 
-<div class="section flow">
+<div class="flow">
   <h1 class="title">{title}</h1>
   <p>
     <a href="/products">Products</a> &raquo; <a href=/products/category/{category}>{category}</a> &raquo; {title}
