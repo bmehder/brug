@@ -1,4 +1,6 @@
 <script>
+	import { dev } from '$app/environment'
+
 	export let data
 
 	let err = null
@@ -6,14 +8,14 @@
 	const handleSSOLogin = async provider => {
 		err = null
 
-		const { error } = await data.supabase.auth.signInWithOAuth(
-			{
-				provider,
-        options: {
-          redirectTo: 'http://localhost:5173/account/',
-        }
-			}
-		)
+		const { error } = await data.supabase.auth.signInWithOAuth({
+			provider,
+			options: {
+				redirectTo: dev
+					? `http://localhost:5173/account/`
+					: 'https://brug-theme.vercel.app/account/',
+			},
+		})
 
 		if (error) {
 			err = error
