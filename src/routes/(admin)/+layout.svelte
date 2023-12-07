@@ -25,7 +25,8 @@
 	<div class="layout">
 		<slot />
 
-		<aside class="light">
+		<aside class="light half-flow">
+			<h3>Account Pages</h3>
 			<nav>
 				<ul class="half-flow">
 					<li>
@@ -53,7 +54,8 @@
 		gap: var(--size-2);
 
 		& aside {
-			padding: var(--size);
+			padding-block: var(--size);
+			padding-inline: var(--size);
 		}
 
 		@media (min-width: 48rem) {

@@ -1,4 +1,6 @@
 <script>
+	import { dev} from '$app/environment'
+	
 	export let data
 
 	let { supabase } = data

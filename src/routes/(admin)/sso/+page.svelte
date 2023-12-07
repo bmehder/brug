@@ -1,48 +1,52 @@
 <script>
-  export let data
+	export let data
 
-  let err = null
+	let err = null
 
-  const handleSSOLogin = async provider => {
-    err = null
+	const handleSSOLogin = async provider => {
+		err = null
 
-    const { error } = await data.supabase.auth.signInWithOAuth({
-      provider
-    })
+		const { error } = await data.supabase.auth.signInWithOAuth(
+			{
+				provider,
+        options: {
+          redirectTo: 'http://localhost:5173/account/',
+        }
+			}
+		)
 
-    if (error) {
-      err = error
-    }
-  }
+		if (error) {
+			err = error
+		}
+	}
 
-  const handleSignOut = async () => {
-    err = null
+	const handleSignOut = async () => {
+		err = null
 
-    const { error } = await data.supabase.auth.signOut()
+		const { error } = await data.supabase.auth.signOut()
 
-    if (error) {
-      err = error
-    }
-  }
+		if (error) {
+			err = error
+		}
+	}
 </script>
 
-
 <div class="flow">
-  <!-- <h1 class="title">Single Sign-On (SSO)</h1> -->
+	<!-- <h1 class="title">Single Sign-On (SSO)</h1> -->
 
-  {#if err}
-    <p>Something went wrong.</p>
-  {/if}
-  
-  {#if !data.session}
-    <p>Register or sign in with:</p>
-    <form>
-      <button on:click={() => handleSSOLogin('github')}>GitHub</button>
-      <button on:click={() => handleSSOLogin('google')}>Google</button>
-    </form>
-  {:else}
-    <form>
-      <button on:click={handleSignOut}>Sign out</button>
-    </form>
-  {/if}
+	{#if err}
+		<p>Something went wrong.</p>
+	{/if}
+
+	{#if !data.session}
+		<p>Register or sign in with:</p>
+		<form>
+			<button on:click={() => handleSSOLogin('github')}>GitHub</button>
+			<button on:click={() => handleSSOLogin('google')}>Google</button>
+		</form>
+	{:else}
+		<form>
+			<button on:click={handleSignOut}>Sign out</button>
+		</form>
+	{/if}
 </div>
