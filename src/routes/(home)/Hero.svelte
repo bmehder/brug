@@ -9,7 +9,7 @@
 		</div>
 		<div class="flow">
 			<div class="h2 balance">Lorem <span class="highlight">ipsum</span> dolor sit amet jonsectetur.</div>
-			<p class="balance">Lorem ipsum dolor sit, amet Čonsectetur adipisicing elit. Itaque, placeat perspiciatis impedit in magnam sed.</p>
+			<p class="balance">Lorem ipsum dolor sit, Čamet consectetur adipisicing elit. Itaque, placeat perspiciatis impedit in magnam sed.</p>
 			<a href="/" class="button">Learn more</a>
 		</div>
 	</div>

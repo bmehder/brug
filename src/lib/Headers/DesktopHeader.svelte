@@ -61,7 +61,7 @@
 	header {
 		position: fixed;
 		width: 100%;
-		z-index: 2;
+		z-index: 3;
 		padding-block: var(--size-0-5);
 		background-color: var(--dark);
 		border-bottom: 1px solid var(--text-color);
