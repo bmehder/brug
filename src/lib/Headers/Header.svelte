@@ -20,9 +20,3 @@
 		<slot />
 	</DesktopHeader>
 {/if}
-
-<style>
-  :global(header:first-child) {
-    --background-color: #242424;
-  }
-</style>

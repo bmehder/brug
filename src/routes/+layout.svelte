@@ -7,11 +7,11 @@
 	import '$lib/styles/layouts.css'
 	import '$lib/styles/utilities.css'
 	import '$lib/styles/misc.css'
-	import '@fontsource/poppins/600.css'
-	import '@fontsource/poppins/700.css'
-	import "@fontsource/open-sans";
-	import "@fontsource/open-sans/600.css";
-	import "@fontsource/open-sans/700.css";
+	// import '@fontsource/poppins/600.css'
+	// import '@fontsource/poppins/700.css'
+	// import "@fontsource/open-sans";
+	// import "@fontsource/open-sans/600.css";
+	// import "@fontsource/open-sans/700.css";
 	import Logo from '$lib/assets/logo.svelte'
 	import Header from '$lib/Headers/Header.svelte'
 	import Footer from '$lib/Footers/Footer.svelte'

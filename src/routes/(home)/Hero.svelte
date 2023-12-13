@@ -2,7 +2,7 @@
 	export let image = ''
 </script>
 
-<div class="full-width hero" style="margin-block-start: calc(var(--size-2) * -1);">
+<div class="full-width hero" style="margin-block-start: calc(var(--size-2) * -1.25);">
 	<div class="flex align-center swap">
 		<div>
 			<enhanced:img src="{image}" alt="hero">

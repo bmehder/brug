@@ -2,6 +2,7 @@
 	import { slide } from 'svelte/transition'
 
 	export let items = []
+	
 	let index = null
 
 	const handleClick = idx => {

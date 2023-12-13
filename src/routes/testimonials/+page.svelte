@@ -1,5 +1,6 @@
 <script>
   import Quote from '$lib/Quote.svelte';
+  
   export let data
 </script>
 

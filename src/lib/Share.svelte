@@ -1,6 +1,9 @@
 <script>
   export let icons = []
 
+  /**
+ * @type {boolean | undefined}
+ */
   let isActive = false
 
   const length = icons.length
