@@ -13,6 +13,7 @@
 	// import "@fontsource/open-sans/600.css";
 	// import "@fontsource/open-sans/700.css";
 	import Logo from '$lib/assets/logo.svelte'
+	import ScrollIndicator from '$lib/ScrollIndicator.svelte'
 	import Header from '$lib/Headers/Header.svelte'
 	import Footer from '$lib/Footers/Footer.svelte'
 	import Popover from '$lib/Popover.svelte'
@@ -41,6 +42,7 @@
 
 <ViewTransition />
 
+<ScrollIndicator />
 <div class="wrapper">
 	<Header {mobileThreshold} menuItems={data.menuItems}>
 		<Logo />

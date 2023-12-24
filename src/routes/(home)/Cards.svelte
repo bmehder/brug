@@ -40,3 +40,26 @@
 		/>
 	</div>
 </section>
+
+<style>
+	.auto-grid {
+		scale: 0.8;
+		opacity: 0.5;
+		animation: fade-in linear forwards;
+		animation-timeline: view();
+		animation-range: entry;
+	}
+
+	@keyframes fade-in {
+		to {
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+    .auto-grid {
+			animation: none;
+		}
+  }
+</style>

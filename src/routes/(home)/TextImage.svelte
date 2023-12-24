@@ -4,16 +4,12 @@
 
 <section class="section flow">
 	<h2>Heading</h2>
-	<enhanced:img
-		class="float-right shadow"
-		src="{image}"
-		alt="placeholder"
-	/>
+	<enhanced:img class="float-right shadow" src={image} alt="placeholder" />
 
 	<p>
-		Fugit est, aliquam, possimus error exercitationem tempor omnis similique
-		provident reprehenderit incidunt corrupti. Quos fugiat obcaecati nobis! Provident
-		voluptate eligendi rem inventore dolorem ad alias, sit harum pariatur!
+		Fugit est, aliquam, possimus error exercitationem tempor omnis similique provident
+		reprehenderit incidunt corrupti. Quos fugiat obcaecati nobis! Provident voluptate
+		eligendi rem inventore dolorem ad alias, sit harum pariatur!
 	</p>
 	<p>
 		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id illo saepe ratione autem,
@@ -44,8 +40,28 @@
 
 <style>
 	.float-right {
+		scale: 0.8;
+		opacity: 0.5;
+		animation: fade-in linear forwards;
+		animation-timeline: view();
+		animation-range-start: cover;
+		animation-range-end: contain -100px;
+
 		@media (min-width: 48em) {
 			min-width: 500px;
 		}
 	}
+
+	@keyframes fade-in {
+		to {
+			scale: 1;
+			opacity: 1;
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+    .float-right {
+			animation: none;
+		}
+  }
 </style>
