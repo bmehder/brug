@@ -55,22 +55,22 @@
 	<Footer />
 </div>
 
-<!-- <Popover
+<Popover
   delay={2000}
   cookieName="visited_within_48_hours"
   cookieValue="yes"
   expirationDays={2}
-  redirect={'/about'}
   --background="#161616"
   --color="#f1f1f1"
+	--width="32rem";
 >
-  <h3>Heading</h3>
-  <p>
+  <h2 id="dialog-heading" class="heading">This heading is a bit long, but it is balanced.</h2>
+  <p id="dialog-content" class="content">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nisi dolorem
     consequatur cum aperiam id earum aliquid non autem molestiae. Corporis non nulla natus
     vitae accusantium recusandae, tenetur repellendus commodi ducimus? Minus.
   </p>
-</Popover> -->
+</Popover>
 
 <BackToTop --color="var(--accent)" --bg-color="var(--light)" threshold="500" />
 

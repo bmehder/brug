@@ -1,110 +1,116 @@
 <script>
-  import { dev } from '$app/environment'
-  import { goto } from '$app/navigation'
+	import { dev } from '$app/environment'
+	import { goto } from '$app/navigation'
 
-  export let delay = 0
-  export let expirationDays = null
-  export let cookieName = 'brug-default-cookie'
-  export let cookieValue = 'yes'
-  export let redirect = ''
+	export let delay = 0
+	export let expirationDays = null
+	export let cookieName = 'brug-default-cookie'
+	export let cookieValue = 'yes'
+	export let redirect = ''
 
-  const getCookie = name => {
-    try {
-      return document.cookie.match(`(?<=${name}=)[^;]*`)[0] // Will throw TypeError if cookie is not found
-    } catch {
-      return undefined
-    }
-  }
+	const getCookie = name => {
+		try {
+			return document.cookie.match(`(?<=${name}=)[^;]*`)[0] // Will throw TypeError if cookie is not found
+		} catch {
+			return undefined
+		}
+	}
 
-  const setCookie = (name, value = '', days) => {
-    let expires = ''
+	const setCookie = (name, value = '', days) => {
+		let expires = ''
 
-    if (days) {
-      const date = new Date()
-      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
-      expires = '; expires=' + date.toUTCString()
-    }
+		if (days) {
+			const date = new Date()
+			date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+			expires = '; expires=' + date.toUTCString()
+		}
 
-    document.cookie = name + '=' + value + expires + '; path=/; secure=' + !dev
-  }
+		document.cookie = name + '=' + value + expires + '; path=/; secure=' + !dev
+	}
 
-  const popover = (elem, ms) => {
-    if (!HTMLElement.prototype.hasOwnProperty('popover')) return
-    
-    const popoverButton = elem.querySelector('[data-popover-button]')
+	const popover = (node, ms) => {
+		if (!HTMLElement.prototype.hasOwnProperty('popover')) return
 
-    const closePopover = () => {
-      elem.hidePopover()
-      goto(redirect)
-    }
-    const removeListener = () => popoverButton.removeEventListener('click', closePopover)
+		const showModal = () => node.showPopover()
+		
+    const closeModal = () => {
+			node.hidePopover()
+			goto(redirect)
+		}
 
-    if (getCookie(cookieName)) {
-      removeListener()
-      return
-    }
+		const button = node.querySelector('button')
 
-    setTimeout(() => {
-      elem.showPopover()
-      setCookie(cookieName, cookieValue, expirationDays)
-    }, ms)
+		button.addEventListener('click', closeModal)
 
-    popoverButton.addEventListener('click', closePopover)
+    const removeListener = () => button.removeEventListener('click', closeModal)
 
-    return {
-      destroy() {
-        removeListener()
-      },
-    }
-  }
+		if (getCookie(cookieName)) {
+			removeListener()
+			return
+		}
+
+		setTimeout(() => {
+			showModal()
+			setCookie(cookieName, cookieValue, expirationDays)
+		}, ms)
+
+		return {
+			destroy() {
+				removeListener()
+			},
+		}
+	}
 </script>
 
-<div class="flow popover" use:popover={delay} popover>
-  <slot>Fallback content</slot>
-  <button data-popover-button>Close</button>
+<div
+	use:popover={delay}
+	id="demo-modal"
+	class="modal"
+	role="dialog"
+	aria-labelledby="dialog-heading"
+	aria-describedby="dialog-content"
+	aria-modal="true"
+	popover
+>
+	<slot>Fallback content</slot>
+	<button>Close</button>
 </div>
 
 <style>
-  :global(body:has(:popover-open)) {
-    position: fixed;
-    inset: 0;
-    filter: blur(3px);
-  }
-
-  div:popover-open {
-    width: min(32em, 80%);
-    display: grid;
+  .modal {
+		max-inline-size: var(--width);
     margin: auto;
-    padding: var(--size-2);
-    background-color: var(--background, black);
-    color: var(--color, white);
+		padding: 2rem;
+    background-color: var(--background);
     line-height: 1.5;
-    border-radius: var(--size-3);
-    animation-delay: 400ms;
-    animation: slideDown 400ms;
-  }
+    color: var(--color);
+		animation: appear 300ms forwards;
+		
+		&::backdrop {
+			background-color: rgba(0,0,0,0.6);
+			backdrop-filter: blur(5px);
+		}
+		
+		& .heading {
+			text-wrap: balance;
+		}
+		
+		& .content {
+			text-wrap: pretty;
+		}
 
-  div::backdrop {
-    background-color: var(--backdrop-color, black);
-    opacity: 0.8;
-    animation: fade 200ms ease-in;
-  }
+		& > * + * {
+			margin-block-start: 1rem;
+		}
+	}
 
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0.8;
-    }
-  }
-
-  @keyframes slideDown {
-    0% {
-      transform: translateY(-500%);
-    }
-    100% {
-      transform: translateY(0%);
-    }
-  }
+	@keyframes appear {
+		from {
+			translate: 0 -50vh;
+		}
+		
+		to {
+			translate: 0 0;
+		}
+	}
 </style>
