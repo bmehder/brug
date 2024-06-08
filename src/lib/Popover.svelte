@@ -35,7 +35,7 @@
 		
     const closeModal = () => {
 			node.hidePopover()
-			goto(redirect)
+			redirect && goto(redirect)
 		}
 
 		const button = node.querySelector('button')
@@ -86,6 +86,12 @@
     color: var(--color);
 		animation: appear 300ms forwards;
 		
+		&:popover-open {
+			display: grid;
+			justify-items: start;
+			gap: 1rem;
+		}
+
 		&::backdrop {
 			background-color: rgba(0,0,0,0.6);
 			backdrop-filter: blur(5px);
@@ -99,8 +105,8 @@
 			text-wrap: pretty;
 		}
 
-		& > * + * {
-			margin-block-start: 1rem;
+		& button {
+			margin-block-start: 2rem;
 		}
 	}
 
