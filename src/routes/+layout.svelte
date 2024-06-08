@@ -17,6 +17,7 @@
 	import Header from '$lib/Headers/Header.svelte'
 	import Footer from '$lib/Footers/Footer.svelte'
 	import Popover from '$lib/Popover.svelte'
+	import DialogModal from '$lib/DialogModal.svelte'
 	import BackToTop from '$lib/BackToTop.svelte'
 	import ViewTransition from '$lib/ViewTransition.svelte'
 
@@ -38,6 +39,11 @@
 
 		return () => subscription.unsubscribe()
 	})
+
+	// Modal Stuff
+	let dialogElement = null
+
+	const openModal = () => dialogElement?.showModal()
 </script>
 
 <ViewTransition />
@@ -55,7 +61,26 @@
 	<Footer />
 </div>
 
-<Popover
+<DialogModal
+	bind:dialogElement
+	delay={2000}
+  cookieName="visited_within_24_hours"
+  cookieValue="yes"
+  expirationDays={1}
+	--width="32rem"
+>
+	<div slot="heading">
+		<h2>Greetings, one and all!</h2>
+	</div>
+	<div slot="content">
+		<p>The dialog HTML element represents a modal or non-modal dialog box or other interactive component, such as a dismissible alert, inspector, or subwindow.</p>
+	</div>
+	<div slot="footer">
+		<button class="button">Close</button>
+	</div>
+</DialogModal>
+
+<!-- <Popover
   delay={2000}
   cookieName="visited_within_48_hours"
   cookieValue="yes"
@@ -70,7 +95,7 @@
     consequatur cum aperiam id earum aliquid non autem molestiae. Corporis non nulla natus
     vitae accusantium recusandae, tenetur repellendus commodi ducimus? Minus.
   </p>
-</Popover>
+</Popover> -->
 
 <BackToTop --color="var(--accent)" --bg-color="var(--light)" threshold="500" />
 
@@ -86,7 +111,7 @@
 		/* margin-block: var(--size-2); */
 		margin-block: calc(var(--size-2) * 1.25);
 		line-height: 1.6;
-		
+
 		@media (min-width: 1120px) {
 			margin-block-start: var(--size-6);
 		}
